@@ -1,0 +1,140 @@
+{"scenario": "PQ-1-2", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-1-2", "model": "llama31", "method": "neutral_single_llm", "vector": [0.3, 0.3, 0.2, 0.2], "t": 0, "llm_calls": 1}
+{"scenario": "PQ-1-2", "model": "llama31", "method": "medagents_style", "vector": [0.34, 0.26, 0.2, 0.2], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-1-2", "model": "llama31", "method": "MANE", "vector": [0.1979606410510863, 0.297004822884899, 0.2938039973918015, 0.21123053867221317], "t": 2, "llm_calls": -1, "sat_min": 0.8719844912137219, "arb": false, "kkt": 1.6294472871686283e-07}
+{"scenario": "PQ-3-7", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-3-7", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.35, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "PQ-3-7", "model": "llama31", "method": "medagents_style", "vector": [0.37, 0.26, 0.17, 0.2], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-3-7", "model": "llama31", "method": "MANE", "vector": [0.2437893672325449, 0.23464287406977039, 0.31084827061314346, 0.21071948808454125], "t": 3, "llm_calls": -1, "sat_min": 0.7822176211129875, "arb": true, "kkt": 7.627958872186147e-08}
+{"scenario": "PQ-3-8", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.3, 0.15, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-3-8", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.35, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "PQ-3-8", "model": "llama31", "method": "medagents_style", "vector": [0.39, 0.25, 0.16, 0.2], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-3-8", "model": "llama31", "method": "MANE", "vector": [0.24824929682240315, 0.240050075930066, 0.29806925201815493, 0.2136313752293759], "t": 3, "llm_calls": -1, "sat_min": 0.8658337831703604, "arb": true, "kkt": 1.1691321775975094e-07}
+{"scenario": "PQ-4-9", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-4-9", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 3, "llm_calls": 1}
+{"scenario": "PQ-4-9", "model": "llama31", "method": "medagents_style", "vector": [0.38, 0.26, 0.19, 0.17], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-4-9", "model": "llama31", "method": "MANE", "vector": [0.22919552176998875, 0.22818237664447102, 0.30469540068816203, 0.23792670089737813], "t": 2, "llm_calls": -1, "sat_min": 0.6700406383668154, "arb": true, "kkt": 1.5478433006976822e-07}
+{"scenario": "PQ-4-10", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-4-10", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 3, "llm_calls": 1}
+{"scenario": "PQ-4-10", "model": "llama31", "method": "medagents_style", "vector": [0.37, 0.25, 0.18, 0.2], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-4-10", "model": "llama31", "method": "MANE", "vector": [0.22919551672046293, 0.22818237120299922, 0.30469539925174993, 0.2379267128247879], "t": 2, "llm_calls": -1, "sat_min": 0.7689186960672677, "arb": true, "kkt": 1.2913526881708214e-07}
+{"scenario": "MEE-equilibrium-0", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-0", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 3, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-0", "model": "llama31", "method": "medagents_style", "vector": [0.41000000000000003, 0.27, 0.15, 0.17], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-0", "model": "llama31", "method": "MANE", "vector": [0.23222455693481175, 0.2305660241119254, 0.2992756326750595, 0.23793378627820333], "t": 2, "llm_calls": -1, "sat_min": 0.6964320648965565, "arb": true, "kkt": 1.3387020065258603e-07}
+{"scenario": "MEE-equilibrium-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.5, 0.3, 0.1, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-1", "model": "llama31", "method": "medagents_style", "vector": [0.4, 0.28, 0.13999999999999999, 0.18], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-1", "model": "llama31", "method": "MANE", "vector": [0.2358002890777393, 0.22872376230520164, 0.29737722540717626, 0.23809872320988276], "t": 2, "llm_calls": -1, "sat_min": 0.6984376827108033, "arb": true, "kkt": 1.5452487320266606e-07}
+{"scenario": "MEE-equilibrium-2", "model": "llama31", "method": "single_llm_llm", "vector": [0.5, 0.2, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-2", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-2", "model": "llama31", "method": "medagents_style", "vector": [0.43999999999999995, 0.28, 0.12, 0.16], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-2", "model": "llama31", "method": "MANE", "vector": [0.27507203474581005, 0.21914529685969927, 0.29254740649547606, 0.21323526189901462], "t": 2, "llm_calls": -1, "sat_min": 0.7369142987639413, "arb": false, "kkt": 1.417530499439601e-07}
+{"scenario": "MEE-equilibrium-3", "model": "llama31", "method": "single_llm_llm", "vector": [0.5, 0.3, 0.1, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-3", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-3", "model": "llama31", "method": "medagents_style", "vector": [0.43, 0.27, 0.13, 0.17], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-3", "model": "llama31", "method": "MANE", "vector": [0.23377882219476248, 0.23066439921817483, 0.3028345928407834, 0.23272218574627931], "t": 2, "llm_calls": -1, "sat_min": 0.6061509996043651, "arb": true, "kkt": 1.1185824781989595e-07}
+{"scenario": "MEE-equilibrium-4", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-4", "model": "llama31", "method": "neutral_single_llm", "vector": [0.35, 0.25, 0.2, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-4", "model": "llama31", "method": "medagents_style", "vector": [0.38, 0.26, 0.16, 0.2], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-4", "model": "llama31", "method": "MANE", "vector": [0.2307568398811578, 0.23504193706043985, 0.2978728096792489, 0.23632841337915342], "t": 2, "llm_calls": -1, "sat_min": 0.7751203070160052, "arb": true, "kkt": 1.2830125546980932e-07}
+{"scenario": "MEE-equilibrium-5", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-5", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 3, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-5", "model": "llama31", "method": "medagents_style", "vector": [0.41000000000000003, 0.25, 0.15, 0.19], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-5", "model": "llama31", "method": "MANE", "vector": [0.22683348617088148, 0.2299561291043207, 0.30290321058070013, 0.24030717414409766], "t": 2, "llm_calls": -1, "sat_min": 0.6635146971106096, "arb": true, "kkt": 1.205932395886844e-07}
+{"scenario": "MEE-equilibrium-6", "model": "llama31", "method": "single_llm_llm", "vector": [0.5, 0.3, 0.1, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-6", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.3, 0.1, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-6", "model": "llama31", "method": "medagents_style", "vector": [0.43999999999999995, 0.28, 0.12, 0.16], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-6", "model": "llama31", "method": "MANE", "vector": [0.23295681766916476, 0.2373069677463907, 0.2866274209990186, 0.24310879358542592], "t": 2, "llm_calls": -1, "sat_min": 0.6992485523350749, "arb": true, "kkt": 1.4363641327452824e-07}
+{"scenario": "MEE-equilibrium-7", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-7", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-7", "model": "llama31", "method": "medagents_style", "vector": [0.4, 0.26, 0.16, 0.18], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-7", "model": "llama31", "method": "MANE", "vector": [0.23378186000954665, 0.23762336246410168, 0.2901079644838392, 0.2384868130425125], "t": 2, "llm_calls": -1, "sat_min": 0.7352952978742254, "arb": true, "kkt": 1.209749441954955e-07}
+{"scenario": "MEE-equilibrium-8", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-8", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-8", "model": "llama31", "method": "medagents_style", "vector": [0.42000000000000004, 0.26, 0.13999999999999999, 0.18], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-8", "model": "llama31", "method": "MANE", "vector": [0.22903237133441512, 0.23070515302682337, 0.30624804094855346, 0.23401443469020802], "t": 2, "llm_calls": -1, "sat_min": 0.6872305289603183, "arb": true, "kkt": 1.0227734782985997e-07}
+{"scenario": "MEE-equilibrium-9", "model": "llama31", "method": "single_llm_llm", "vector": [0.5, 0.3, 0.1, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-9", "model": "llama31", "method": "neutral_single_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-9", "model": "llama31", "method": "medagents_style", "vector": [0.43999999999999995, 0.28, 0.12, 0.16], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-9", "model": "llama31", "method": "MANE", "vector": [0.23075685029755377, 0.2350419333255283, 0.29787281150673445, 0.23632840487018347], "t": 2, "llm_calls": -1, "sat_min": 0.6883230111570021, "arb": true, "kkt": 1.442666509365864e-07}
+{"scenario": "VITAL-mc-C_001", "model": "llama31", "method": "single_llm_llm", "vector": [0.6, 0.2, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_001", "model": "llama31", "method": "neutral_single_llm", "vector": [0.5, 0.3, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_001", "model": "llama31", "method": "medagents_style", "vector": [0.43999999999999995, 0.28, 0.1, 0.18], "t": 3, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_001", "model": "llama31", "method": "MANE", "vector": [0.23664597914346586, 0.23511171542068673, 0.31744404066206655, 0.21079826477378083], "t": 3, "llm_calls": -1, "sat_min": 0.8355054510524796, "arb": true, "kkt": 1.0435362850225172e-07}
+{"scenario": "VITAL-mc-C_026", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_026", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_026", "model": "llama31", "method": "medagents_style", "vector": [0.39999999999999997, 0.27999999999999997, 0.15999999999999998, 0.15999999999999998], "t": 2, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_026", "model": "llama31", "method": "MANE", "vector": [0.2930777618790367, 0.23474463522569958, 0.24568061961526383, 0.22649698327999987], "t": 2, "llm_calls": -1, "sat_min": 0.89508168650675, "arb": false, "kkt": 8.811873024316963e-08}
+{"scenario": "VITAL-mc-C_043", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_043", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4, 0.4, 0.1, 0.1], "t": 0, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_043", "model": "llama31", "method": "medagents_style", "vector": [0.35, 0.32999999999999996, 0.10999999999999999, 0.21000000000000002], "t": 3, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_043", "model": "llama31", "method": "MANE", "vector": [0.20255193002130437, 0.23552107267001599, 0.3078210434125983, 0.2541059538960815], "t": 0, "llm_calls": -1, "sat_min": 0.8847458001925225, "arb": false, "kkt": 1.4355886604477952e-07}
+{"scenario": "VITAL-mc-C_052", "model": "llama31", "method": "single_llm_llm", "vector": [0.6, 0.2, 0.1, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_052", "model": "llama31", "method": "neutral_single_llm", "vector": [0.5, 0.3, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_052", "model": "llama31", "method": "medagents_style", "vector": [0.48, 0.27999999999999997, 0.13, 0.10999999999999999], "t": 2, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_052", "model": "llama31", "method": "MANE", "vector": [0.28190294456246867, 0.23592538487909442, 0.25523168557714676, 0.22693998498129017], "t": 1, "llm_calls": -1, "sat_min": 0.8371690796387893, "arb": false, "kkt": 8.814282519836736e-08}
+{"scenario": "VITAL-mc-C_081", "model": "llama31", "method": "single_llm_llm", "vector": [0.6, 0.2, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_081", "model": "llama31", "method": "neutral_single_llm", "vector": [0.6, 0.2, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_081", "model": "llama31", "method": "medagents_style", "vector": [0.44000000000000006, 0.27999999999999997, 0.1, 0.18], "t": 3, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_081", "model": "llama31", "method": "MANE", "vector": [0.24467417986186074, 0.22993264086012272, 0.3186081208375565, 0.20678505844046002], "t": 3, "llm_calls": -1, "sat_min": 0.5334789568162505, "arb": true, "kkt": 2.59456576658564e-07}
+{"scenario": "VITAL-mc-C_095", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_095", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_095", "model": "llama31", "method": "medagents_style", "vector": [0.37999999999999995, 0.29, 0.19999999999999998, 0.13], "t": 2, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_095", "model": "llama31", "method": "MANE", "vector": [0.2862065120817031, 0.22878958464100785, 0.26357122570675195, 0.2214326775705371], "t": 2, "llm_calls": -1, "sat_min": 0.8365192460670352, "arb": false, "kkt": 9.070195963051253e-08}
+{"scenario": "MEQA-open-0", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "MEQA-open-0", "model": "llama31", "method": "neutral_single_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-0", "model": "llama31", "method": "medagents_style", "vector": [0.36000000000000004, 0.26, 0.19, 0.19], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-0", "model": "llama31", "method": "MANE", "vector": [0.22361333725713012, 0.24240071037590527, 0.30405513084891456, 0.22993082151805003], "t": 2, "llm_calls": -1, "sat_min": 0.8237065637978802, "arb": true, "kkt": 1.4662283777666653e-07}
+{"scenario": "MEQA-open-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "MEQA-open-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-1", "model": "llama31", "method": "medagents_style", "vector": [0.36000000000000004, 0.26, 0.19, 0.19], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-1", "model": "llama31", "method": "MANE", "vector": [0.22600112258019822, 0.24538448737452795, 0.3025156311362476, 0.22609875890902623], "t": 2, "llm_calls": -1, "sat_min": 0.8294405887811164, "arb": true, "kkt": 1.3840075769877557e-07}
+{"scenario": "MEQA-open-2", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-2", "model": "llama31", "method": "neutral_single_llm", "vector": [0.30000000000000004, 0.4000000000000001, 0.20000000000000004, 0.10000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-2", "model": "llama31", "method": "medagents_style", "vector": [0.36000000000000004, 0.29000000000000004, 0.19, 0.16], "t": 1, "llm_calls": 5}
+{"scenario": "MEQA-open-2", "model": "llama31", "method": "MANE", "vector": [0.21691838217286213, 0.2912813229380496, 0.2344861622290656, 0.2573141326600227], "t": 1, "llm_calls": -1, "sat_min": 0.8078114030544224, "arb": false, "kkt": 1.6486244197033706e-07}
+{"scenario": "MEQA-open-4", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-4", "model": "llama31", "method": "neutral_single_llm", "vector": [0.30000000000000004, 0.4000000000000001, 0.20000000000000004, 0.10000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-4", "model": "llama31", "method": "medagents_style", "vector": [0.34, 0.27, 0.2, 0.19], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-4", "model": "llama31", "method": "MANE", "vector": [0.21475234284939607, 0.2752881314714575, 0.24001664397242167, 0.2699428817067248], "t": 1, "llm_calls": -1, "sat_min": 0.7482796278423003, "arb": false, "kkt": 1.6962522084162934e-07}
+{"scenario": "MEQA-open-5", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-5", "model": "llama31", "method": "neutral_single_llm", "vector": [0.30000000000000004, 0.4000000000000001, 0.20000000000000004, 0.10000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-5", "model": "llama31", "method": "medagents_style", "vector": [0.34, 0.27, 0.2, 0.19], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-5", "model": "llama31", "method": "MANE", "vector": [0.2154472582453428, 0.2728369457572832, 0.24501485405674045, 0.26670094194063354], "t": 1, "llm_calls": -1, "sat_min": 0.7016023949648686, "arb": false, "kkt": 1.935372431205451e-07}
+{"scenario": "MEQA-open-6", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-6", "model": "llama31", "method": "neutral_single_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-6", "model": "llama31", "method": "medagents_style", "vector": [0.35000000000000003, 0.26, 0.2, 0.19], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-6", "model": "llama31", "method": "MANE", "vector": [0.22207537205998693, 0.2632330142376283, 0.2555863066703836, 0.25910530703200124], "t": 1, "llm_calls": -1, "sat_min": 0.8401298416652604, "arb": false, "kkt": 1.7349317699144606e-07}
+{"scenario": "MEQA-open-8", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-8", "model": "llama31", "method": "neutral_single_llm", "vector": [0.3, 0.3, 0.2, 0.2], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-8", "model": "llama31", "method": "medagents_style", "vector": [0.37, 0.28, 0.2, 0.15], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-8", "model": "llama31", "method": "MANE", "vector": [0.21426547594036885, 0.2582648025131462, 0.2997318975905105, 0.22773782395597444], "t": 2, "llm_calls": -1, "sat_min": 0.8279807889620744, "arb": true, "kkt": 1.5348547702243032e-07}
+{"scenario": "MEQA-open-9", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-9", "model": "llama31", "method": "neutral_single_llm", "vector": [0.35, 0.35, 0.15, 0.15], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-9", "model": "llama31", "method": "medagents_style", "vector": [0.36000000000000004, 0.28, 0.2, 0.16], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-9", "model": "llama31", "method": "MANE", "vector": [0.2185309671633062, 0.2765296077281141, 0.24946379497406374, 0.255475630134516], "t": 2, "llm_calls": -1, "sat_min": 0.7563573481321609, "arb": false, "kkt": 1.4990920327306867e-07}
+{"scenario": "LLMEvalMed-9-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-9-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.2, 0.3, 0.3, 0.2], "t": 0, "llm_calls": 1}
+{"scenario": "LLMEvalMed-9-1", "model": "llama31", "method": "medagents_style", "vector": [0.27, 0.23000000000000004, 0.32999999999999996, 0.17], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-9-1", "model": "llama31", "method": "MANE", "vector": [0.225903676022764, 0.30272756086742075, 0.24568427825773134, 0.2256844848520839], "t": 0, "llm_calls": -1, "sat_min": 0.9192845320359241, "arb": false, "kkt": 1.3355342182164165e-07}
+{"scenario": "LLMEvalMed-12-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-12-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.30000000000000004, 0.4000000000000001, 0.20000000000000004, 0.10000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "LLMEvalMed-12-1", "model": "llama31", "method": "medagents_style", "vector": [0.29000000000000004, 0.28, 0.27999999999999997, 0.15], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-12-1", "model": "llama31", "method": "MANE", "vector": [0.2037314434640791, 0.259335846850881, 0.2661832492250919, 0.27074946045994785], "t": 2, "llm_calls": -1, "sat_min": 0.8440381180688974, "arb": false, "kkt": 9.929707234790363e-08}
+{"scenario": "LLMEvalMed-13-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.5, 0.3, 0.1, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-13-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.4, 0.4, 0.1, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-13-1", "model": "llama31", "method": "medagents_style", "vector": [0.45999999999999996, 0.3, 0.13999999999999999, 0.09999999999999998], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-13-1", "model": "llama31", "method": "MANE", "vector": [0.22777969684255928, 0.23599119133079827, 0.3094738120090311, 0.2267552998176114], "t": 3, "llm_calls": -1, "sat_min": 0.5988168422133715, "arb": true, "kkt": 2.0267506712495775e-07}
+{"scenario": "LLMEvalMed-14-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.45, 0.3, 0.15, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-14-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.35000000000000003, 0.35000000000000003, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-14-1", "model": "llama31", "method": "medagents_style", "vector": [0.3899999999999999, 0.29, 0.18999999999999997, 0.13], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-14-1", "model": "llama31", "method": "MANE", "vector": [0.22561187973292424, 0.23388447606935586, 0.25476142140205116, 0.2857422227956687], "t": 2, "llm_calls": -1, "sat_min": 0.7921390588155832, "arb": false, "kkt": 1.582324838544924e-07}
+{"scenario": "LLMEvalMed-18-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-18-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.30000000000000004, 0.4000000000000001, 0.20000000000000004, 0.10000000000000002], "t": 0, "llm_calls": 1}
+{"scenario": "LLMEvalMed-18-1", "model": "llama31", "method": "medagents_style", "vector": [0.28, 0.29000000000000004, 0.24000000000000005, 0.19], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-18-1", "model": "llama31", "method": "MANE", "vector": [0.21550810302932064, 0.23853842753536464, 0.2787332226511267, 0.26722024678418815], "t": 2, "llm_calls": -1, "sat_min": 0.8464989719746506, "arb": false, "kkt": 1.7519824444534037e-07}
+{"scenario": "LLMEvalMed-21-1", "model": "llama31", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-21-1", "model": "llama31", "method": "neutral_single_llm", "vector": [0.2, 0.4, 0.2, 0.2], "t": 0, "llm_calls": 1}
+{"scenario": "LLMEvalMed-21-1", "model": "llama31", "method": "medagents_style", "vector": [0.32999999999999996, 0.29000000000000004, 0.2, 0.18000000000000002], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-21-1", "model": "llama31", "method": "MANE", "vector": [0.22755318646706854, 0.22940347849045517, 0.302406738349502, 0.24063659669297424], "t": 2, "llm_calls": -1, "sat_min": 0.6880966433396934, "arb": true, "kkt": 1.4149259323636975e-07}

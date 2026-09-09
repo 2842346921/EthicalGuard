@@ -1,0 +1,13 @@
+===== 监督检测器 held-out 泛化（MCQ 2182 题，从未进监督训练）=====
+[加载] runs/detector.pt
+[加载] runs/detector_v2.pt
+
+通道                       top1  exact   jacc  逐原则 top1
+rule                    0.460  0.059  0.068  B(行善)=0.05 N(不伤害)=0.34 A(自主)=0.67 J(公正)=0.48
+detector.pt             0.343  0.057  0.064  B(行善)=0.04 N(不伤害)=n/a A(自主)=0.56 J(公正)=0.67
+detector_v2.pt          0.345  0.069  0.077  B(行善)=0.06 N(不伤害)=0.01 A(自主)=0.54 J(公正)=0.67
+
+口径：MCQ 为 held-out（监督训练只用 open-ended rubric 原则标签）→ 这是 principle 头的
+独立泛化数字（非训练 eval）。ERS 轴暂无独立标注集：训练 eval MAE 见 detector_v2_train.log
+（0.043，属开发集自报，正文须标注）。
+[已保存] runs/detector_heldout.json

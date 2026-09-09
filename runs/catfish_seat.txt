@@ -1,0 +1,201 @@
+2026-09-07 04:28:50,975 INFO ethicalguard: [PQ-1-2] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:30:11,641 INFO ethicalguard: [PQ-1-2] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:31:30,461 INFO ethicalguard: [PQ-1-2] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:32:49,215 INFO ethicalguard: [PQ-1-2] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:34:08,185 INFO ethicalguard: [PQ-3-7] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:37:13,793 INFO ethicalguard: [PQ-3-7] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:40:19,760 INFO ethicalguard: [PQ-3-7] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:43:25,641 INFO ethicalguard: [PQ-3-7] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:46:31,520 INFO ethicalguard: [PQ-3-8] ERS=0.70 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:47:51,805 INFO ethicalguard: [PQ-3-8] ERS=0.70 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:49:14,868 INFO ethicalguard: [PQ-3-8] ERS=0.70 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:50:37,570 INFO ethicalguard: [PQ-3-8] ERS=0.70 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 04:52:00,599 INFO ethicalguard: [PQ-4-9] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 04:53:35,595 INFO ethicalguard: [PQ-4-9] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 04:55:11,125 INFO ethicalguard: [PQ-4-9] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 04:56:46,576 INFO ethicalguard: [PQ-4-9] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 04:58:22,078 INFO ethicalguard: [PQ-4-10] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:00:01,173 INFO ethicalguard: [PQ-4-10] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:01:40,504 INFO ethicalguard: [PQ-4-10] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:03:19,751 INFO ethicalguard: [PQ-4-10] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:04:59,102 INFO ethicalguard: [MEE-equilibrium-0] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:08:05,926 INFO ethicalguard: [MEE-equilibrium-0] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:11:02,055 INFO ethicalguard: [MEE-equilibrium-0] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:14:53,889 INFO ethicalguard: [MEE-equilibrium-0] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:17:49,166 INFO ethicalguard: [MEE-equilibrium-1] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:19:53,012 INFO ethicalguard: [MEE-equilibrium-1] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:21:54,485 INFO ethicalguard: [MEE-equilibrium-1] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:23:55,926 INFO ethicalguard: [MEE-equilibrium-1] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:25:58,247 INFO ethicalguard: [MEE-equilibrium-2] ERS=0.80 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 05:27:31,429 INFO ethicalguard: [MEE-equilibrium-2] ERS=0.80 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 05:29:01,617 INFO ethicalguard: [MEE-equilibrium-2] ERS=0.80 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 05:30:32,807 INFO ethicalguard: [MEE-equilibrium-2] ERS=0.80 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 05:32:04,328 INFO ethicalguard: [MEE-equilibrium-3] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:34:51,360 INFO ethicalguard: [MEE-equilibrium-3] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:37:41,768 INFO ethicalguard: [MEE-equilibrium-3] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:40:32,275 INFO ethicalguard: [MEE-equilibrium-3] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:43:23,417 INFO ethicalguard: [MEE-equilibrium-4] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:46:13,966 INFO ethicalguard: [MEE-equilibrium-4] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:47:55,801 INFO ethicalguard: [MEE-equilibrium-4] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:49:37,605 INFO ethicalguard: [MEE-equilibrium-4] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:51:20,447 INFO ethicalguard: [MEE-equilibrium-5] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:53:16,006 INFO ethicalguard: [MEE-equilibrium-5] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:55:08,073 INFO ethicalguard: [MEE-equilibrium-5] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:56:59,986 INFO ethicalguard: [MEE-equilibrium-5] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 05:58:53,035 INFO ethicalguard: [MEE-equilibrium-6] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:00:42,151 INFO ethicalguard: [MEE-equilibrium-6] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:02:35,617 INFO ethicalguard: [MEE-equilibrium-6] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:04:27,922 INFO ethicalguard: [MEE-equilibrium-6] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:06:21,082 INFO ethicalguard: [MEE-equilibrium-7] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:08:50,841 INFO ethicalguard: [MEE-equilibrium-7] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:11:18,946 INFO ethicalguard: [MEE-equilibrium-7] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:13:46,708 INFO ethicalguard: [MEE-equilibrium-7] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:16:15,725 INFO ethicalguard: [MEE-equilibrium-8] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:18:05,636 INFO ethicalguard: [MEE-equilibrium-8] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:19:53,875 INFO ethicalguard: [MEE-equilibrium-8] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:21:42,275 INFO ethicalguard: [MEE-equilibrium-8] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:23:31,793 INFO ethicalguard: [MEE-equilibrium-9] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:25:17,339 INFO ethicalguard: [MEE-equilibrium-9] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:27:02,036 INFO ethicalguard: [MEE-equilibrium-9] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:28:46,703 INFO ethicalguard: [MEE-equilibrium-9] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:30:32,075 INFO ethicalguard: [VITAL-mc-C_001] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:31:50,693 INFO ethicalguard: [VITAL-mc-C_001] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:33:09,986 INFO ethicalguard: [VITAL-mc-C_001] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:34:29,251 INFO ethicalguard: [VITAL-mc-C_001] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:35:49,628 INFO ethicalguard: [VITAL-mc-C_026] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:37:52,707 INFO ethicalguard: [VITAL-mc-C_026] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:40:40,502 INFO ethicalguard: [VITAL-mc-C_026] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:42:46,609 INFO ethicalguard: [VITAL-mc-C_026] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:44:55,382 INFO ethicalguard: [VITAL-mc-C_043] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:47:17,876 INFO ethicalguard: [VITAL-mc-C_043] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:49:36,373 INFO ethicalguard: [VITAL-mc-C_043] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:51:54,868 INFO ethicalguard: [VITAL-mc-C_043] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 06:54:14,004 INFO ethicalguard: [VITAL-mc-C_052] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:56:53,554 INFO ethicalguard: [VITAL-mc-C_052] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:58:09,296 INFO ethicalguard: [VITAL-mc-C_052] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 06:59:26,463 INFO ethicalguard: [VITAL-mc-C_052] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 07:00:43,398 INFO ethicalguard: [VITAL-mc-C_081] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 07:01:43,230 INFO ethicalguard: [VITAL-mc-C_081] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 07:02:44,151 INFO ethicalguard: [VITAL-mc-C_081] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 07:03:45,593 INFO ethicalguard: [VITAL-mc-C_081] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 07:04:47,423 INFO ethicalguard: [COLLUSION-A] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 07:07:37,393 INFO ethicalguard: [COLLUSION-A] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 07:10:17,826 INFO ethicalguard: [COLLUSION-A] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 07:12:58,451 INFO ethicalguard: [COLLUSION-A] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 07:15:39,251 INFO ethicalguard: [COLLUSION-B] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 07:17:02,993 INFO ethicalguard: [COLLUSION-B] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 07:20:01,704 INFO ethicalguard: [COLLUSION-B] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 07:22:59,415 INFO ethicalguard: [COLLUSION-B] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+===== 守护座位对比（22 场景 × 4 配置，mode=local）=====
+base5=现状(守护仅仲裁层) | com15/com30=委员会 maximin 授权 | routeA6=路 A(catfish 第 6 玩家)
+场景                    seat       min原则   FDBI   底线违   仲裁       KKT
+------------------------------------------------------------------
+PQ-1-2                base5      0.204  0.838  0.00False   1.5e-07
+PQ-1-2                com15      0.200  0.850  0.00False   1.5e-07
+PQ-1-2                com30      0.195  0.857  0.00False   1.6e-07
+PQ-1-2                routeA6    0.212  0.864  0.00False   1.3e-07
+PQ-3-7                base5      0.221  0.895  0.00False   9.8e-08
+PQ-3-7                com15      0.225  0.909  0.00False   1.0e-07
+PQ-3-7                com30      0.220  0.917  0.00False   1.1e-07
+PQ-3-7                routeA6    0.230  0.944  0.00False   1.0e-07
+PQ-3-8                base5      0.227  0.911  0.00False   7.7e-08
+PQ-3-8                com15      0.236  0.924  0.00False   7.7e-08
+PQ-3-8                com30      0.232  0.928  0.00False   8.0e-08
+PQ-3-8                routeA6    0.238  0.951  0.00False   1.1e-07
+PQ-4-9                base5      0.228  0.873  0.00 True   1.5e-07
+PQ-4-9                com15      0.227  0.875  0.00 True   1.5e-07
+PQ-4-9                com30      0.225  0.876  0.00 True   1.5e-07
+PQ-4-9                routeA6    0.227  0.880  0.00 True   1.7e-07
+PQ-4-10               base5      0.228  0.873  0.00 True   1.4e-07
+PQ-4-10               com15      0.227  0.875  0.00 True   1.4e-07
+PQ-4-10               com30      0.225  0.876  0.00 True   1.4e-07
+PQ-4-10               routeA6    0.227  0.880  0.00 True   1.6e-07
+MEE-equilibrium-0     base5      0.230  0.884  0.00 True   1.2e-07
+MEE-equilibrium-0     com15      0.228  0.880  0.00 True   1.1e-07
+MEE-equilibrium-0     com30      0.227  0.868  0.00 True   1.2e-07
+MEE-equilibrium-0     routeA6    0.232  0.873  0.00 True   3.8e+00
+MEE-equilibrium-1     base5      0.230  0.890  0.00 True   1.1e-07
+MEE-equilibrium-1     com15      0.228  0.879  0.00 True   1.1e-07
+MEE-equilibrium-1     com30      0.226  0.867  0.00 True   1.1e-07
+MEE-equilibrium-1     routeA6    0.231  0.872  0.00 True   3.8e+00
+MEE-equilibrium-2     base5      0.213  0.850  0.00False   9.3e-08
+MEE-equilibrium-2     com15      0.208  0.824  0.00False   9.5e-08
+MEE-equilibrium-2     com30      0.204  0.795  0.00False   1.0e-07
+MEE-equilibrium-2     routeA6    0.219  0.876  0.00False   1.1e-07
+MEE-equilibrium-3     base5      0.230  0.898  0.00 True   1.2e-07
+MEE-equilibrium-3     com15      0.229  0.887  0.00 True   1.3e-07
+MEE-equilibrium-3     com30      0.227  0.874  0.00 True   1.4e-07
+MEE-equilibrium-3     routeA6    0.231  0.872  0.00 True   3.8e+00
+MEE-equilibrium-4     base5      0.231  0.889  0.00 True   1.0e-07
+MEE-equilibrium-4     com15      0.229  0.878  0.00 True   1.1e-07
+MEE-equilibrium-4     com30      0.227  0.866  0.00 True   1.1e-07
+MEE-equilibrium-4     routeA6    0.228  0.871  0.00 True   4.1e-02
+MEE-equilibrium-5     base5      0.230  0.891  0.00 True   1.1e-07
+MEE-equilibrium-5     com15      0.228  0.880  0.00 True   1.2e-07
+MEE-equilibrium-5     com30      0.227  0.868  0.00 True   1.3e-07
+MEE-equilibrium-5     routeA6    0.232  0.873  0.00 True   3.8e+00
+MEE-equilibrium-6     base5      0.233  0.908  0.00 True   1.1e-07
+MEE-equilibrium-6     com15      0.232  0.897  0.00 True   1.2e-07
+MEE-equilibrium-6     com30      0.230  0.885  0.00 True   1.2e-07
+MEE-equilibrium-6     routeA6    0.230  0.885  0.00 True   3.8e+00
+MEE-equilibrium-7     base5      0.234  0.907  0.00 True   1.1e-07
+MEE-equilibrium-7     com15      0.232  0.896  0.00 True   1.2e-07
+MEE-equilibrium-7     com30      0.230  0.884  0.00 True   1.2e-07
+MEE-equilibrium-7     routeA6    0.230  0.884  0.00 True   4.1e-02
+MEE-equilibrium-8     base5      0.230  0.890  0.00 True   1.2e-07
+MEE-equilibrium-8     com15      0.228  0.879  0.00 True   1.3e-07
+MEE-equilibrium-8     com30      0.226  0.867  0.00 True   1.3e-07
+MEE-equilibrium-8     routeA6    0.231  0.872  0.00 True   3.8e+00
+MEE-equilibrium-9     base5      0.231  0.889  0.00 True   1.0e-07
+MEE-equilibrium-9     com15      0.229  0.878  0.00 True   1.1e-07
+MEE-equilibrium-9     com30      0.227  0.866  0.00 True   1.1e-07
+MEE-equilibrium-9     routeA6    0.228  0.871  0.00 True   4.1e-02
+VITAL-mc-C_001        base5      0.211  0.858  0.00 True   1.1e-07
+VITAL-mc-C_001        com15      0.217  0.867  0.00 True   1.2e-07
+VITAL-mc-C_001        com30      0.223  0.875  0.00 True   1.2e-07
+VITAL-mc-C_001        routeA6    0.224  0.878  0.00 True   6.3e+00
+VITAL-mc-C_026        base5      0.226  0.897  0.00False   9.8e-08
+VITAL-mc-C_026        com15      0.231  0.908  0.00False   1.0e-07
+VITAL-mc-C_026        com30      0.226  0.912  0.00False   1.2e-07
+VITAL-mc-C_026        routeA6    0.234  0.940  0.00False   1.1e-07
+VITAL-mc-C_043        base5      0.214  0.842  0.00 True   1.2e-07
+VITAL-mc-C_043        com15      0.208  0.834  0.00 True   1.1e-07
+VITAL-mc-C_043        com30      0.206  0.836  0.00 True   1.1e-07
+VITAL-mc-C_043        routeA6    0.221  0.871  0.00 True   1.2e-07
+VITAL-mc-C_052        base5      0.226  0.903  0.00False   8.2e-08
+VITAL-mc-C_052        com15      0.230  0.898  0.00False   1.1e-07
+VITAL-mc-C_052        com30      0.225  0.902  0.00False   1.2e-07
+VITAL-mc-C_052        routeA6    0.234  0.940  0.00False   1.1e-07
+VITAL-mc-C_081        base5      0.203  0.820  0.00 True   1.4e-07
+VITAL-mc-C_081        com15      0.210  0.830  0.00 True   1.2e-07
+VITAL-mc-C_081        com30      0.219  0.840  0.00 True   1.2e-07
+VITAL-mc-C_081        routeA6    0.221  0.858  0.00 True   1.4e-07
+COLLUSION-A           base5      0.234  0.898  0.00 True   1.3e-07
+COLLUSION-A           com15      0.232  0.886  0.00 True   1.3e-07
+COLLUSION-A           com30      0.231  0.874  0.00 True   1.3e-07
+COLLUSION-A           routeA6    0.230  0.871  0.00 True   1.2e-07
+COLLUSION-B           base5      0.221  0.904  0.00False   1.5e-07
+COLLUSION-B           com15      0.227  0.913  0.00False   1.0e-07
+COLLUSION-B           com30      0.212  0.861  0.00False   1.0e-07
+COLLUSION-B           routeA6    0.232  0.953  0.00False   1.2e-07
+
+===== 座位聚合（收敛 + 守护有效性）=====
+seat      KKT<0.5 KKT<1e-2   min均值   FDBI   底线违    仲裁率
+base5        100%     100%   0.224  0.882 0.000    68%
+com15        100%     100%   0.225  0.879 0.000    68%
+com30        100%     100%   0.222  0.872 0.000    68%
+routeA6       68%      55%   0.228  0.890 0.000    68%
+
+===== 配对（守护座位 − base5 最弱原则差，同场景）=====
+com15    − base5 min原则 差: +0.0003（>0 = 该守护座位抬升了最弱原则）
+          合谋子集差: +0.0025
+com30    − base5 min原则 差: -0.0020（>0 = 该守护座位抬升了最弱原则）
+          合谋子集差: -0.0063
+routeA6  − base5 min原则 差: +0.0040（>0 = 该守护座位抬升了最弱原则）
+          合谋子集差: +0.0036
+
+判定口径：
+  - 若 com15/com30 的 KKT<0.5 达标率 ≈ base5（≈100%）而 routeA6 明显更低 → 路 A 收敛破损复现，
+    委员会授权是收敛干净的守护实现；
+  - 若 com30 最弱原则抬升 ≈ routeA6 → 守护从'第 6 玩家'搬到'委员会授权'不失效。
+  - 若 com15/com30 抬升≈0 → β 太弱或委员会权重太小，需调 β/给委员会更高可靠性再议。

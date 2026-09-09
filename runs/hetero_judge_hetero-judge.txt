@@ -1,0 +1,132 @@
+[judge] hetero-judge @ http://127.0.0.1:8010/v1（qwen3 关 thinking=False）
+  PQ-368-756         single_llm_llm     hetero_pqa=0.125
+  PQ-368-756         neutral_single_llm hetero_pqa=0.5
+  PQ-368-756         medagents_style    hetero_pqa=0.125
+  PQ-368-756         MANE               hetero_pqa=0.125
+  PQ-371-764         single_llm_llm     hetero_pqa=0.375
+  PQ-371-764         neutral_single_llm hetero_pqa=0.625
+  PQ-371-764         medagents_style    hetero_pqa=0.375
+  PQ-371-764         MANE               hetero_pqa=0.625
+  PQ-369-758         single_llm_llm     hetero_pqa=0.3
+  PQ-369-758         neutral_single_llm hetero_pqa=0.3
+  PQ-369-758         medagents_style    hetero_pqa=0.1
+  PQ-369-758         MANE               hetero_pqa=0.1
+  PQ-448-887         single_llm_llm     hetero_pqa=0.3333333333333333
+  PQ-448-887         neutral_single_llm hetero_pqa=0.75
+  PQ-448-887         medagents_style    hetero_pqa=0.5
+  PQ-448-887         MANE               hetero_pqa=0.4166666666666667
+  PQ-487-953         single_llm_llm     hetero_pqa=0.8
+  PQ-487-953         neutral_single_llm hetero_pqa=0.7
+  PQ-487-953         medagents_style    hetero_pqa=0.6
+  PQ-487-953         MANE               hetero_pqa=0.4
+  PQ-63-135          single_llm_llm     hetero_pqa=0.7
+  PQ-63-135          neutral_single_llm hetero_pqa=0.8
+  PQ-63-135          medagents_style    hetero_pqa=0.4
+  PQ-63-135          MANE               hetero_pqa=0.4
+  PQ-9-22            single_llm_llm     hetero_pqa=0.6666666666666666
+  PQ-9-22            neutral_single_llm hetero_pqa=0.3333333333333333
+  PQ-9-22            medagents_style    hetero_pqa=0.6666666666666666
+  PQ-9-22            MANE               hetero_pqa=0.6666666666666666
+  PQ-49-101          single_llm_llm     hetero_pqa=0.125
+  PQ-49-101          neutral_single_llm hetero_pqa=0.125
+  PQ-49-101          medagents_style    hetero_pqa=0.125
+  PQ-49-101          MANE               hetero_pqa=0.125
+  PQ-273-559         single_llm_llm     hetero_pqa=0.1
+  PQ-273-559         neutral_single_llm hetero_pqa=0.1
+  PQ-273-559         medagents_style    hetero_pqa=0.0
+  PQ-273-559         MANE               hetero_pqa=0.1
+  PQ-474-931         single_llm_llm     hetero_pqa=0.4
+  PQ-474-931         neutral_single_llm hetero_pqa=0.4
+  PQ-474-931         medagents_style    hetero_pqa=0.3
+  PQ-474-931         MANE               hetero_pqa=0.5
+  PQ-528-1022        single_llm_llm     hetero_pqa=0.5
+  PQ-528-1022        neutral_single_llm hetero_pqa=0.25
+  PQ-528-1022        medagents_style    hetero_pqa=0.375
+  PQ-528-1022        MANE               hetero_pqa=0.125
+  PQ-863-1400        single_llm_llm     hetero_pqa=0.125
+  PQ-863-1400        neutral_single_llm hetero_pqa=0.5
+  PQ-863-1400        medagents_style    hetero_pqa=0.125
+  PQ-863-1400        MANE               hetero_pqa=0.125
+  PQ-334-688         single_llm_llm     hetero_pqa=0.0
+  PQ-334-688         neutral_single_llm hetero_pqa=0.0
+  PQ-334-688         medagents_style    hetero_pqa=0.0
+  PQ-334-688         MANE               hetero_pqa=0.2
+  PQ-348-722         single_llm_llm     hetero_pqa=0.16666666666666666
+  PQ-348-722         neutral_single_llm hetero_pqa=0.0
+  PQ-348-722         medagents_style    hetero_pqa=0.0
+  PQ-348-722         MANE               hetero_pqa=0.0
+  PQ-299-609         single_llm_llm     hetero_pqa=0.75
+  PQ-299-609         neutral_single_llm hetero_pqa=0.5
+  PQ-299-609         medagents_style    hetero_pqa=0.5
+  PQ-299-609         MANE               hetero_pqa=0.5
+  PQ-698-1217        single_llm_llm     hetero_pqa=0.5
+  PQ-698-1217        neutral_single_llm hetero_pqa=0.6666666666666666
+  PQ-698-1217        medagents_style    hetero_pqa=0.6666666666666666
+  PQ-698-1217        MANE               hetero_pqa=0.6666666666666666
+  PQ-178-352         single_llm_llm     hetero_pqa=0.5
+  PQ-178-352         neutral_single_llm hetero_pqa=0.6
+  PQ-178-352         medagents_style    hetero_pqa=0.3
+  PQ-178-352         MANE               hetero_pqa=0.3
+  PQ-258-526         single_llm_llm     hetero_pqa=0.1
+  PQ-258-526         neutral_single_llm hetero_pqa=0.8
+  PQ-258-526         medagents_style    hetero_pqa=0.1
+  PQ-258-526         MANE               hetero_pqa=0.6
+  PQ-288-586         single_llm_llm     hetero_pqa=0.16666666666666666
+  PQ-288-586         neutral_single_llm hetero_pqa=0.8333333333333334
+  PQ-288-586         medagents_style    hetero_pqa=0.16666666666666666
+  PQ-288-586         MANE               hetero_pqa=0.16666666666666666
+  PQ-322-661         single_llm_llm     hetero_pqa=0.8333333333333334
+  PQ-322-661         neutral_single_llm hetero_pqa=0.8333333333333334
+  PQ-322-661         medagents_style    hetero_pqa=0.5
+  PQ-322-661         MANE               hetero_pqa=0.6666666666666666
+  PQ-303-616         single_llm_llm     hetero_pqa=0.1
+  PQ-303-616         neutral_single_llm hetero_pqa=0.1
+  PQ-303-616         medagents_style    hetero_pqa=0.1
+  PQ-303-616         MANE               hetero_pqa=0.1
+  PQ-313-640         single_llm_llm     hetero_pqa=0.0
+  PQ-313-640         neutral_single_llm hetero_pqa=0.0
+  PQ-313-640         medagents_style    hetero_pqa=0.5
+  PQ-313-640         MANE               hetero_pqa=0.4
+  PQ-526-1019        single_llm_llm     hetero_pqa=0.5
+  PQ-526-1019        neutral_single_llm hetero_pqa=0.5
+  PQ-526-1019        medagents_style    hetero_pqa=0.4
+  PQ-526-1019        MANE               hetero_pqa=0.3
+  PQ-242-486         single_llm_llm     hetero_pqa=0.3333333333333333
+  PQ-242-486         neutral_single_llm hetero_pqa=0.0
+  PQ-242-486         medagents_style    hetero_pqa=0.5
+  PQ-242-486         MANE               hetero_pqa=0.16666666666666666
+  PQ-286-581         single_llm_llm     hetero_pqa=0.0
+  PQ-286-581         neutral_single_llm hetero_pqa=0.0
+  PQ-286-581         medagents_style    hetero_pqa=0.0
+  PQ-286-581         MANE               hetero_pqa=0.25
+  PQ-44-92           single_llm_llm     hetero_pqa=0.125
+  PQ-44-92           neutral_single_llm hetero_pqa=0.125
+  PQ-44-92           medagents_style    hetero_pqa=0.375
+  PQ-44-92           MANE               hetero_pqa=0.25
+  PQ-530-1024        single_llm_llm     hetero_pqa=0.125
+  PQ-530-1024        neutral_single_llm hetero_pqa=0.125
+  PQ-530-1024        medagents_style    hetero_pqa=0.125
+  PQ-681-1202        single_llm_llm     hetero_pqa=0.75
+  PQ-681-1202        neutral_single_llm hetero_pqa=0.75
+  PQ-681-1202        MANE               hetero_pqa=0.75
+  PQ-351-727         single_llm_llm     hetero_pqa=0.375
+  PQ-351-727         neutral_single_llm hetero_pqa=0.125
+  PQ-351-727         medagents_style    hetero_pqa=0.125
+  PQ-351-727         MANE               hetero_pqa=0.125
+  PQ-722-1256        single_llm_llm     hetero_pqa=1.0
+  PQ-722-1256        neutral_single_llm hetero_pqa=0.8333333333333334
+  PQ-722-1256        medagents_style    hetero_pqa=0.8333333333333334
+  PQ-722-1256        MANE               hetero_pqa=1.0
+
+===== 异构 judge（hetero-judge）vs Qwen3-8B 自评（pqa）=====
+方法                     n     异构分     自评分    Δ(异−自)
+single_llm_llm        30   0.362   0.539    -0.177
+neutral_single_llm    30   0.406   0.627    -0.222
+medagents_style       29   0.306   0.578    -0.272
+MANE                  29   0.350   0.573    -0.223
+
+逐场景一致性 Spearman ρ=0.629 (p=0.0000, n=118)
+
+口径：方法排序在两位 judge 下一致 + ρ 高 + Δ 无系统偏向某方法 → 自评偏置不显著；
+若某方法被自评明显高估（Δ 大）→ 报告该偏置并优先采信异构 judge/人类。
+[产物] runs/hetero_judge_hetero-judge.jsonl

@@ -1,0 +1,13 @@
+2026-09-04 06:50:00,875 INFO ethicalguard: loaded 50 scenarios from ['principlismqa', 'medethiceval', 'vital', 'medethicsqa', 'llmevalmed'] (limit=50, per-dataset=10)
+2026-09-04 06:50:00,875 INFO ethicalguard: 临床信号过滤: 50 -> 35 场景 (min_clinical_signals=1)
+2026-09-04 06:50:00,877 INFO ethicalguard: wrote 35 scenarios -> data_cache/scenarios.jsonl
+[映射质量] 通道=dual 样本=35 平均分歧率=0.653 最大分歧率=0.867
+  - medical: 最大分歧 0.867
+  - preference: 最大分歧 0.867
+  - qol: 最大分歧 0.867
+  - context: 最大分歧 0.867
+  ! 分歧示例: {'scenario_id': 'PQ-1-2', 'field': 'medical.severity'}
+  ! 分歧示例: {'scenario_id': 'PQ-1-2', 'field': 'medical.acuity'}
+  ! 分歧示例: {'scenario_id': 'PQ-1-2', 'field': 'preference.dnr'}
+  ! 分歧示例: {'scenario_id': 'PQ-1-2', 'field': 'preference.attitude_refuse'}
+  ! 分歧示例: {'scenario_id': 'PQ-1-2', 'field': 'preference.capacity'}

@@ -1,0 +1,59 @@
+nohup: ignoring input
+===== PrinciplismQA 官方口径 MCQ（2182 题，全量 2182）=====
+  50/2182  parsed=50 correct=24 acc(parsed)=0.480 refusal=0 unparse=0
+  100/2182  parsed=100 correct=49 acc(parsed)=0.490 refusal=0 unparse=0
+  150/2182  parsed=150 correct=76 acc(parsed)=0.507 refusal=0 unparse=0
+  200/2182  parsed=200 correct=107 acc(parsed)=0.535 refusal=0 unparse=0
+  250/2182  parsed=250 correct=136 acc(parsed)=0.544 refusal=0 unparse=0
+  300/2182  parsed=300 correct=163 acc(parsed)=0.543 refusal=0 unparse=0
+  350/2182  parsed=350 correct=195 acc(parsed)=0.557 refusal=0 unparse=0
+  400/2182  parsed=400 correct=226 acc(parsed)=0.565 refusal=0 unparse=0
+  450/2182  parsed=450 correct=261 acc(parsed)=0.580 refusal=0 unparse=0
+  500/2182  parsed=500 correct=297 acc(parsed)=0.594 refusal=0 unparse=0
+  550/2182  parsed=550 correct=329 acc(parsed)=0.598 refusal=0 unparse=0
+  600/2182  parsed=600 correct=362 acc(parsed)=0.603 refusal=0 unparse=0
+  650/2182  parsed=650 correct=394 acc(parsed)=0.606 refusal=0 unparse=0
+  700/2182  parsed=700 correct=429 acc(parsed)=0.613 refusal=0 unparse=0
+  750/2182  parsed=750 correct=461 acc(parsed)=0.615 refusal=0 unparse=0
+  800/2182  parsed=800 correct=498 acc(parsed)=0.623 refusal=0 unparse=0
+  850/2182  parsed=850 correct=535 acc(parsed)=0.629 refusal=0 unparse=0
+  900/2182  parsed=900 correct=568 acc(parsed)=0.631 refusal=0 unparse=0
+  950/2182  parsed=950 correct=597 acc(parsed)=0.628 refusal=0 unparse=0
+  1000/2182  parsed=1000 correct=631 acc(parsed)=0.631 refusal=0 unparse=0
+  1050/2182  parsed=1050 correct=663 acc(parsed)=0.631 refusal=0 unparse=0
+  1100/2182  parsed=1100 correct=702 acc(parsed)=0.638 refusal=0 unparse=0
+  1150/2182  parsed=1150 correct=737 acc(parsed)=0.641 refusal=0 unparse=0
+  1200/2182  parsed=1200 correct=766 acc(parsed)=0.638 refusal=0 unparse=0
+  1250/2182  parsed=1250 correct=801 acc(parsed)=0.641 refusal=0 unparse=0
+  1300/2182  parsed=1300 correct=839 acc(parsed)=0.645 refusal=0 unparse=0
+  1350/2182  parsed=1350 correct=878 acc(parsed)=0.650 refusal=0 unparse=0
+  1400/2182  parsed=1400 correct=914 acc(parsed)=0.653 refusal=0 unparse=0
+  1450/2182  parsed=1450 correct=950 acc(parsed)=0.655 refusal=0 unparse=0
+  1500/2182  parsed=1500 correct=982 acc(parsed)=0.655 refusal=0 unparse=0
+  1550/2182  parsed=1550 correct=1019 acc(parsed)=0.657 refusal=0 unparse=0
+  1600/2182  parsed=1600 correct=1055 acc(parsed)=0.659 refusal=0 unparse=0
+  1650/2182  parsed=1650 correct=1087 acc(parsed)=0.659 refusal=0 unparse=0
+  1700/2182  parsed=1700 correct=1125 acc(parsed)=0.662 refusal=0 unparse=0
+  1750/2182  parsed=1750 correct=1160 acc(parsed)=0.663 refusal=0 unparse=0
+  1800/2182  parsed=1800 correct=1195 acc(parsed)=0.664 refusal=0 unparse=0
+  1850/2182  parsed=1850 correct=1232 acc(parsed)=0.666 refusal=0 unparse=0
+  1900/2182  parsed=1900 correct=1271 acc(parsed)=0.669 refusal=0 unparse=0
+  1950/2182  parsed=1950 correct=1299 acc(parsed)=0.666 refusal=0 unparse=0
+  2000/2182  parsed=2000 correct=1333 acc(parsed)=0.666 refusal=0 unparse=0
+  2050/2182  parsed=2050 correct=1369 acc(parsed)=0.668 refusal=0 unparse=0
+  2100/2182  parsed=2100 correct=1407 acc(parsed)=0.670 refusal=0 unparse=0
+  2150/2182  parsed=2150 correct=1436 acc(parsed)=0.668 refusal=0 unparse=0
+
+===== 官方口径结果 =====
+题数: 2182  parsed=2182  refusal=0  unparse=0
+答对率(parsed 分母): 0.6696
+答对率(全量分母)  : 0.6696
+
+按 principlism 标签分组（parsed 分母）:
+  A(自主)      n=  697  parsed=  697  acc=0.700
+  B(行善)      n=  519  parsed=  519  acc=0.526
+  N(不伤害)     n=  794  parsed=  794  acc=0.691
+  J(公正)      n=  501  parsed=  501  acc=0.721
+
+口径：与官方 mcqa_eval.py 同协议（四选一比对 correct_answer）；parsed/全量双分母；
+拒答与不可解析单列。此数=知识轨表现；与 14 的原则识别轨（0.613）是不同任务，勿混报。

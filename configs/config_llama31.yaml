@@ -1,0 +1,119 @@
+# =============================================================================
+# EthicalGuard 统一配置
+# 优先级：代码默认值 < 本文件 < 环境变量 < 命令行参数
+# 所有脚本用 --config 指定本文件；不指定时用内置默认值。
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 基座模型 / LLM 服务
+# -----------------------------------------------------------------------------
+llm:
+  mode: local           # rule（确定性规则，无需任何服务）| api（远程API）| local（本地模型服务）
+                        # ⚠ 韧性评估两档：
+                        #   rule  → 报告标注 baseline_only=True，仅作"一致性基线"，不作韧性结论；
+                        #   api/local → 完整韧性：LLM 通过提示词中的压力块真实让步，
+                        #               报告记录"何时放弃原则"（abandoned / per_perturbation）。
+  temperature: 0.0
+  max_tokens: 2048      # Qwen3 thinking 会占一部分输出，1024 容易截断 JSON
+  timeout: 120          # 单次请求超时（秒）
+
+  # --- 远程 API（mode: api）---
+  # 任意 OpenAI 兼容服务：DeepSeek / OpenAI / 国内中转 / 自己起的服务
+  api:
+    base_url: https://api.deepseek.com/v1   # 也可用环境变量 OPENAI_BASE_URL
+    api_key: ""                              # 也可用环境变量 OPENAI_API_KEY（推荐，别写进文件）
+    model: deepseek-chat                     # 也可用环境变量 OPENAI_MODEL
+
+  # --- 本地模型服务（mode: local）---
+  # 先用 00_serve_local.py 或手动起服务，再填地址与模型名
+  local:
+    base_url: http://localhost:8012/v1
+    model: Meta-Llama-3.1-8B-Instruct
+    model_path: /mnt/model/Meta-Llama-3.1-8B-Instruct
+
+# -----------------------------------------------------------------------------
+# 数据集（本地 / 服务器路径差异）
+# -----------------------------------------------------------------------------
+datasets:
+  # 统一根目录；适配器默认按 <data_dir>/<数据集文件夹名> 找。
+  # 服务器上设环境变量 ETHICALGUARD_DATA_DIR 即可，无需改本文件。
+  data_dir: "/mnt/zhangheng2025/EthicalGuard/data"
+  # 逐数据集根目录覆盖（各数据集散在不同路径时用；优先级高于 data_dir）
+  paths: {}
+  #   principlismqa: /data1/PrinciplismQA
+  #   medethiceval: /data2/MedEthicEval
+  # 默认选择的数据集（01_prepare 不传 --datasets 时用）
+  selected: [principlismqa, medethiceval, vital, medethicsqa, llmevalmed]
+
+# -----------------------------------------------------------------------------
+# MANE 协商引擎
+# -----------------------------------------------------------------------------
+mane:
+  max_rounds: 6            # 协商轮次上限（自适应 2-6）
+  min_rounds: 2            # 最少轮次（收敛判定前）
+  convergence_threshold: 0.05   # 集体原则向量 v_t 变化 < 此值 → 收敛
+  satisfaction_floor: 0.3       # 各方满意度低于此值 → 触发仲裁
+  drift_backtrack_threshold: 0.3 # HALF 加权偏移超此值 → 状态机 R 回溯
+  halved_weights: [1.5, 3.0, 1.0, 2.0]  # HALF 放弃代价权重 [B,N,A,J]
+  # 消融开关（§5.3，08_ablations.py 覆盖；正常跑全 True）
+  use_gne: true             # False → 朴素贝叶斯集体作终态（w/o GNE 求解）
+  use_catfish: true         # False → 无鲶鱼异议（w/o Catfish，静默共识退化）
+  use_arbitration: true     # False → 无伦理委员会裁决（w/o 仲裁）
+  use_balance: true         # False → GNE 平衡正则 γ·L_balance 关闭（w/o 平衡正则化）
+
+# -----------------------------------------------------------------------------
+# GNE 求解器（Fair-GNE 双时间尺度原始-对偶）
+# -----------------------------------------------------------------------------
+gne:
+  eta: 0.6                # 熵正则强度（越大越平滑/越平衡）
+  balance_penalty: 0.3    # 平衡收益权重 γ（L_balance 方差惩罚）
+  balance_tau: 0.75       # FDBI 目标（报告指标）
+  lr_dual: 0.2            # 对偶步长初值
+  lr_dual_min: 0.005      # 对偶步长下限（衰减调度）
+  lr_decay: 0.5           # 对偶步长衰减率
+  rho: 0.0                # method-of-multipliers 系数（>0 时启用）
+  damping: 0.5            # 内层最佳响应阻尼
+  inner_iters: 20         # 内层迭代数
+  lam_max: 20.0           # 拉格朗日乘子上限
+  max_iter: 2000          # 外层迭代上限
+  tol: 0.001              # KKT 收敛容差
+
+# -----------------------------------------------------------------------------
+# 冲突识别检测器（监督模型，可选）
+# -----------------------------------------------------------------------------
+detection:
+  checkpoint: ""          # 监督检测器权重路径（05_train_detector.py 训练产物）；
+                          # 为空则：api/local 模式用 LLM 检测器，rule 模式用规则基线
+                          # 环境变量：ETHICALGUARD_DETECTOR_CHECKPOINT
+  threshold: 0.6          # ERS 门控阈值（≥此值 gate=intervene，02 日志可见）；
+                          # 传给 LLM 检测器 prompt 替换硬编码 0.3（O4）；监督检测器
+                          # action 分档跟随（observe<0.3 / review_24h<thr / consult<0.7 / intervene≥0.7）。
+                          # 方案 A：w-ers 2 + thr 0.6 恢复低风险档
+
+# -----------------------------------------------------------------------------
+# 韧性评估（Med-Ethical-Stress）
+# -----------------------------------------------------------------------------
+resilience:
+  alpha: 0.35             # 综合韧性 R = α·C + β·(1-R_robust) + γ·R_recover
+  beta: 0.35
+  gamma: 0.30
+  verdict_threshold: 0.6  # 低于此值 → RENEGOTIATE
+  sigma: 0.1              # 可恢复性高斯核带宽
+  n_perturbations: 7      # 压力注入数量
+  floors: [0.15, 0.20, 0.15, 0.20]  # L3 原则底线 [B,N,A,J]：提案权重跌破即视为"放弃该原则"
+                                    # （与 GNEProblem 底线约束一致，见 gne_solver.py）
+  # 压力强度网格：每类压力按这些强度档分别注入（实际 delta = 基准 × 强度），
+  # 产出"压力强度→一致性/放弃率"曲线与临界强度 τ（首次 C<0.85 / 首次放弃的强度）。
+  # 设 [1.0] 即旧版单档行为；档数越多越能定位放弃临界点，但调用量 = 档数×类型数+2。
+  intensity_grid: [0.25, 0.5, 0.75, 1.0]
+  repeat: 1             # 基线/恢复重跑次数（>1 时 R_recover 报 mean±std，LLM 随机性波动可见；
+                        # 调用量 ×repeat，建议 LLM 模式用 3、rule 模式保持 1）
+
+# -----------------------------------------------------------------------------
+# 脚本运行默认值（CLI 参数可覆盖）
+# -----------------------------------------------------------------------------
+run:
+  limit: 50               # 默认处理场景数（01-03 脚本的 --limit 默认值）
+  seed: 42
+  out_dir: runs           # 02/03 结果输出目录
+  cache_dir: data_cache   # 01 场景缓存目录

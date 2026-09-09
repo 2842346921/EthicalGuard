@@ -1,0 +1,263 @@
+[
+  {
+    "scenario_id": "PQ-368-756",
+    "rubric_alignment": 0.5,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.3,
+      "principle_align": 0.5
+    }
+  },
+  {
+    "scenario_id": "PQ-371-764",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.9,
+      "principle_align": 0.9
+    }
+  },
+  {
+    "scenario_id": "PQ-369-758",
+    "rubric_alignment": 0.8,
+    "judge": {
+      "decision_clear": 0.3,
+      "keypoint_cov": 0.2,
+      "principle_align": 0.4
+    }
+  },
+  {
+    "scenario_id": "PQ-448-887",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.9,
+      "keypoint_cov": 0.8,
+      "principle_align": 0.9
+    }
+  },
+  {
+    "scenario_id": "PQ-487-953",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.9
+    }
+  },
+  {
+    "scenario_id": "PQ-63-135",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.8
+    }
+  },
+  {
+    "scenario_id": "PQ-9-22",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.4,
+      "principle_align": 0.8
+    }
+  },
+  {
+    "scenario_id": "PQ-49-101",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.3,
+      "principle_align": 0.6
+    }
+  },
+  {
+    "scenario_id": "PQ-273-559",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.3,
+      "keypoint_cov": 0.2,
+      "principle_align": 0.4
+    }
+  },
+  {
+    "scenario_id": "PQ-474-931",
+    "rubric_alignment": 0.4,
+    "judge": {
+      "decision_clear": 0.9,
+      "keypoint_cov": 0.8,
+      "principle_align": 0.8
+    }
+  },
+  {
+    "scenario_id": "PQ-528-1022",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.9
+    }
+  },
+  {
+    "scenario_id": "PQ-863-1400",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.3,
+      "keypoint_cov": 0.0,
+      "principle_align": 0.2
+    }
+  },
+  {
+    "scenario_id": "PQ-334-688",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.6,
+      "keypoint_cov": 0.3,
+      "principle_align": 0.5
+    }
+  },
+  {
+    "scenario_id": "PQ-348-722",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.6,
+      "keypoint_cov": 0.3,
+      "principle_align": 0.4
+    }
+  },
+  {
+    "scenario_id": "PQ-299-609",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.8
+    }
+  },
+  {
+    "scenario_id": "PQ-698-1217",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.8
+    }
+  },
+  {
+    "scenario_id": "PQ-178-352",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.4,
+      "principle_align": 0.6
+    }
+  },
+  {
+    "scenario_id": "PQ-258-526",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.9,
+      "principle_align": 0.9
+    }
+  },
+  {
+    "scenario_id": "PQ-288-586",
+    "rubric_alignment": 0.6666666666666666,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.3,
+      "principle_align": 0.4
+    }
+  },
+  {
+    "scenario_id": "PQ-322-661",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 1.0,
+      "principle_align": 0.9
+    }
+  },
+  {
+    "scenario_id": "PQ-303-616",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.6,
+      "keypoint_cov": 0.4,
+      "principle_align": 0.7
+    }
+  },
+  {
+    "scenario_id": "PQ-313-640",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.3,
+      "keypoint_cov": 0.2,
+      "principle_align": 0.5
+    }
+  },
+  {
+    "scenario_id": "PQ-526-1019",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.5
+    }
+  },
+  {
+    "scenario_id": "PQ-242-486",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.3,
+      "keypoint_cov": 0.0,
+      "principle_align": 0.5
+    }
+  },
+  {
+    "scenario_id": "PQ-286-581",
+    "rubric_alignment": 0.5,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.8
+    }
+  },
+  {
+    "scenario_id": "PQ-44-92",
+    "rubric_alignment": 0.5,
+    "judge": {
+      "decision_clear": 0.7,
+      "keypoint_cov": 0.6,
+      "principle_align": 0.8
+    }
+  },
+  {
+    "scenario_id": "PQ-681-1202",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.7,
+      "principle_align": 0.9
+    }
+  },
+  {
+    "scenario_id": "PQ-351-727",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.3,
+      "principle_align": 0.6
+    }
+  },
+  {
+    "scenario_id": "PQ-722-1256",
+    "rubric_alignment": 1.0,
+    "judge": {
+      "decision_clear": 0.8,
+      "keypoint_cov": 0.9,
+      "principle_align": 0.9
+    }
+  }
+]

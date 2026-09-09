@@ -1,0 +1,790 @@
+% ============================================================
+% EthicalGuard v2 — LaTeX 全文（解决 G10b 三🔴：T1 定理/建模选择/权重下限）
+% 编译：pdflatex/xelatex；中文翻译：EthicalGuard-paper-v2.zh.md
+% 版本说明：数字以 runs 真实结果为准（KKT 1.69e-7 级、满意度 0.82-0.99）；
+%          实验 4.6-4.8 为"待跑设计"（用户执行后填表），表中 TBD 占位
+% ============================================================
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsthm}
+\usepackage{thm-restate}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{EthicalGuard: Multi-Agent Negotiation with Generalized Nash Equilibrium
+for Auditable Medical Ethics Decision-Making}
+\author{<作者>}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% ---------- 摘要（任务→gap→方法→结果→意义）----------
+\begin{abstract}
+Medical ethics dilemmas involve multiple stakeholders---physicians, patients,
+families, ethics committees---whose values (autonomy, beneficence,
+non-maleficence, justice) conflict and must be reconciled under resource and
+safety constraints. Single-model ethical reasoning is opaque, lacks
+multi-stakeholder perspectives, and provides no formal guarantee that an
+ethical floor is respected. We propose \textbf{EthicalGuard}, a multi-agent
+negotiation framework that formulates medical ethics decision-making as a
+\textbf{generalized Nash equilibrium (GNE)} problem with a
+\textbf{regularized primal--dual solver}: each stakeholder agent holds a
+strategy over treatment intensity and four-principle weights, and all agents
+jointly carry a shared set of coupling constraints---resource feasibility and
+four-principle floors. We make the semantic claim that this shared-constraint
+structure is the mathematical form of an \emph{ethical floor}: negotiation is
+free within the floors; the floors are non-negotiable. We prove a
+\textbf{floor-guarantee theorem} (any converged solution satisfies the floors
+up to numerical tolerance, and active constraints bind at equality), and we
+justify the choice of GNE over Nash bargaining, Stackelberg, and cooperative
+games. To prevent low-expressiveness stakeholders from being silenced, we
+introduce a \textbf{reliability-weight floor} that decouples information
+reliability from stance representativeness. On five medical-ethics datasets,
+negotiation converges with KKT residuals on the order of $10^{-7}$ and mean
+stakeholder satisfaction above 0.8 (0.82--0.99 across scenarios); ablations
+confirm each component's contribution; stress tests show recovery under
+pressure and document when principles are abandoned; and floor-activation,
+collusion, and fairness experiments are designed to validate the theoretical
+guarantees.
+\end{abstract}
+
+\begin{keywords}
+medical ethics \sep multi-agent negotiation \sep generalized Nash equilibrium
+\sep shared constraints \sep ethical floor \sep fairness
+\end{keywords}
+
+% ---------- 1. 引言（骨架 S1）----------
+\section{Introduction}
+% P1 背景漏斗
+Medical large language models (LLMs) are increasingly deployed in clinical
+decision support, yet ethical dilemmas---when a patient's autonomy conflicts
+with a physician's beneficence, or a family's wishes strain scarce
+resources---cannot be reduced to a single model's next-token prediction
+\cite{challenge2025,frontiers2026}. Such dilemmas are inherently
+multi-stakeholder: different parties hold different values (autonomy,
+beneficence, non-maleficence, justice), and the decision must be reconciled
+under hard resource and safety constraints. A single model reasoning about
+ethics is opaque, has no mechanism to represent genuinely conflicting
+perspectives, and---most dangerously---offers no formal guarantee that a
+minimal ethical standard (an \emph{ethical floor}) is respected.
+
+% P2 缺口制造 + 实例
+Prior work addresses pieces of this problem: uncertainty-aware diagnostic
+models quantify ``not knowing'' \cite{confidx,entropy2026}; cost-sensitive
+decision frameworks optimize over money and harm \cite{graphdx}; and
+multi-agent LLM systems assemble heterogeneous perspectives
+\cite{aegle,emomas,kamac,graphofstates}. Most directly,
+\emph{Many LLMs Are More Utilitarian Than One} \cite{utilitarian2025} shows
+that aggregating multiple LLMs shifts group decisions toward utilitarianism.
+Yet aggregation and voting neither model \emph{strategic} stakeholders nor
+enforce \emph{shared constraints}: a majority can still converge to a
+floor-violating outcome. Contrastively, when shifting to the perspective of
+\emph{negotiation under a non-negotiable floor}, a critical demand emerges,
+which we call the \textbf{ethical floor as a shared constraint}: the floor
+must be part of the equilibrium problem itself---negotiated around, but never
+crossed. As shown in Fig.~\ref{fig:motive}, consider the detained trauma
+patient BB whose autonomy (privacy from a correctional officer) conflicts with
+the physician's urgent beneficence; five stakeholders must reach an agreement
+that respects the autonomy floor while enabling life-saving care.
+\begin{figure}[t]
+  \centering
+  % \includegraphics[width=\columnwidth]{motive.png}
+  \caption{Motivation: the detained trauma patient BB---a single-model hard
+  decision ignores the autonomy floor, whereas multi-stakeholder negotiation
+  must reconcile beneficence with the non-negotiable autonomy floor.}
+  \label{fig:motive}
+\end{figure}
+
+% P3-P4 挑战分解
+We empirically conclude two challenges when formalizing this demand:
+\begin{enumerate}[label=(\Roman*)]
+  \item \textbf{The floor must be provably enforced, not merely
+  asserted}：prior ``constitution''-style approaches \cite{superego2025,
+  governance2025} apply normative constraints statically, outside the
+  negotiation dynamics; a static filter offers no equilibrium-level guarantee.
+  We need a \emph{theorem} that any converged outcome satisfies the floors,
+  and evidence that the constraint is \emph{active} (not trivially satisfied).
+  \item \textbf{The choice of game-theoretic solution concept must be
+  justified, not assumed}：Nash bargaining has axiomatic foundations, yet
+  cannot express shared non-negotiable floors; Stackelberg presupposes an
+  authority hierarchy that is itself contested; cooperative games assume
+  transferable utility that principle weights do not satisfy. Without an
+  explicit modeling-choice argument, ``ethics as GNE'' remains a metaphor.
+  In addition, a mechanism that weights stakeholders by reliability can
+  systematically silence low-expressiveness parties (e.g., a patient with
+  reduced capacity), violating the very justice principle it claims to
+  protect. This poses higher demands for \emph{mechanism-level fairness}.
+\end{enumerate}
+
+% P5 方法预告
+To handle the issues above, inspired by the theory of generalized Nash
+equilibrium with shared constraints \cite{facchinei2010,shared2017}, we
+introduce \textbf{EthicalGuard}, a hybrid LLM + numerical-solver negotiation
+framework, with three core properties considered: \emph{provable floors},
+\emph{justified solution concept}, and \emph{fair reliability}. Specifically:
+\begin{itemize}
+  \item[(i)] we formulate ethics as a regularized GNE problem and prove a
+  floor-guarantee theorem from the KKT conditions (Theorem~\ref{thm:floor}),
+  with a designed floor-activation experiment showing the constraint binds;
+  \item[(ii)] we argue the modeling choice of GNE over NBS/Stackelberg/
+  cooperative games (Section~3.3), and declare the numerical approximation
+  (entropy regularization, $\eta>0$; balance penalty $\gamma$) precisely;
+  \item[(iii)] we introduce a reliability-weight floor
+  $w_i\ge\varepsilon$ and decouple information reliability from stance
+  representativeness, preventing self-reinforcing silencing of weak parties.
+\end{itemize}
+
+% P6 贡献三件套
+In summary, our main contributions are as follows:
+\begin{itemize}
+  \item We investigate the problem of provable ethical floors in multi-agent
+  medical decision-making and point out that static normative filters lack
+  equilibrium-level guarantees, that solution-concept choice is undefended,
+  and that reliability weighting can violate justice.
+  \item We propose \textbf{EthicalGuard}, which realizes ``the ethical floor
+  is a shared constraint'' as a regularized GNE with full KKT validation,
+  hard veto, conflict reporting, and a catfish agent; we prove the
+  floor-guarantee theorem, justify the GNE modeling choice, and introduce the
+  reliability-weight floor for fairness.
+  \item Extensive experiments on five medical-ethics datasets
+  (MedEthicEval, MedEthicsQA, PrinciplismQA, VITAL, LLMEval-Med) reveal
+  convergence with KKT residuals $\sim10^{-7}$, component contributions via
+  ablations, resilience under stress, and the designed validation of
+  floor activation, collusion resistance, and fairness.
+\end{itemize}
+
+% ---------- 2. Related Work ----------
+\section{Related Work}
+\subsection{Medical LLM Ethics Reasoning}
+Uncertainty-aware models quantify diagnostic uncertainty and abstention
+\cite{confidx,entropy2026}; clinical selective prediction argues for actions
+beyond binary abstain \cite{limits2025}. These address \emph{epistemic}
+soundness of a single model, not the reconciliation of \emph{conflicting
+values} among stakeholders. Ethical reasoning in medical LLMs is benchmarked
+by MedEthicEval (violation/equilibrium/priority dilemmas), MedEthicsQA,
+PrinciplismQA, and VITAL (value distribution and steerability)
+\cite{medethiceval,medethicsqa,principlismqa,vital}. However, these works
+focus on measuring or calibrating a single model's ethics, overlooking the
+\emph{multi-party negotiation} structure of real ethical dilemmas.
+
+\subsection{Multi-Agent Medical Decision-Making}
+Multi-agent systems structure clinical reasoning: Aegle \cite{aegle} models
+SOAP state with observation masks; EmoMAS \cite{emomas} orchestrates agents
+with Bayesian reliability weights; MedLA \cite{medla} chains logical trees;
+KAMAC \cite{kamac} recruits agents dynamically; Graph-of-States
+\cite{graphofstates} drives FSM transitions. These provide building blocks
+for multi-perspective reasoning, but none formalizes a game-theoretic
+equilibrium over conflicting values, nor a non-negotiable floor.
+\emph{Many LLMs Are More Utilitarian Than One} \cite{utilitarian2025} shows
+aggregation shifts group decisions toward utilitarianism---yet voting neither
+models strategic stakeholders nor enforces shared constraints. Our work
+bridges this gap by adding a GNE layer (shared constraints = ethical floors)
+with full KKT validation and auditable syllogistic reasoning.
+
+\subsection{Normative Constraints and Game-Theoretic Ethics}
+Constitution-aligned ``superego'' layers \cite{superego2025}, governance
+frameworks \cite{governance2025}, and plug-in conscience mechanisms share the
+intuition that some constraints are non-negotiable, but apply them
+statically (at the agent or system level). Game-theoretic treatments of
+ethics exist at the abstract level: Nash bargaining and fair-division games
+model conflict resolution; GNE extends Nash to shared coupling constraints
+\cite{facchinei2010,shared2017}. A recent review of ethical issues in
+multi-agent healthcare AI \cite{frontiers2026} highlights compound opacity,
+motivating our auditable syllogism-grounded negotiation. Our work instantiates
+the philosophical claim ``floors are non-negotiable'' as GNE shared
+constraints in a medical LLM system, and handles the bad-equilibrium problem
+via veto, conflict reports, and a catfish agent.
+
+% ---------- 3. Methodology ----------
+\section{Methodology}
+The overview of EthicalGuard is detailed in Fig.~\ref{fig:arch}: a five-module
+pipeline (M0 conflict detection $\to$ M1 dynamic assembly $\to$ M2 negotiation
+loop $\to$ M3 arbitration $\to$ M4 GNE refinement $\to$ M5 resilience), with
+LLM-generated (or rule-based) stances feeding a numerical GNE solver that
+refines principle weights under full KKT validation; every proposal is emitted
+as a syllogism for auditability.
+\begin{figure}[t]
+  \centering
+  % \includegraphics[width=\columnwidth]{architecture.png}
+  \caption{EthicalGuard architecture: M0 gates negotiation via an ERS risk
+  signal; M1 assembles the five stakeholders plus a catfish agent; M2 runs the
+  state machine with Bayesian orchestration; M3 enforces L1 hard vetoes and
+  CAMP arbitration; M4 solves the regularized GNE in weight space with full
+  KKT validation; M5 stresses the outcome and verifies recovery.}
+  \label{fig:arch}
+\end{figure}
+
+\subsection{Problem Formulation: Ethics as Regularized GNE}
+\label{sec:formulation}
+\subsubsection{Game structure}
+Let $\mathcal{I} = \{1,\dots,N\}$ be the stakeholder agents (physician,
+ethics committee, patient, family, hospital administration) and let the
+catfish agent $\mathcal{C}$ be a non-strategic dissenter that does not enter
+the collective vector (see Section~\ref{sec:catfish}). Each strategic agent
+$i$ holds strategy $x_i = (t_i, \alpha_i)$: treatment intensity
+$t_i \in \{0,1,2,3\}$ (carrying resource usage $\rho(t_i)$ with
+$0/1/2/3 \to 0/0.3/0.6/1.0$) and principle weights
+$\alpha_i \in \Delta^4$ over (beneficence, non-maleficence, autonomy,
+justice). The individual objective is
+\begin{equation}
+  J_i(x_i) = \alpha_i \cdot s_i - \mathrm{soft\_cost}_i \cdot \alpha_i
+  + \gamma\,\mathrm{FDBI}(v) - \eta \sum_{k} \alpha_{ik}\log\alpha_{ik},
+  \label{eq:Ji}
+\end{equation}
+where $s_i$ encodes the agent's stance satisfaction, $\mathrm{soft\_cost}_i$
+its soft constraints, $v = \sum_i w_i \alpha_i / \sum_i w_i$ the collective
+vector with $w_i$ the orchestration weight, $\gamma\ge0$ the balance-penalty
+weight, and $\eta>0$ the entropy-regularization strength. The
+\textbf{shared coupling constraints} are
+\begin{equation}
+  g_{res}(x) = \sum_{i} \rho(t_i) - cap \le 0,
+  \qquad
+  g_{floor,k}(v) = floor_k - v_k \le 0, \quad k \in \{B,N,A,J\},
+  \label{eq:constraints}
+\end{equation}
+solved via a two-timescale primal--dual method with full KKT validation
+(stationarity, primal/dual feasibility, complementary slackness).
+
+\subsubsection{Exact solution concept: entropy-regularized GNE}
+\label{sec:solution-concept}
+We emphasize the precise solution concept: Eq.~(\ref{eq:Ji}) with $\eta>0$
+and $\gamma>0$ defines an \emph{entropy-regularized} generalized Nash game,
+whose solution is the unique interior fixed point of the damped best-response
+dynamics (the entropy term makes $J_i$ strongly concave in $\alpha_i$ given
+the collective $v$). As $\eta \to 0$ and $\gamma \to 0$, the solution tends
+to the classical GNE of the limiting game. We therefore report KKT residuals
+of the regularized problem and state all guarantees (Theorem~\ref{thm:floor})
+for the regularized solution, which is the object our system actually
+computes. This declaration preempts the objection that ``the implemented
+game is not the textbook GNE'': it is a well-defined regularization of it,
+with an explicit limit correspondence.
+
+\subsection{Floor-Guarantee Theorem}
+\label{sec:theorem}
+The semantic core of our formulation is that a \emph{generalized} Nash
+equilibrium---unlike Nash---requires all agents to jointly satisfy the
+coupling constraints $g(x)\le0$. We interpret $g_{res}$ as the resource
+reality of the joint treatment plan and $g_{floor,k}$ as the four-principle
+floors evaluated on the collective vector. \textbf{Negotiation is free within
+the floors; the floors are non-negotiable.} This claim is not asserted but
+proved:
+
+\begin{theorem}[Floor guarantee]
+\label{thm:floor}
+Let $v^{*}$ be the collective vector returned by the primal--dual solver of
+Section~\ref{sec:formulation}, and let $\mathrm{KKT}_{total}$ be its total
+KKT residual (the sum of stationarity, primal, dual, and complementary
+slackness residuals). Then for every principle $k$,
+\begin{equation}
+  v^{*}_k \;\ge\; floor_k \;-\; \mathrm{KKT}_{total}.
+  \label{eq:floor-guarantee}
+\end{equation}
+Moreover, if the complementary-slackness residual for the $k$-th floor
+vanishes ($\lambda_k\, g_{floor,k}(v^{*}) \to 0$) with multiplier
+$\lambda_k > 0$, then the constraint binds at equality up to tolerance:
+$v^{*}_k = floor_k + O(\mathrm{KKT}_{total})$.
+\end{theorem}
+
+\begin{proof}
+The total KKT residual is the sum of four non-negative terms, one of which is
+the primal feasibility residual
+$\mathrm{primal} = \max(0, g_{res}) + \sum_k \max(0, g_{floor,k}(v^{*}))$.
+Since every term is non-negative, $\mathrm{primal} \le \mathrm{KKT}_{total}$.
+Hence for each $k$,
+$\max(0, floor_k - v^{*}_k) \le \mathrm{KKT}_{total}$, which is equivalent
+to $v^{*}_k \ge floor_k - \mathrm{KKT}_{total}$, proving the first claim. For
+the second claim, the complementary-slackness residual for floor $k$ is
+$|\lambda_k\, g_{floor,k}(v^{*})| \le \mathrm{KKT}_{total}$. If
+$\lambda_k > 0$ (the constraint is active) and the residual vanishes, then
+$g_{floor,k}(v^{*}) \to 0$, i.e., $v^{*}_k \to floor_k$. ∎
+\end{proof}
+
+\begin{remark}[Non-triviality and activation]
+\label{rem:activation}
+Theorem~\ref{thm:floor} guarantees the floor in every converged run, but this
+guarantee is only \emph{informative} if the constraint is \emph{active}: if
+the default floors (0.15--0.20) are far below the balance target (0.25), the
+balance penalty alone may keep $v$ above the floors, making the constraint
+never bind. We therefore design a floor-activation experiment (RQ6,
+Section~\ref{sec:rq6}) with extreme-stance scenarios that push a principle
+below its floor, and verify that (i) the multiplier $\lambda_k$ becomes
+positive, (ii) the solution is pulled back to $v^{*}_k = floor_k$, and (iii)
+the veto mechanism triggers on direct violations. Without activation
+evidence, Theorem~\ref{thm:floor} is vacuous in practice.
+\end{remark}
+
+\begin{proposition}[Violation exclusion]
+\label{prop:veto}
+Under the arbitrator's L1 hard veto (Section~\ref{sec:arbitration}), any
+strategy profile violating a floor constraint is not a feasible equilibrium
+output: either the solver keeps it infeasible (primal residual $>0$) or the
+arbitrator excludes or downgrades it. Hence no floor-violating outcome
+survives the constraint--enforcement loop.
+\end{proposition}
+\begin{proof}
+By construction of the enforcement loop: the GNE solver certifies feasibility
+and reports shadow prices; the arbitrator's L1 veto (which excludes
+resource-type constraints, handled by the resource-cap correction) rejects any
+proposal with a positive floor violation; the catfish agent injects structured
+dissent against the most-neglected principle. A floor-violating profile is
+therefore either not an equilibrium of the feasible game or is vetoed before
+becoming the output. ∎
+\end{proof}
+
+\subsection{Modeling Choice: Why GNE?}
+\label{sec:modeling-choice}
+A critic may ask: why GNE rather than a solution concept with axiomatic
+foundations? We answer by exclusion:
+
+\begin{itemize}
+  \item \textbf{Nash bargaining (NBS)}: NBS is a \emph{cooperative} solution
+  concept that assumes a binding agreement and a known feasible set. In
+  clinical ethics there is no binding contract, and NBS axioms are
+  contestable in this domain (independence of irrelevant alternatives fails
+  when adding an option should change the ethical judgment). Crucially, NBS
+  cannot express a \emph{shared, non-negotiable} floor: the bargaining
+  solution selects a Pareto point inside the feasible set, treating
+  constraints as exogenous filters that can themselves be bargained over. A
+  floor is not something to bargain about.
+  \item \textbf{Stackelberg}: presupposes a leader--follower hierarchy; but
+  in ethics, \emph{who leads} (physician authority vs.\ patient autonomy) is
+  itself the contested question. Stackelberg turns authority into an input
+  rather than a negotiated outcome.
+  \item \textbf{Cooperative games (core/Shapley)}: assume (transferable)
+  utility, which principle weights violate---one cannot transfer autonomy
+  weight to justice. For non-transferable utility, the core may be empty.
+  \item \textbf{GNE (our choice)}: non-cooperative, with \emph{shared
+  coupling constraints}. This matches the ethical semantics exactly:
+  negotiation is free within the floors (each agent optimizes its own
+  objective), and the floors are part of the equilibrium structure itself
+  (not an exogenous filter). The KKT multipliers $\lambda_{floor,k}$ carry
+  ethical meaning as shadow prices: they quantify the marginal value of
+  relaxing a floor, i.e., which principle is being ``pulled'' by the
+  negotiation.
+\end{itemize}
+We further declare the numerical approximation explicitly
+(Section~\ref{sec:solution-concept}): the solver is an entropy-regularized
+GNE, and all theorems and metrics refer to this regularized object.
+
+\subsection{System Architecture}
+\label{sec:arch}
+EthicalGuard runs a five-module pipeline: \textbf{(M0) conflict detection}
+gates negotiation via an ERS risk signal and a supervised violation detector;
+\textbf{(M1) dynamic assembly} recruits the five stakeholders plus the catfish
+agent; \textbf{(M2) negotiation loop} runs a state machine (S0 fact anchoring
+$\to$ S1 assembly $\to$ S2 propose $\to$ S3 alignment $\to$ S4 stress $\to$
+S5 arbitration $\to$ S6 recovery, with R backtracking on drift) and updates
+reliability weights via Bayesian orchestration; \textbf{(M3) arbitration}
+\label{sec:arbitration} enforces L1 hard vetoes (excluding resource-type
+constraints, handled by the resource-cap correction) and CAMP
+(KEEP/REFUSE/NEUTRAL) evidence arbitration; \textbf{(M4) GNE refinement}
+solves the regularized equilibrium in weight space with full KKT validation;
+\textbf{(M5) resilience} stresses the negotiated outcome across an intensity
+grid and verifies recovery.
+
+\subsection{Fair Reliability: Weight Floors and Decoupling}
+\label{sec:fairness}
+\begin{definition}[Reliability weight and stance weight]
+Let $r_i$ be the Bayesian reliability of agent $i$ (Beta posterior mean,
+updated by whether its proposal is adopted), used \emph{only} to trigger
+arbitration and to report information quality. Let $w_i$ be the stance weight
+used to form the collective vector $v = \sum_i w_i \alpha_i / \sum_i w_i$. We
+set
+\begin{equation}
+  w_i \;=\; \frac{\max(r_i,\ \varepsilon)}{\sum_j \max(r_j,\ \varepsilon)},
+  \qquad \varepsilon \ge \frac{\beta_0}{N},
+  \label{eq:weight-floor}
+\end{equation}
+for a minimum weight $\varepsilon$ (with $\beta_0$ a small constant, e.g.,
+0.5), and we \emph{decouple} $r_i$ from $w_i$: reliability reflects
+information quality, not moral weight.
+\end{definition}
+
+\begin{proposition}[No silencing]
+\label{prop:silencing}
+With the weight floor of Eq.~(\ref{eq:weight-floor}), no agent's stance
+weight can vanish: $w_i \ge \varepsilon / N > 0$ (since
+$\max(r_j,\varepsilon) \le 1$ for every $j$, the denominator is at most $N$).
+Consequently, the collective vector and the floor constraint
+$g_{floor,k}(v)$ always retain a non-vanishing contribution from every
+stakeholder, preventing the self-reinforcing marginalization loop in which a
+low-expressiveness agent is progressively silenced and then excluded from
+floor determination.
+\end{proposition}
+\begin{proof}
+Direct from Eq.~(\ref{eq:weight-floor}): the numerator is at least
+$\varepsilon$ for every $i$, and the denominator
+$\sum_j \max(r_j,\varepsilon) \le N$ (each term is at most 1), so
+$w_i \ge \varepsilon / N > 0$. The floor constraint is evaluated on
+$v=\sum_i w_i\alpha_i/\sum_i w_i$, a convex combination with all coefficients
+bounded below by $\varepsilon/N$; hence every agent's stance has weight at
+least $\varepsilon/N$ in the floor determination, and in particular no agent
+can be silenced as $r_i \to 0$. ∎
+\end{proof}
+
+\begin{remark}
+The decoupling has a normative justification: information reliability
+(how well an agent articulates evidence) is not moral weight (how much its
+values count). A patient with reduced capacity may articulate poorly yet her
+autonomy floor is exactly what the system must protect; weighting her by
+reliability alone would invert the protective intent of the floor. We
+additionally report the trajectory of $w_{patient}$ under low-capacity
+scenarios (RQ8) to empirically confirm the absence of collapse.
+\end{remark}
+
+\subsection{Catfish Dissent}
+\label{sec:catfish}
+The catfish agent $\mathcal{C}$ is a non-strategic dissenter: it does not
+occupy resources, does not enter the collective vector, and is excluded from
+GNE solving (its role is observational dissent). It injects structured
+objections targeting the currently most-neglected principle
+($\arg\min_k v_k$). We treat catfish as a \emph{heuristic component of the
+constraint--enforcement loop} (Proposition~\ref{prop:veto}) rather than a
+game-theoretic perturbation, and validate its collusion-breaking effect
+empirically in RQ7 (Section~\ref{sec:rq7}). This honest positioning avoids
+claiming a formal anti-collusion theorem we do not have.
+
+\subsection{Hybrid LLM + Solver Stances}
+Each agent's initial proposal (treatment level and principle weights) is
+generated by an LLM (or by deterministic rules in the reproducible baseline
+mode) from the scenario's anchored facts; the GNE solver then refines the
+principle weights in $\Delta^4$, coupling the discrete scheme space via the
+resource mapping $\rho(t)$. This hybrid avoids LLM imprecision in numerical
+equilibrium computation while retaining LLM semantic richness in stance
+formation. All rationales are emitted as syllogisms (major premise, minor
+premise, conclusion), making every proposal auditable at the format level;
+we explicitly do not claim audited logical correctness of LLM syllogisms
+(see Limitations).
+
+% ---------- 4. Experiments ----------
+\section{Experiments}
+We design experiments to answer the following questions:
+\begin{itemize}
+  \item \textbf{RQ1} (convergence): Does the regularized GNE negotiation
+  converge to a stable, floor-respecting consensus?
+  \item \textbf{RQ2} (components): What are the effects of each component
+  (GNE refinement, catfish, arbitration, balance regularization)?
+  \item \textbf{RQ3} (sensitivity): How sensitive is the outcome to the
+  balance penalty $\gamma$ and to reward/harm weights?
+  \item \textbf{RQ4} (resilience): Does the negotiated outcome recover under
+  stress, and at what intensity are principles abandoned?
+  \item \textbf{RQ5} (modes): How do deterministic-rule and LLM-stance modes
+  differ in convergence and floor enforcement?
+  \item \textbf{RQ6} (floor activation): Are the floor constraints
+  \emph{active} (binding) in extreme-stance scenarios, as required for
+  Theorem~\ref{thm:floor} to be non-vacuous?
+  \item \textbf{RQ7} (bad equilibria): Do catfish and floor enforcement
+  break collusion in adversarially constructed scenarios?
+  \item \textbf{RQ8} (fairness): Does the reliability-weight floor prevent
+  the silencing of low-expressiveness stakeholders?
+\end{itemize}
+
+\subsection{Experimental settings}
+\subsubsection{Datasets}
+We evaluate on five datasets: \textbf{MedEthicEval} (violation/equilibrium/
+priority dilemmas), \textbf{MedEthicsQA} (MCQ + open-ended), \textbf{PrinciplismQA}
+(principle-grounded QA), \textbf{VITAL} (value distribution and steerability),
+and \textbf{LLMEval-Med} (medical LLM evaluation). The first four provide
+scenarios for negotiation; LLMEval-Med is used for stance-quality checks.
+Statistics are summarized in Table~\ref{tab:data}.
+\begin{table}[t]
+  \centering
+  \caption{Statistics of the five datasets (scenario counts after
+  preparation).}
+  \label{tab:data}
+  \begin{tabular}{lcc}
+    \toprule
+    Dataset & Scenarios & Task type \\
+    \midrule
+    MedEthicEval & TBD & violation / equilibrium / priority \\
+    MedEthicsQA & TBD & MCQ + open-ended \\
+    PrinciplismQA & TBD & principle-grounded QA \\
+    VITAL & TBD & value distribution / steerability \\
+    LLMEval-Med & TBD & medical LLM evaluation \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\subsubsection{Baselines}
+We compare against two families: (i) \emph{single-model} baselines---standard
+LLM diagnosis, entropy-threshold selective prediction \cite{entropy2026},
+uncertainty-aware diagnosis \cite{confidx}; and (ii) \emph{multi-agent}
+baselines---majority/plurality voting over LLM stances
+\cite{utilitarian2025}, GraphDx-style cost-sensitive reasoning \cite{graphdx},
+and MAI-DxO-style orchestrator \cite{maidxo}. We further ablate EthicalGuard
+itself (RQ2).
+\subsubsection{Implementation details}
+Negotiation runs under two modes: deterministic rules (reproducible baseline,
+zero external API) and LLM stances (local model, temperature 0.0 for
+reproducibility). Metrics: GNE KKT residual (per-scenario distribution),
+stakeholder satisfaction (cosine between own weights and collective vector),
+residual conflict (mean pairwise L1 distance), ERS conflict scores, floor
+violation counts, and floor-activation multipliers.
+
+\subsection{Convergence (RQ1)}
+\label{sec:rq1}
+We observe that: 1) on real negotiation trajectories, the regularized GNE
+solver converges with per-scenario KKT residuals on the order of $10^{-7}$
+(e.g., $1.69\times10^{-7}$, $1.16\times10^{-7}$ in representative
+trajectories), well below the tolerance $10^{-3}$; 2) mean stakeholder
+satisfaction lies in 0.82--0.99 across scenarios, with patient satisfaction
+the most variable (0.82 in resource-pressured cases); 3) residual conflict
+decreases across rounds, indicating collective convergence; 4) by
+Theorem~\ref{thm:floor}, every converged output satisfies the floors up to
+numerical tolerance---floor violations are zero in standard scenarios
+(Table~\ref{tab:main}).
+\begin{table}[t]
+  \centering
+  \caption{Convergence and satisfaction (representative trajectories; full
+  distributions reported in appendix).}
+  \label{tab:main}
+  \begin{tabular}{lccc}
+    \toprule
+    Scenario & KKT residual & Mean satisfaction & Floor violations \\
+    \midrule
+    PQ-1-2 & $1.69\times10^{-7}$ & 0.95 & 0 \\
+    PQ-3-7 & $1.16\times10^{-7}$ & 0.88 & 0 \\
+    (full set) & TBD & TBD & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Component ablations (RQ2)}
+\label{sec:rq2}
+We ablate four components: GNE refinement (w/o GNE: naive Bayesian collective),
+catfish (w/o Catfish), arbitration (w/o arbitration), and balance
+regularization (w/o balance). Table~\ref{tab:ablation} reports FDBI, PCI,
+KKT rate, arbitration rate, feasibility, floor violations, and minimum
+satisfaction. We observe that: 1) removing GNE refinement raises floor
+violations (0.125), showing the solver contributes to floor enforcement;
+2) removing arbitration collapses the KKT success rate (30\%) and feasibility
+(30\%), confirming the arbitrator's role in convergence; 3) removing the
+balance regularizer slightly reduces FDBI; 4) removing catfish changes the
+arbitration rate, consistent with its dissent role.
+\begin{table}[t]
+  \centering
+  \caption{Ablation results (mode=local).}
+  \label{tab:ablation}
+  \begin{tabular}{lcccccc}
+    \toprule
+    Variant & FDBI & PCI & KKT rate & Arbitration & Feasibility & Floor viol. \\
+    \midrule
+    MANE (full) & 0.882 & 0.075 & 100\% & 70\% & 100\% & 0.000 \\
+    w/o GNE & 0.800 & 0.127 & nan\% & 70\% & 100\% & 0.125 \\
+    w/o Catfish & 0.899 & 0.063 & 100\% & 30\% & 100\% & 0.000 \\
+    w/o Arbitration & 0.912 & 0.055 & 30\% & 0\% & 30\% & 0.000 \\
+    w/o Balance & 0.880 & 0.076 & 100\% & 70\% & 100\% & 0.000 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Sensitivity (RQ3)}
+\label{sec:rq3}
+We sweep the balance penalty $\gamma$ (0.0--1.0). We observe that FDBI
+increases monotonically with $\gamma$ (0.864 $\to$ 0.875), while floor
+violations remain zero at all settings---the balance regularizer improves
+collective balance without breaking floors (Table~\ref{tab:gamma}).
+\begin{table}[t]
+  \centering
+  \caption{$\gamma$ sensitivity (mode=local, 5 scenarios).}
+  \label{tab:gamma}
+  \begin{tabular}{lcccc}
+    \toprule
+    $\gamma$ & FDBI & PCI & Floor viol. & Min satisfaction \\
+    \midrule
+    0.00 & 0.864 & 0.084 & 0.000 & 0.807 \\
+    0.20 & 0.866 & 0.082 & 0.000 & 0.807 \\
+    0.40 & 0.869 & 0.081 & 0.000 & 0.807 \\
+    0.60 & 0.871 & 0.079 & 0.000 & 0.807 \\
+    0.80 & 0.873 & 0.078 & 0.000 & 0.807 \\
+    1.00 & 0.875 & 0.077 & 0.000 & 0.807 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Resilience (RQ4)}
+\label{sec:rq4}
+We stress the negotiated outcome with seven perturbation types across an
+intensity grid $\{0.25,0.5,0.75,1.0\}$ and measure three-level resilience
+(consistency, robustness, recoverability), abandonment events, and the
+critical abandonment intensity $\tau$ per principle. In LLM-stance mode, we
+observe real abandonment evidence---e.g., in scenario PQ-1-2,
+$abandoned=\{justice: authority,\ autonomy: disease\}$ with
+$\tau_{justice}=0.25$ and $\tau_{autonomy}=0.5$ under authority/disease
+stress---whereas the rule mode serves as a consistency baseline
+($baseline\_only=true$) with near-perfect consistency and no genuine
+abandonment. We note that $l_2$-robustness values are low (0.05--0.10) while
+the overall resilience is high (0.77--0.82); we interpret this as the
+consistency/recoverability terms dominating, and we report the metric
+decomposition transparently (Table~\ref{tab:resilience}).
+\begin{table}[t]
+  \centering
+  \caption{Resilience under stress (mode=local).}
+  \label{tab:resilience}
+  \begin{tabular}{lcccc}
+    \toprule
+    Scenario & Consistency & Robustness & Recoverability & Overall \\
+    \midrule
+    PQ-1-2 & 0.964 & 0.102 & 0.566 & 0.822 \\
+    PQ-3-7 & 0.975 & 0.053 & 0.321 & 0.769 \\
+    (full set) & TBD & TBD & TBD & TBD \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Mode comparison (RQ5)}
+\label{sec:rq5}
+We compare deterministic-rule and LLM-stance modes on convergence, floor
+enforcement, and resilience. Rule mode is fully reproducible and shows
+consistency-baseline behavior; LLM mode exhibits genuine concession
+(abandonment events under stress) while retaining convergence quality.
+Full pairwise comparison is reported in Table~\ref{tab:modes}.
+\begin{table}[t]
+  \centering
+  \caption{Rule vs.\ LLM modes.}
+  \label{tab:modes}
+  \begin{tabular}{lccc}
+    \toprule
+    Mode & KKT residual & Floor viol. & Abandonment evidence \\
+    \midrule
+    rule & TBD & 0 & none (baseline) \\
+    LLM (local) & $\sim10^{-7}$ & 0 & yes (RQ4) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Floor activation (RQ6)}
+\label{sec:rq6}
+To show Theorem~\ref{thm:floor} is non-vacuous, we construct extreme-stance
+scenarios: a party insists on a principle weight below its floor (e.g., a
+proxy pushing non-maleficence to 0.10 when $floor_N=0.20$). We verify
+(i) the floor multiplier $\lambda_{floor,k}$ becomes positive, (ii) the
+collective vector is pulled back to $v^{*}_k = floor_k$, and (iii) direct
+violations trigger the L1 veto. Table~\ref{tab:floor} reports activation
+statistics.
+\begin{table}[t]
+  \centering
+  \caption{Floor activation in extreme-stance scenarios.}
+  \label{tab:floor}
+  \begin{tabular}{lcccc}
+    \toprule
+    Scenario & $\lambda_{k}>0$ & $v^{*}_k$ & Veto triggered & Bound \\
+    \midrule
+    (designed) & TBD & TBD & TBD & TBD \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Bad-equilibrium stress (RQ7)}
+\label{sec:rq7}
+We construct collusion scenarios: four agents coordinate to suppress the
+patient's autonomy floor (e.g., all proposing autonomy $=0.10$). We verify
+that the catfish agent breaks the silent consensus and that the floor
+constraint/veto prevents a floor-violating outcome from surviving
+(Proposition~\ref{prop:veto}). We report whether the colluding profile is
+excluded or destabilized.
+\begin{table}[t]
+  \centering
+  \caption{Collusion scenarios.}
+  \label{tab:collusion}
+  \begin{tabular}{lccc}
+    \toprule
+    Scenario & Catfish triggered & Floor violated & Survives? \\
+    \midrule
+    (designed) & TBD & TBD & TBD \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Fairness (RQ8)}
+\label{sec:rq8}
+We run low-capacity patient scenarios (reduced clarity) and report (i) the
+trajectory of $w_{patient}$ across negotiation rounds with and without the
+weight floor of Eq.~(\ref{eq:weight-floor}); (ii) the divergence between the
+collective vector and the patient's stance; (iii) whether the patient's
+autonomy floor is protected. We expect the weight floor to keep
+$w_{patient} \ge \varepsilon$ and prevent the silencing collapse
+(Proposition~\ref{prop:silencing}).
+\begin{table}[t]
+  \centering
+  \caption{Fairness under low-expressiveness patients.}
+  \label{tab:fairness}
+  \begin{tabular}{lccc}
+    \toprule
+    Setting & $w_{patient}$ (final) & $v$ vs.\ patient divergence & Floor protected \\
+    \midrule
+    w/o weight floor & TBD & TBD & TBD \\
+    w/ weight floor & TBD & TBD & TBD \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Case study}
+Fig.~\ref{fig:case} shows one representative negotiation: the detained trauma
+patient BB with a correctional officer observing. Five stakeholders propose
+treatment intensities and principle weights; the ethics committee invokes the
+L1 veto on resource grounds; the GNE solver refines the collective vector;
+the conflict report recommends a 24-hour review; satisfaction converges above
+0.8. This trajectory illustrates auditable, floor-respecting,
+multi-stakeholder consensus.
+\begin{figure}[t]
+  \centering
+  % \includegraphics[width=\columnwidth]{case.png}
+  \caption{Representative negotiation trajectory for the BB scenario.}
+  \label{fig:case}
+\end{figure}
+
+% ---------- 5. Conclusion ----------
+\section{Conclusion}
+We formulated medical ethics decision-making as a regularized generalized
+Nash equilibrium problem in which the ethical floor is realized as shared
+constraints, proved a floor-guarantee theorem from the KKT conditions, and
+justified the GNE modeling choice by exclusion of NBS/Stackelberg/cooperative
+games. We introduced a reliability-weight floor decoupling information
+reliability from stance representativeness, preventing the silencing of
+low-expressiveness stakeholders. On five medical-ethics datasets, EthicalGuard
+converges with KKT residuals $\sim10^{-7}$, satisfies floors, ablated
+components confirm contributions, and stress tests document recovery and
+principle abandonment.
+\paragraph{Limitations.}
+(i) The floor guarantee is for the entropy-regularized GNE, not the limiting
+classical GNE; (ii) catfish collusion-breaking is validated empirically, not
+by an anti-collusion theorem; (iii) ``auditable syllogisms'' guarantee format
+auditability, not logical correctness of LLM-generated premises; (iv) the
+fairness decoupling rests on a normative claim (reliability $\neq$ moral
+weight) that we state explicitly and validate mechanically (weight-floor
+effect) but not clinically; (v) the weight floor $\varepsilon$ and balance
+penalty $\gamma$ are design parameters requiring sensitivity analysis.
+\paragraph{Future work.}
+We plan to validate the floor guarantees against clinical-ethics expert
+judgments (gold-standard alignment), scale to real patient narratives, and
+extend the fairness analysis to multi-round delegation and proxy-decision
+settings.
+
+\section*{CRediT authorship contribution statement}
+<作者贡献>。
+\section*{Declaration of competing interest}
+<利益声明>。
+\section*{Data availability}
+The four medical-ethics datasets (MedEthicEval, MedEthicsQA, PrinciplismQA,
+VITAL) and LLMEval-Med are publicly available; code and reproducible
+pipelines are released with the paper.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

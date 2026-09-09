@@ -1,0 +1,15 @@
+同场景配对: 29 个（runs 30 × align 29 交集）
+
+指标对                            n       ρ       p  口径
+------------------------------------------------------------------------------
+FDBI × rubric_alignment       29   0.339  0.0722  词面对齐（p:scipy）
+FDBI × keypoint_cov           29   0.113  0.5600  专家要点实质覆盖（p:scipy）
+FDBI × decision_clear         29   0.246  0.1989  决策明确性（p:scipy）
+FDBI × principle_align        29   0.173  0.3688  原则立场一致（p:scipy）
+FDBI × 综合                     29   0.149  0.4407  三轴均值（p:scipy）
+rubric × keypoint_cov         29   0.034  0.8625  词面 vs 实质（表面效度）（p:scipy）
+
+口径：ρ>0 且 p 小 → 平衡的结构质量与专家锚定的内容质量共变（收敛效度证据）；
+ρ≈0 → 平衡是正交结构维度（互补而非替代）。n≈29 提示性，正文按探索性表述。
+rubric×cov 若低相关 → 印证决策对齐发现：词面重叠 ≠ 实质要点覆盖（表面效度局限）。
+[已保存] runs/balance_content_corr.json

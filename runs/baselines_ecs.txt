@@ -1,0 +1,28 @@
+2026-09-03 04:40:51,871 INFO ethicalguard: MANE 结果 29 条 <- runs/mane_results.jsonl
+数据集           方法             FDBI    PCI   dist    ECS    通过率     放弃率
+----------------------------------------------------------------------
+llmevalmed    single_llm    0.490  0.300  0.255  0.000     0%   0.250
+llmevalmed    harmony       0.344  0.383  0.328  0.000     0%   0.500
+llmevalmed    rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+llmevalmed    MANE          0.892  0.068  0.054  0.892   100%   0.000
+medethiceval  single_llm    0.490  0.300  0.255  0.000     0%   0.250
+medethiceval  harmony       0.354  0.375  0.323  0.000     0%   0.500
+medethiceval  rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+medethiceval  MANE          0.907  0.062  0.046  0.907   100%   0.000
+medethicsqa   single_llm    0.490  0.300  0.255  0.000     0%   0.250
+medethicsqa   harmony       0.295  0.425  0.353  0.000     0%   0.500
+medethicsqa   rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+medethicsqa   MANE          0.921  0.051  0.040  0.921   100%   0.000
+principlismqa single_llm    0.490  0.300  0.255  0.000     0%   0.250
+principlismqa harmony       0.360  0.370  0.320  0.000     0%   0.500
+principlismqa rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+principlismqa MANE          0.869  0.081  0.066  0.869   100%   0.000
+vital         single_llm    0.490  0.300  0.255  0.000     0%   0.250
+vital         harmony       0.364  0.367  0.318  0.000     0%   0.500
+vital         rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+vital         MANE          0.864  0.089  0.068  0.864   100%   0.000
+----------------------------------------------------------------------
+ALL           single_llm    0.490  0.300  0.255  0.000     0%   0.250
+ALL           harmony       0.339  0.388  0.331  0.000     0%   0.500
+ALL           rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+ALL           MANE          0.892  0.069  0.054  0.892   100%   0.000

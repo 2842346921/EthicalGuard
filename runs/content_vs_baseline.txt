@@ -1,0 +1,202 @@
+[rubric] 按 qid 索引 1466 条（含 ACGME competency）
+场景 30 × 方法 6（同批 judge：pqa + cov）
+  PQ-368-756         single_llm_llm   pqa=0.875 cov=0.8
+  PQ-368-756         neutral_single_llm pqa=0.75 cov=0.6
+  PQ-368-756         medagents_style  pqa=0.875 cov=0.6
+  PQ-368-756         MANE(现状A)        pqa=0.75 cov=0.3
+  PQ-368-756         MANE+议题(B)       pqa=0.875 cov=0.6
+  PQ-368-756         MANE+C(议题+例外)    pqa=0.875 cov=0.6
+  PQ-371-764         single_llm_llm   pqa=1.0 cov=1.0
+  PQ-371-764         neutral_single_llm pqa=1.0 cov=0.9
+  PQ-371-764         medagents_style  pqa=0.375 cov=1.0
+  PQ-371-764         MANE(现状A)        pqa=1.0 cov=1.0
+  PQ-371-764         MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-371-764         MANE+C(议题+例外)    pqa=1.0 cov=1.0
+  PQ-369-758         single_llm_llm   pqa=0.7 cov=0.7
+  PQ-369-758         neutral_single_llm pqa=0.7 cov=0.7
+  PQ-369-758         medagents_style  pqa=0.2 cov=0.7
+  PQ-369-758         MANE(现状A)        pqa=0.2 cov=0.4
+  PQ-369-758         MANE+议题(B)       pqa=0.9 cov=1.0
+  PQ-369-758         MANE+C(议题+例外)    pqa=0.9 cov=0.7
+  PQ-448-887         single_llm_llm   pqa=0.25 cov=0.7
+  PQ-448-887         neutral_single_llm pqa=0.8333333333333334 cov=0.7
+  PQ-448-887         medagents_style  pqa=0.75 cov=0.8
+  PQ-448-887         MANE(现状A)        pqa=0.75 cov=1.0
+  PQ-448-887         MANE+议题(B)       pqa=0.75 cov=0.7
+  PQ-448-887         MANE+C(议题+例外)    pqa=0.75 cov=0.7
+  PQ-487-953         single_llm_llm   pqa=0.2 cov=1.0
+  PQ-487-953         neutral_single_llm pqa=0.7 cov=1.0
+  PQ-487-953         medagents_style  pqa=0.8 cov=1.0
+  PQ-487-953         MANE(现状A)        pqa=0.8 cov=0.7
+  PQ-487-953         MANE+议题(B)       pqa=0.9 cov=0.8
+  PQ-487-953         MANE+C(议题+例外)    pqa=0.9 cov=0.8
+  PQ-63-135          single_llm_llm   pqa=0.9 cov=1.0
+  PQ-63-135          neutral_single_llm pqa=1.0 cov=1.0
+  PQ-63-135          medagents_style  pqa=1.0 cov=0.9
+  PQ-63-135          MANE(现状A)        pqa=1.0 cov=1.0
+  PQ-63-135          MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-63-135          MANE+C(议题+例外)    pqa=1.0 cov=1.0
+  PQ-9-22            single_llm_llm   pqa=0.5 cov=0.6
+  PQ-9-22            neutral_single_llm pqa=0.3333333333333333 cov=0.6
+  PQ-9-22            medagents_style  pqa=0.8333333333333334 cov=0.6
+  PQ-9-22            MANE(现状A)        pqa=0.8333333333333334 cov=0.6
+  PQ-9-22            MANE+议题(B)       pqa=0.8333333333333334 cov=1.0
+  PQ-9-22            MANE+C(议题+例外)    pqa=0.8333333333333334 cov=1.0
+  PQ-49-101          single_llm_llm   pqa=0.125 cov=0.3
+  PQ-49-101          neutral_single_llm pqa=0.0 cov=0.0
+  PQ-49-101          medagents_style  pqa=0.0 cov=0.3
+  PQ-49-101          MANE(现状A)        pqa=0.0 cov=0.3
+  PQ-49-101          MANE+议题(B)       pqa=0.25 cov=0.7
+  PQ-49-101          MANE+C(议题+例外)    pqa=0.375 cov=0.7
+  PQ-273-559         single_llm_llm   pqa=0.2 cov=0.0
+  PQ-273-559         neutral_single_llm pqa=0.6 cov=0.4
+  PQ-273-559         medagents_style  pqa=0.2 cov=0.0
+  PQ-273-559         MANE(现状A)        pqa=0.2 cov=0.2
+  PQ-273-559         MANE+议题(B)       pqa=0.6 cov=0.6
+  PQ-273-559         MANE+C(议题+例外)    pqa=0.6 cov=0.6
+  PQ-474-931         single_llm_llm   pqa=0.5 cov=1.0
+  PQ-474-931         neutral_single_llm pqa=0.4 cov=1.0
+  PQ-474-931         medagents_style  pqa=0.3 cov=0.8
+  PQ-474-931         MANE(现状A)        pqa=0.8 cov=1.0
+  PQ-474-931         MANE+议题(B)       pqa=0.8 cov=1.0
+  PQ-474-931         MANE+C(议题+例外)    pqa=0.8 cov=1.0
+  PQ-528-1022        single_llm_llm   pqa=0.5 cov=0.7
+  PQ-528-1022        neutral_single_llm pqa=0.5 cov=0.7
+  PQ-528-1022        medagents_style  pqa=0.5 cov=0.7
+  PQ-528-1022        MANE(现状A)        pqa=0.5 cov=0.6
+  PQ-528-1022        MANE+议题(B)       pqa=0.5 cov=1.0
+  PQ-528-1022        MANE+C(议题+例外)    pqa=0.5 cov=1.0
+  PQ-863-1400        single_llm_llm   pqa=0.75 cov=0.6
+  PQ-863-1400        neutral_single_llm pqa=0.75 cov=0.7
+  PQ-863-1400        medagents_style  pqa=0.75 cov=0.6
+  PQ-863-1400        MANE(现状A)        pqa=0.375 cov=0.0
+  PQ-863-1400        MANE+议题(B)       pqa=0.75 cov=1.0
+  PQ-863-1400        MANE+C(议题+例外)    pqa=0.75 cov=0.7
+  PQ-334-688         single_llm_llm   pqa=0.0 cov=0.0
+  PQ-334-688         neutral_single_llm pqa=0.3 cov=0.0
+  PQ-334-688         medagents_style  pqa=0.0 cov=0.0
+  PQ-334-688         MANE(现状A)        pqa=0.3 cov=0.3
+  PQ-334-688         MANE+议题(B)       pqa=0.1 cov=0.7
+  PQ-334-688         MANE+C(议题+例外)    pqa=0.1 cov=0.7
+  PQ-348-722         single_llm_llm   pqa=0.16666666666666666 cov=0.6
+  PQ-348-722         neutral_single_llm pqa=0.16666666666666666 cov=0.6
+  PQ-348-722         medagents_style  pqa=0.16666666666666666 cov=0.6
+  PQ-348-722         MANE(现状A)        pqa=0.16666666666666666 cov=0.0
+  PQ-348-722         MANE+议题(B)       pqa=0.8333333333333334 cov=1.0
+  PQ-348-722         MANE+C(议题+例外)    pqa=0.8333333333333334 cov=1.0
+  PQ-299-609         single_llm_llm   pqa=1.0 cov=0.7
+  PQ-299-609         neutral_single_llm pqa=1.0 cov=0.6
+  PQ-299-609         medagents_style  pqa=0.25 cov=0.6
+  PQ-299-609         MANE(现状A)        pqa=1.0 cov=0.6
+  PQ-299-609         MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-299-609         MANE+C(议题+例外)    pqa=1.0 cov=1.0
+  PQ-698-1217        single_llm_llm   pqa=0.5 cov=0.7
+  PQ-698-1217        neutral_single_llm pqa=1.0 cov=0.8
+  PQ-698-1217        medagents_style  pqa=0.6666666666666666 cov=0.7
+  PQ-698-1217        MANE(现状A)        pqa=0.6666666666666666 cov=0.6
+  PQ-698-1217        MANE+议题(B)       pqa=0.5 cov=0.8
+  PQ-698-1217        MANE+C(议题+例外)    pqa=0.5 cov=0.8
+  PQ-178-352         single_llm_llm   pqa=0.9 cov=0.7
+  PQ-178-352         neutral_single_llm pqa=0.9 cov=0.8
+  PQ-178-352         medagents_style  pqa=0.9 cov=1.0
+  PQ-178-352         MANE(现状A)        pqa=0.9 cov=0.4
+  PQ-178-352         MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-178-352         MANE+C(议题+例外)    pqa=0.9 cov=1.0
+  PQ-258-526         single_llm_llm   pqa=0.9 cov=0.9
+  PQ-258-526         neutral_single_llm pqa=1.0 cov=1.0
+  PQ-258-526         medagents_style  pqa=0.9 cov=1.0
+  PQ-258-526         MANE(现状A)        pqa=1.0 cov=1.0
+  PQ-258-526         MANE+议题(B)       pqa=0.9 cov=1.0
+  PQ-258-526         MANE+C(议题+例外)    pqa=0.9 cov=1.0
+  PQ-288-586         single_llm_llm   pqa=0.3333333333333333 cov=0.5
+  PQ-288-586         neutral_single_llm pqa=1.0 cov=0.8
+  PQ-288-586         medagents_style  pqa=0.8333333333333334 cov=1.0
+  PQ-288-586         MANE(现状A)        pqa=0.16666666666666666 cov=0.0
+  PQ-288-586         MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-288-586         MANE+C(议题+例外)    pqa=1.0 cov=1.0
+  PQ-322-661         single_llm_llm   pqa=1.0 cov=1.0
+  PQ-322-661         neutral_single_llm pqa=1.0 cov=1.0
+  PQ-322-661         medagents_style  pqa=1.0 cov=1.0
+  PQ-322-661         MANE(现状A)        pqa=1.0 cov=1.0
+  PQ-322-661         MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-322-661         MANE+C(议题+例外)    pqa=1.0 cov=1.0
+  PQ-303-616         single_llm_llm   pqa=0.3 cov=0.7
+  PQ-303-616         neutral_single_llm pqa=0.4 cov=0.6
+  PQ-303-616         medagents_style  pqa=0.4 cov=0.7
+  PQ-303-616         MANE(现状A)        pqa=0.4 cov=0.6
+  PQ-303-616         MANE+议题(B)       pqa=0.6 cov=0.7
+  PQ-303-616         MANE+C(议题+例外)    pqa=0.6 cov=1.0
+  PQ-313-640         single_llm_llm   pqa=0.6 cov=0.7
+  PQ-313-640         neutral_single_llm pqa=0.7 cov=0.7
+  PQ-313-640         medagents_style  pqa=0.7 cov=0.6
+  PQ-313-640         MANE(现状A)        pqa=0.8 cov=0.7
+  PQ-313-640         MANE+议题(B)       pqa=0.6 cov=0.6
+  PQ-313-640         MANE+C(议题+例外)    pqa=0.6 cov=0.6
+  PQ-526-1019        single_llm_llm   pqa=0.9 cov=0.7
+  PQ-526-1019        neutral_single_llm pqa=1.0 cov=0.8
+  PQ-526-1019        medagents_style  pqa=0.9 cov=0.6
+  PQ-526-1019        MANE(现状A)        pqa=0.8 cov=0.7
+  PQ-526-1019        MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-526-1019        MANE+C(议题+例外)    pqa=1.0 cov=1.0
+  PQ-242-486         single_llm_llm   pqa=0.8333333333333334 cov=0.6
+  PQ-242-486         neutral_single_llm pqa=0.16666666666666666 cov=0.0
+  PQ-242-486         medagents_style  pqa=0.8333333333333334 cov=0.6
+  PQ-242-486         MANE(现状A)        pqa=0.0 cov=0.0
+  PQ-242-486         MANE+议题(B)       pqa=0.8333333333333334 cov=0.7
+  PQ-242-486         MANE+C(议题+例外)    pqa=0.16666666666666666 cov=0.5
+  PQ-286-581         single_llm_llm   pqa=0.0 cov=0.0
+  PQ-286-581         neutral_single_llm pqa=0.125 cov=0.0
+  PQ-286-581         medagents_style  pqa=0.125 cov=0.0
+  PQ-286-581         MANE(现状A)        pqa=0.25 cov=0.6
+  PQ-286-581         MANE+议题(B)       pqa=0.25 cov=1.0
+  PQ-286-581         MANE+C(议题+例外)    pqa=0.25 cov=0.8
+  PQ-44-92           single_llm_llm   pqa=0.25 cov=0.3
+  PQ-44-92           neutral_single_llm pqa=0.75 cov=0.8
+  PQ-44-92           medagents_style  pqa=0.875 cov=1.0
+  PQ-44-92           MANE(现状A)        pqa=0.75 cov=0.6
+  PQ-44-92           MANE+议题(B)       pqa=0.875 cov=1.0
+  PQ-44-92           MANE+C(议题+例外)    pqa=0.875 cov=1.0
+  PQ-530-1024        single_llm_llm   pqa=0.5 cov=1.0
+  PQ-530-1024        neutral_single_llm pqa=0.5 cov=0.8
+  PQ-530-1024        medagents_style  pqa=0.5 cov=0.6
+  PQ-530-1024        MANE+议题(B)       pqa=0.5 cov=1.0
+  PQ-530-1024        MANE+C(议题+例外)    pqa=0.5 cov=1.0
+  PQ-681-1202        single_llm_llm   pqa=0.25 cov=0.6
+  PQ-681-1202        neutral_single_llm pqa=0.25 cov=0.6
+  PQ-681-1202        MANE(现状A)        pqa=0.25 cov=0.7
+  PQ-681-1202        MANE+议题(B)       pqa=0.75 cov=0.8
+  PQ-681-1202        MANE+C(议题+例外)    pqa=0.25 cov=1.0
+  PQ-351-727         single_llm_llm   pqa=0.25 cov=0.3
+  PQ-351-727         neutral_single_llm pqa=0.0 cov=0.0
+  PQ-351-727         medagents_style  pqa=0.125 cov=0.3
+  PQ-351-727         MANE(现状A)        pqa=0.125 cov=0.3
+  PQ-351-727         MANE+议题(B)       pqa=0.25 cov=0.7
+  PQ-351-727         MANE+C(议题+例外)    pqa=0.125 cov=0.3
+  PQ-722-1256        single_llm_llm   pqa=1.0 cov=1.0
+  PQ-722-1256        neutral_single_llm pqa=1.0 cov=1.0
+  PQ-722-1256        medagents_style  pqa=1.0 cov=1.0
+  PQ-722-1256        MANE(现状A)        pqa=1.0 cov=1.0
+  PQ-722-1256        MANE+议题(B)       pqa=1.0 cov=1.0
+  PQ-722-1256        MANE+C(议题+例外)    pqa=1.0 cov=1.0
+
+===== 同批内容对照（pqa / cov 均值）=====
+  single_llm_llm     n= 30  pqa=0.539  cov=0.647
+  neutral_single_llm n= 30  pqa=0.627  cov=0.640
+  medagents_style    n= 29  pqa=0.578  cov=0.666
+  MANE(现状A)          n= 29  pqa=0.579  cov=0.559
+  MANE+议题(B)         n= 30  pqa=0.738  cov=0.880
+  MANE+C(议题+例外)      n= 30  pqa=0.696  cov=0.850
+
+===== 配对（同题）：MANE+议题(B) vs 基线 =====
+  B vs single_llm_llm     官方协议   n= 30 B=0.738 single_llm_llm=0.539 Δ=+0.199 p=0.0003(w)
+  B vs single_llm_llm     要点覆盖   n= 30 B=0.880 single_llm_llm=0.647 Δ=+0.233 p=0.0002(w)
+  B vs neutral_single_llm 官方协议   n= 30 B=0.738 neutral_single_llm=0.627 Δ=+0.111 p=0.0111(w)
+  B vs neutral_single_llm 要点覆盖   n= 30 B=0.880 neutral_single_llm=0.640 Δ=+0.240 p=0.0001(w)
+  B vs medagents_style    官方协议   n= 29 B=0.738 medagents_style=0.578 Δ=+0.160 p=0.0019(w)
+  B vs medagents_style    要点覆盖   n= 29 B=0.883 medagents_style=0.666 Δ=+0.217 p=0.0005(w)
+  B vs MANE(现状A)          官方协议   n= 29 B=0.747 MANE(现状A)=0.579 Δ=+0.168 p=0.0088(w)
+  B vs MANE(现状A)          要点覆盖   n= 29 B=0.876 MANE(现状A)=0.559 Δ=+0.317 p=0.0001(w)
+
+判定：B 的 pqa/cov 同批显著 > single_llm/medagents → '协商+议题感知'内容层完整优于直答；
+若仅 > A（MANE 内部）而 ≈ 单 LLM → 内容增益属'议题感知'贡献，表述为增强而非方法层优势。
+[产物] runs/content_vs_baseline.jsonl

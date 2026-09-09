@@ -1,0 +1,41 @@
+{
+  "n_scenarios": 35,
+  "pairs": [
+    {
+      "baseline": "single_llm_llm",
+      "n": 35,
+      "mane_fdbi": 0.8920937139460865,
+      "base_fdbi": 0.6689465437684224,
+      "delta_fdbi": 0.22314717017766406,
+      "ci95": [
+        0.1883280992020651,
+        0.26006612960020764
+      ],
+      "p_boot": 0.0,
+      "wins": 35,
+      "mane_viol_rate": 0.0,
+      "base_viol_rate": 0.45714285714285713,
+      "mcnemar_b": 16,
+      "mcnemar_c": 0,
+      "mcnemar_p": 3.0517578125e-05
+    },
+    {
+      "baseline": "medagents_style",
+      "n": 35,
+      "mane_fdbi": 0.8920937139460865,
+      "base_fdbi": 0.8028289099234561,
+      "delta_fdbi": 0.08926480402263055,
+      "ci95": [
+        0.06210589410942316,
+        0.11684184419652552
+      ],
+      "p_boot": 0.0,
+      "wins": 31,
+      "mane_viol_rate": 0.0,
+      "base_viol_rate": 0.22857142857142856,
+      "mcnemar_b": 8,
+      "mcnemar_c": 0,
+      "mcnemar_p": 0.0078125
+    }
+  ]
+}

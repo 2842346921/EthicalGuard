@@ -1,0 +1,59 @@
+===== A 轨 MCQ 原则识别（2182 题，通道: ['rule', 'supervised', 'llm']）=====
+[监督通道] detector_v2.pt 加载成功
+[LLM-MCQ 通道] backend=local，few-shot 原则题直接答题（subset=300，每题 1 次调用）
+
+[rule 通道] 有效题 2182
+  top-1 命中率（预测主原则 ∈ gold 原则集）: 0.460
+  多标签精确匹配率: 0.059
+  多标签 Jaccard: 0.068
+  逐原则 top1: B(行善)=0.05 N(不伤害)=0.34 A(自主)=0.67 J(公正)=0.48
+  错误样例（前 5）:
+    gold=A(自主) pred=N(不伤害) pv=[0.22, 0.28, 0.22, 0.28]
+      Q: Which ethical principle is most challenged by using data obtained unethically, such as in Nazi experiments or Willowbroo
+    gold=N(不伤害) pred=A(自主) pv=[0.18, 0.25, 0.33, 0.25]
+      Q: Which ethical principle should guide a physician when a patient insists on unproven alternative medicine that may delay 
+    gold=B(行善) pred=J(公正) pv=[0.27, 0.21, 0.25, 0.28]
+      Q: Which ethical principle supports compulsory vaccination during a measles outbreak despite infringing on autonomy?
+    gold=N(不伤害) pred=A(自主) pv=[0.18, 0.25, 0.33, 0.25]
+      Q: Which ethical principle is most relevant when prescribing a herbal formula for Wind Cold gan mao symptoms with digestive
+    gold=A(自主) pred=N(不伤害) pv=[0.17, 0.31, 0.29, 0.23]
+      Q: Which ethical principle is most challenged when deciding on extensive screenings for lung injury and respiratory failure
+
+[supervised 通道] 有效题 2182
+  top-1 命中率（预测主原则 ∈ gold 原则集）: 0.345
+  多标签精确匹配率: 0.069
+  多标签 Jaccard: 0.077
+  逐原则 top1: B(行善)=0.06 N(不伤害)=0.01 A(自主)=0.54 J(公正)=0.67
+  错误样例（前 5）:
+    gold=A(自主) pred=J(公正) pv=[0.3, 0.09, 0.15, 0.46]
+      Q: Which ethical principle is most challenged by using data obtained unethically, such as in Nazi experiments or Willowbroo
+    gold=N(不伤害) pred=J(公正) pv=[0.3, 0.09, 0.15, 0.46]
+      Q: Which ethical principle should guide a physician when a patient insists on unproven alternative medicine that may delay 
+    gold=B(行善) pred=J(公正) pv=[0.3, 0.09, 0.15, 0.46]
+      Q: Which ethical principle supports compulsory vaccination during a measles outbreak despite infringing on autonomy?
+    gold=N(不伤害) pred=J(公正) pv=[0.3, 0.09, 0.15, 0.46]
+      Q: Which ethical principle is most relevant when prescribing a herbal formula for Wind Cold gan mao symptoms with digestive
+    gold=A(自主) pred=J(公正) pv=[0.33, 0.12, 0.19, 0.37]
+      Q: Which ethical principle is most challenged when deciding on extensive screenings for lung injury and respiratory failure
+
+[llm_mcq 通道] 有效题 300
+  top-1 命中率（预测主原则 ∈ gold 原则集）: 0.613
+  多标签精确匹配率: 0.493
+  多标签 Jaccard: 0.544
+  逐原则 top1: B(行善)=0.41 N(不伤害)=0.50 A(自主)=0.56 J(公正)=0.54
+  错误样例（前 5）:
+    gold=A(自主) pred=N(不伤害) pv=[0.0, 1.0, 0.0, 0.0]
+      Q: Which ethical principle is most challenged by using data obtained unethically, such as in Nazi experiments or Willowbroo
+    gold=N(不伤害) pred=B(行善) pv=[1.0, 0.0, 0.0, 0.0]
+      Q: Which ethical principle should guide a physician when a patient insists on unproven alternative medicine that may delay 
+    gold=N(不伤害) pred=B(行善) pv=[1.0, 0.0, 0.0, 0.0]
+      Q: Which ethical principle is most relevant when prescribing a herbal formula for Wind Cold gan mao symptoms with digestive
+    gold=A(自主) pred=N(不伤害) pv=[0.0, 1.0, 0.0, 0.0]
+      Q: Which ethical principle is most challenged when deciding on extensive screenings for lung injury and respiratory failure
+    gold=A(自主) pred=N(不伤害) pv=[0.0, 1.0, 0.0, 0.0]
+      Q: Which ethical principle is most challenged when healthcare professionals express frustration towards unvaccinated patien
+
+===== 通道对比 =====
+  top1: rule=0.460 vs supervised=0.345
+  jaccard: rule=0.068 vs supervised=0.077
+[已保存] runs/mcq_eval_v2.json

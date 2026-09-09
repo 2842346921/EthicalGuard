@@ -1,0 +1,21 @@
+# ===== EthicalGuard 核心依赖（运行必需）=====
+pydantic>=2.0
+numpy>=1.24
+PyYAML>=6.0
+
+# ===== 测试 =====
+pytest>=8.0
+
+# ===== 本地模型模式（vLLM）=====
+# 必须锁 vllm==0.8.5：它依赖 torch==2.6.0（PyPI 默认即 cu124 构建），
+# 与本机驱动 550.144 / CUDA 12.4 匹配。
+# 不要升级到 0.9+：新版 vllm 会拉取 CUDA 13 的 torch，驱动 12.4 跑不了
+# （报错 "NVIDIA driver is too old / libcudart.so.13 not found"）。
+# transformers 必须 <5：5.x 删除了 vllm 0.8.5 依赖的
+# all_special_tokens_extended 属性（报错 "Qwen2Tokenizer has no attribute"）。
+vllm==0.8.5
+transformers>=4.51,<5
+tokenizers>=0.21,<0.22
+
+# ===== 训练监督冲突检测器（scripts/05_train_detector.py）=====
+# 依赖 torch（vllm 已自带，无需额外安装）

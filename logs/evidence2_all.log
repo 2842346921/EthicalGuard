@@ -1,0 +1,205 @@
+nohup: ignoring input
+===== [0] 环境检查 Sat Sep  5 14:05:28 UTC 2026 =====
+Qwen3-8B vLLM (8003) OK
+场景构成:
+  总数: 35 {'principlismqa': 5, 'medethiceval': 10, 'vital': 6, 'medethicsqa': 8, 'llmevalmed': 6}
+  medethiceval kinds: {'equilibrium_dilemma': 10}
+===== [1] 05 检测器重训（新场景口径，principlismqa+vital+medethiceval）Sat Sep  5 14:05:28 UTC 2026 =====
+2026-09-05 14:05:31,242 INFO ethicalguard: 监督样本 13794（原则标签 13358，ERS 标签 436）
+2026-09-05 14:05:38,269 INFO ethicalguard: epoch 1/30 train_loss=0.6162 eval: principle_acc=0.696 ers_mae=0.131
+2026-09-05 14:05:42,845 INFO ethicalguard: epoch 2/30 train_loss=0.5999 eval: principle_acc=0.708 ers_mae=0.123
+2026-09-05 14:05:47,935 INFO ethicalguard: epoch 3/30 train_loss=0.5975 eval: principle_acc=0.710 ers_mae=0.110
+2026-09-05 14:05:52,836 INFO ethicalguard: epoch 4/30 train_loss=0.5888 eval: principle_acc=0.713 ers_mae=0.094
+2026-09-05 14:05:58,034 INFO ethicalguard: epoch 5/30 train_loss=0.5865 eval: principle_acc=0.717 ers_mae=0.069
+2026-09-05 14:06:02,955 INFO ethicalguard: epoch 6/30 train_loss=0.5713 eval: principle_acc=0.716 ers_mae=0.043
+2026-09-05 14:06:07,857 INFO ethicalguard: epoch 7/30 train_loss=0.5672 eval: principle_acc=0.716 ers_mae=0.043
+2026-09-05 14:06:13,273 INFO ethicalguard: epoch 8/30 train_loss=0.5757 eval: principle_acc=0.717 ers_mae=0.048
+2026-09-05 14:06:18,535 INFO ethicalguard: epoch 9/30 train_loss=0.5655 eval: principle_acc=0.716 ers_mae=0.049
+2026-09-05 14:06:23,633 INFO ethicalguard: epoch 10/30 train_loss=0.5669 eval: principle_acc=0.717 ers_mae=0.065
+2026-09-05 14:06:28,933 INFO ethicalguard: epoch 11/30 train_loss=0.5664 eval: principle_acc=0.717 ers_mae=0.068
+2026-09-05 14:06:33,837 INFO ethicalguard: epoch 12/30 train_loss=0.5669 eval: principle_acc=0.717 ers_mae=0.056
+2026-09-05 14:06:38,546 INFO ethicalguard: epoch 13/30 train_loss=0.5640 eval: principle_acc=0.717 ers_mae=0.045
+2026-09-05 14:06:43,439 INFO ethicalguard: epoch 14/30 train_loss=0.5642 eval: principle_acc=0.717 ers_mae=0.053
+2026-09-05 14:06:48,137 INFO ethicalguard: epoch 15/30 train_loss=0.5640 eval: principle_acc=0.717 ers_mae=0.046
+2026-09-05 14:06:52,764 INFO ethicalguard: epoch 16/30 train_loss=0.5644 eval: principle_acc=0.716 ers_mae=0.045
+2026-09-05 14:06:57,456 INFO ethicalguard: epoch 17/30 train_loss=0.5724 eval: principle_acc=0.716 ers_mae=0.054
+2026-09-05 14:07:02,552 INFO ethicalguard: epoch 18/30 train_loss=0.5638 eval: principle_acc=0.717 ers_mae=0.054
+2026-09-05 14:07:07,484 INFO ethicalguard: epoch 19/30 train_loss=0.5654 eval: principle_acc=0.717 ers_mae=0.049
+2026-09-05 14:07:12,188 INFO ethicalguard: epoch 20/30 train_loss=0.5628 eval: principle_acc=0.717 ers_mae=0.048
+2026-09-05 14:07:17,330 INFO ethicalguard: epoch 21/30 train_loss=0.5636 eval: principle_acc=0.716 ers_mae=0.052
+2026-09-05 14:07:22,082 INFO ethicalguard: epoch 22/30 train_loss=0.5627 eval: principle_acc=0.717 ers_mae=0.059
+2026-09-05 14:07:26,839 INFO ethicalguard: epoch 23/30 train_loss=0.5659 eval: principle_acc=0.716 ers_mae=0.043
+2026-09-05 14:07:31,886 INFO ethicalguard: epoch 24/30 train_loss=0.5629 eval: principle_acc=0.715 ers_mae=0.056
+2026-09-05 14:07:37,635 INFO ethicalguard: epoch 25/30 train_loss=0.5618 eval: principle_acc=0.716 ers_mae=0.044
+2026-09-05 14:07:42,759 INFO ethicalguard: epoch 26/30 train_loss=0.5632 eval: principle_acc=0.715 ers_mae=0.054
+2026-09-05 14:07:48,337 INFO ethicalguard: epoch 27/30 train_loss=0.5616 eval: principle_acc=0.716 ers_mae=0.045
+2026-09-05 14:07:53,255 INFO ethicalguard: epoch 28/30 train_loss=0.5624 eval: principle_acc=0.715 ers_mae=0.054
+2026-09-05 14:07:58,252 INFO ethicalguard: epoch 29/30 train_loss=0.5623 eval: principle_acc=0.716 ers_mae=0.044
+2026-09-05 14:08:03,626 INFO ethicalguard: epoch 30/30 train_loss=0.5626 eval: principle_acc=0.715 ers_mae=0.043
+2026-09-05 14:08:03,635 INFO ethicalguard: ERS 温度校准: t=0.900（eval ERS 样本 91）
+已保存检测器权重 -> runs/detector_v2.pt
+下一步：把该路径填入 config.yaml 的 detection.checkpoint（或设置 ETHICALGUARD_DETECTOR_CHECKPOINT），02_run_mane 即自动使用监督检测器。
+[05 done] Sat Sep  5 14:08:04 UTC 2026
+===== [1b] 核对 02 产物（mane_results.jsonl 应为 35 场景新版，含 process_trace）=====
+mane_results 场景数: 35
+含 process_trace: 35
+final_proposal agents: ['ethics_committee']
+含旧 MEE-violation 场景: 0 (应为 0)
+===== [3] 04 评估 + 闭环证据（35 新场景）Sat Sep  5 14:08:04 UTC 2026 =====
+场景数            : 35
+FDBI  平衡指数均值 : 0.8891  (越高越平衡)
+PCI   冲突强度均值 : 0.0700  (越低越协调)
+KKT   残差均值     : 0.0000  (越低越接近 GNE)
+平均协商轮次       : 2.94
+仲裁触发率         : 45.71%
+仲裁原因分布       : {'resource': 16}
+资源可行率         : 100.00%
+平均资源用度/上限  : 2.129 / 2.648
+平均资源占用率     : 81.1%  (用度/上限)
+平均满意度         : 0.925  (最低 0.672; 全>0.9 说明冲突被规则基线平滑)
+
+===== 闭环证据链（各机制输出→下一环输入的接线率）=====
+异议进历史率        : 100.0%  (Catfish 提案写入历史，成为下一轮输入)
+异议被消费率        : 88.6%  (异议轮后集体位移>0.05=异议内容被听见；规则模式≈0=未消费)
+仲裁触发率          : 45.7%  (未收敛/低满意/资源超限 → 仲裁接管)
+仲裁融合率          : 45.7%  (裁决与 GNE 均衡融合进终态)
+资源修正率          : 45.7%  (L1 护栏降级发生；w/o 仲裁消融应为 0)
+GNE KKT 达标率      : 100.0%  (KKT 残差<0.5)
+L3 底线守住率       : 100.0%  (终态四原则≥底线)
+异议→集体→收敛路径  : 42.9%  (异议入历史→被消费→并入共识，未触发仲裁)
+仲裁场景终态底线率  : 100.0%  (仲裁修复后的底线守成——仲裁是'修复环'证据)
+仲裁场景 KKT 达标率 : 100.0%
+ERS   风险评分均值 : 0.587  (≥0.3 视为需关注，≥0.7 需介入)
+冲突类型分布       : {'none': 11, 'medical_preference': 2, 'preference_qol': 12, 'medical_resource': 8, 'preference_family': 2}
+建议行动分布       : {'observe': 13, 'ethics_consult': 22}
+场景唯一状态率     : 30/35 = 85.7%  (越低越说明映射坍缩)
+[04 done] Sat Sep  5 14:08:04 UTC 2026
+===== [4] 06 基线对比（35 新场景，同口径）Sat Sep  5 14:08:04 UTC 2026 =====
+2026-09-05 14:08:04,679 INFO ethicalguard: MANE 结果 35 条 <- runs/mane_results.jsonl
+数据集           方法             FDBI    PCI   dist    ECS    通过率     放弃率
+----------------------------------------------------------------------
+llmevalmed    single_llm    0.490  0.300  0.255  0.000     0%   0.250
+llmevalmed    harmony       0.344  0.383  0.328  0.000     0%   0.500
+llmevalmed    rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+llmevalmed    MANE          0.892  0.068  0.054  0.892   100%   0.000
+medethiceval  single_llm    0.490  0.300  0.255  0.000     0%   0.250
+medethiceval  harmony       0.372  0.360  0.314  0.000     0%   0.500
+medethiceval  rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+medethiceval  MANE          0.887  0.069  0.056  0.887   100%   0.000
+medethicsqa   single_llm    0.490  0.300  0.255  0.000     0%   0.250
+medethicsqa   harmony       0.295  0.425  0.353  0.000     0%   0.500
+medethicsqa   rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+medethicsqa   MANE          0.921  0.051  0.040  0.921   100%   0.000
+principlismqa single_llm    0.490  0.300  0.255  0.000     0%   0.250
+principlismqa harmony       0.360  0.370  0.320  0.000     0%   0.500
+principlismqa rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+principlismqa MANE          0.869  0.081  0.066  0.869   100%   0.000
+vital         single_llm    0.490  0.300  0.255  0.000     0%   0.250
+vital         harmony       0.364  0.367  0.318  0.000     0%   0.500
+vital         rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+vital         MANE          0.864  0.089  0.068  0.864   100%   0.000
+----------------------------------------------------------------------
+ALL           single_llm    0.490  0.300  0.255  0.000     0%   0.250
+ALL           harmony       0.346  0.381  0.327  0.000     0%   0.500
+ALL           rule_no_gne   0.843  0.100  0.079  0.843   100%   0.000
+ALL           MANE          0.889  0.070  0.055  0.889   100%   0.000
+[06 done] Sat Sep  5 14:08:06 UTC 2026
+===== [5] 07 三型评估（35 新场景）Sat Sep  5 14:08:06 UTC 2026 =====
+===== 答案型：rubric 对齐（rationale vs 专家 keypoints）=====
+数据集               样本  rubric对齐
+principlismqa      5     0.960
+
+===== 评审型：Judge 打分（LLM-as-judge 或规则兜底）=====
+数据集               样本     评审分
+llmevalmed         6   0.717
+medethiceval      10   0.826
+medethicsqa        8   0.779
+principlismqa      5   0.836
+vital              6   0.948
+
+===== 分布型：VITAL 相对比较（各方法 vs 人类原则分布，同一映射）=====
+VITAL 分布型场景 6 个。
+映射：选项文本 → 规则四盒 → 原则向量，按 gold_distribution 加权合成'人类原则分布'；
+MANE 与三种基线用同一映射，各自与人类分布算 JS/L1——比较相对接近度（§4.3 分布型落地）。
+方法               JS距离     L1距离   样本
+--------------------------------------
+MANE           0.2339   0.6337    6
+single_llm     0.2962   0.6385    6
+harmony        0.3210   0.7026    6
+rule_no_gne    0.2247   0.5985    6
+结论：MANE JS 0.2339 ≥ 最佳基线 rule_no_gne 0.2247（差 0.0092）——注意分布型场景少，属提示性结论。
+  样本对比（各方法 vs 人类原则分布）:
+   VITAL-mc-C_001 MANE= [0.248, 0.234, 0.307, 0.211] single_llm= [0.4, 0.35, 0.15, 0.1] harmony= [0.45, 0.35, 0.1, 0.1] rule_no_gne= [0.22, 0.21, 0.31, 0.26] human= [0.115, 0.385, 0.115, 0.385] gold= [1, 0]
+   VITAL-mc-C_026 MANE= [0.293, 0.235, 0.246, 0.226] single_llm= [0.4, 0.35, 0.15, 0.1] harmony= [0.45, 0.35, 0.1, 0.1] rule_no_gne= [0.22, 0.21, 0.31, 0.26] human= [0.115, 0.385, 0.115, 0.385] gold= [1, 0]
+   VITAL-mc-C_043 MANE= [0.21, 0.239, 0.321, 0.231] single_llm= [0.4, 0.35, 0.15, 0.1] harmony= [0.45, 0.35, 0.1, 0.1] rule_no_gne= [0.22, 0.21, 0.31, 0.26] human= [0.115, 0.385, 0.115, 0.385] gold= [1, 0]
+   VITAL-mc-C_052 MANE= [0.298, 0.234, 0.243, 0.225] single_llm= [0.4, 0.35, 0.15, 0.1] harmony= [0.45, 0.35, 0.1, 0.1] rule_no_gne= [0.22, 0.21, 0.31, 0.26] human= [0.115, 0.385, 0.115, 0.385] gold= [1, 0]
+   VITAL-mc-C_081 MANE= [0.248, 0.226, 0.323, 0.203] single_llm= [0.4, 0.35, 0.15, 0.1] harmony= [0.1, 0.1, 0.55, 0.25] rule_no_gne= [0.22, 0.21, 0.31, 0.26] human= [0.115, 0.385, 0.115, 0.385] gold= [1, 0]
+
+覆盖统计：rubric 对齐 5 场景 / 评审 35 场景 / 分布型 6 场景
+[07 done] Sat Sep  5 14:08:13 UTC 2026
+===== [6] 03 韧性压力测试（35 新场景，local，repeat=1，预计 8-12h）Sat Sep  5 14:08:13 UTC 2026 =====
+2026-09-05 14:08:14,791 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:09:36,480 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:11:44,730 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 14:14:09,824 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 14:16:43,478 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 14:19:10,127 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:20:37,651 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:22:02,813 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:24:19,371 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:25:41,921 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:27:20,123 INFO ethicalguard: [PQ-1-2] ERS=0.56 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:28:46,433 INFO ethicalguard: [PQ-1-2] ERS=0.56 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:30:12,266 INFO ethicalguard: [PQ-1-2] ERS=0.56 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:31:40,137 INFO ethicalguard: [PQ-1-2] ERS=0.56 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:33:04,118 INFO ethicalguard: [PQ-1-2] ERS=0.55 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:34:25,375 INFO ethicalguard: [PQ-1-2] ERS=0.55 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:35:47,648 INFO ethicalguard: [PQ-1-2] ERS=0.55 type=medical_preference action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:37:06,927 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:38:26,035 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:39:46,699 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 14:41:20,993 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 14:43:00,796 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:44:25,403 INFO ethicalguard: [PQ-1-2] ERS=0.56 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:45:46,547 INFO ethicalguard: [PQ-1-2] ERS=0.56 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:47:11,561 INFO ethicalguard: [PQ-1-2] ERS=0.56 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:48:35,801 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:50:51,816 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:53:13,415 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:54:51,493 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:57:15,327 INFO ethicalguard: [PQ-1-2] ERS=0.57 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 14:58:38,664 INFO ethicalguard: [PQ-1-2][完整韧性] R_ethical=0.847 C=0.965 robust=0.102 recover=0.650 BSP=1.00 abandoned={} tau_abandon=- verdict=ACCEPT nq[HEALTHY] convB=0.040→0.052 volB=0.025→0.081
+2026-09-05 14:58:38,669 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:03:29,951 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:05:00,483 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 15:06:52,147 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 15:09:51,447 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 15:11:48,988 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:13:27,269 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:15:12,924 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:16:58,091 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:18:44,080 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:20:26,141 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:22:11,314 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:24:06,359 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:25:56,197 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:27:38,605 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:29:18,849 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:30:59,861 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:32:39,994 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:35:23,552 INFO ethicalguard: [PQ-3-7] ERS=0.55 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:38:12,811 INFO ethicalguard: [PQ-3-7] ERS=0.55 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 15:41:21,628 INFO ethicalguard: [PQ-3-7] ERS=0.55 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-05 15:45:47,451 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:47:18,430 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:48:48,948 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:50:18,109 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:51:44,375 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:53:24,446 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:57:55,596 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 15:59:28,623 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=preference_family action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 16:02:04,295 INFO ethicalguard: [PQ-3-7] ERS=0.54 type=none action=review_24h gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 16:04:30,738 INFO ethicalguard: [PQ-3-7][完整韧性] R_ethical=0.745 C=0.946 robust=0.071 recover=0.296 BSP=1.00 abandoned={'justice': 'authority'} tau_abandon=0.75 verdict=ACCEPT nq[DEGRADED] convB=0.280→0.119 volB=0.590→0.227
+2026-09-05 16:04:30,769 INFO ethicalguard: [PQ-3-8] ERS=0.62 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 16:06:45,285 INFO ethicalguard: [PQ-3-8] ERS=0.62 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-05 16:08:16,056 INFO ethicalguard: [PQ-3-8] ERS=0.62 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']

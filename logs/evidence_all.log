@@ -1,0 +1,322 @@
+nohup: ignoring input
+===== [0] 环境检查 Fri Sep  4 10:56:16 UTC 2026 =====
+Qwen3-8B vLLM (8003) OK
+0, 24564, 1745
+1, 24564, 24197
+GPU 状态如上
+===== [1] E1 底线激活实验（local, Qwen3-8B）Fri Sep  4 10:56:16 UTC 2026 =====
+2026-09-04 10:56:19,941 INFO ethicalguard: [FLOOR-1-refusal] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 10:59:32,191 INFO ethicalguard: [FLOOR-1-refusal] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:02:41,912 INFO ethicalguard: [FLOOR-1-refusal] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:05:52,980 INFO ethicalguard: [FLOOR-2-triage] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:07:31,501 INFO ethicalguard: [FLOOR-2-triage] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:09:13,867 INFO ethicalguard: [FLOOR-2-triage] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:10:56,415 INFO ethicalguard: [FLOOR-3-family] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:12:30,576 INFO ethicalguard: [FLOOR-3-family] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:17:06,809 INFO ethicalguard: [FLOOR-3-family] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:21:44,122 INFO ethicalguard: [FLOOR-4-jehovah] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:23:53,550 INFO ethicalguard: [FLOOR-4-jehovah] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:27:21,963 INFO ethicalguard: [FLOOR-4-jehovah] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:30:51,869 INFO ethicalguard: [FLOOR-5-research] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:34:10,792 INFO ethicalguard: [FLOOR-5-research] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:37:24,409 INFO ethicalguard: [FLOOR-5-research] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:40:47,214 INFO ethicalguard: [PQ-1-2] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:42:09,078 INFO ethicalguard: [PQ-3-7] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:44:21,936 INFO ethicalguard: [PQ-3-8] ERS=0.70 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:46:25,962 INFO ethicalguard: [PQ-4-9] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:48:02,787 INFO ethicalguard: [PQ-4-10] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:49:46,902 INFO ethicalguard: [MEE-equilibrium-0] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:51:48,947 INFO ethicalguard: [MEE-equilibrium-1] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:53:58,185 INFO ethicalguard: [MEE-equilibrium-2] ERS=0.80 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 11:55:31,908 INFO ethicalguard: [MEE-equilibrium-3] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 11:57:30,209 INFO ethicalguard: [MEE-equilibrium-4] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:00:19,404 INFO ethicalguard: [MEE-equilibrium-5] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:02:14,770 INFO ethicalguard: [MEE-equilibrium-6] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:05:03,099 INFO ethicalguard: [MEE-equilibrium-7] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:07:35,052 INFO ethicalguard: [MEE-equilibrium-8] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:09:30,315 INFO ethicalguard: [MEE-equilibrium-9] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:11:18,989 INFO ethicalguard: [VITAL-mc-C_001] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:13:22,005 INFO ethicalguard: [VITAL-mc-C_026] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:15:31,525 INFO ethicalguard: [VITAL-mc-C_043] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:17:44,518 INFO ethicalguard: [VITAL-mc-C_052] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:19:01,365 INFO ethicalguard: [VITAL-mc-C_081] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-04 12:20:00,844 INFO ethicalguard: [VITAL-mc-C_095] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:23:19,957 INFO ethicalguard: [MEQA-open-0] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:24:58,346 INFO ethicalguard: [MEQA-open-1] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:26:32,064 INFO ethicalguard: [MEQA-open-2] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:28:16,390 INFO ethicalguard: [MEQA-open-4] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:30:52,750 INFO ethicalguard: [MEQA-open-5] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:32:32,219 INFO ethicalguard: [MEQA-open-6] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:34:10,363 INFO ethicalguard: [MEQA-open-8] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:35:56,250 INFO ethicalguard: [MEQA-open-9] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:37:39,519 INFO ethicalguard: [LLMEvalMed-9-1] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:38:57,690 INFO ethicalguard: [LLMEvalMed-12-1] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:42:12,220 INFO ethicalguard: [LLMEvalMed-13-1] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:43:44,339 INFO ethicalguard: [LLMEvalMed-14-1] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:46:50,065 INFO ethicalguard: [LLMEvalMed-18-1] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 12:48:32,658 INFO ethicalguard: [LLMEvalMed-21-1] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+===== E1 底线激活实验（mode=local，5 个压力场景）=====
+审计底线 AUDIT_FLOORS=[0.15, 0.2, 0.15, 0.2]  OFF=全0（无约束）  ON=默认/高
+场景              档位                     终态[B,N,A,J]     跌破底线?     KKT   仲裁
+------------------------------------------------------------------------------
+FLOOR-1-refusal OFF      [0.224 0.212 0.296 0.269]      None 2.3e-07False
+FLOOR-1-refusal ON       [0.224 0.212 0.296 0.269]      None 2.3e-07False
+FLOOR-1-refusal HIGH     [0.235 0.228 0.276 0.262]      None 2.7e-01False
+FLOOR-2-triage  OFF      [0.22  0.264 0.241 0.276]      None 1.6e-07False
+FLOOR-2-triage  ON       [0.22  0.251 0.249 0.28 ]      None 1.6e-07False
+FLOOR-2-triage  HIGH     [0.23  0.251 0.249 0.269]      None 2.6e-01False
+FLOOR-3-family  OFF      [0.218 0.239 0.248 0.295]      None 2.2e-07 True
+FLOOR-3-family  ON       [0.195 0.237 0.276 0.292]      None 2.1e-07False
+FLOOR-3-family  HIGH     [0.212 0.243 0.268 0.277]      None 2.7e-01False
+FLOOR-4-jehovah OFF      [0.231 0.213 0.29  0.267]      None 2.1e-07False
+FLOOR-4-jehovah ON       [0.235 0.213 0.286 0.266]      None 2.3e-07False
+FLOOR-4-jehovah HIGH     [0.241 0.228 0.271 0.26 ]      None 2.6e-01False
+FLOOR-5-researchOFF      [0.203 0.263 0.24  0.294]      None 2.6e-07 True
+FLOOR-5-researchON       [0.203 0.263 0.24  0.294]      None 2.6e-07 True
+FLOOR-5-researchHIGH     [0.213 0.257 0.239 0.291]      None 2.7e-01 True
+
+===== 激活证据汇总 =====
+OFF（无底线约束）: 0/5 场景跌破审计底线 → 违反率 0%
+ON（默认底线约束）: 0/5 场景跌破审计底线 → 违反率 0%
+KKT 证据：OFF 均值 2.17e-07（约束未参与→乘子≈0）
+          ON  均值 2.21e-07
+HIGH 档 KKT 均值 2.68e-01——乘子非零=约束激活中
+HIGH 档各场景最小维度均值 0.222（越接近 0.30=约束越把向量拉向底线）
+⚠️ 规则模式场景天然平衡，OFF 未跌破——约束激活需 LLM 模式（模型真正偏执）或 HIGH 底线档。rule 模式只验证机制通道。
+OFF→HIGH 终态平均位移 0.042（>0 且 KKT 上升 = 底线约束真的在改变均衡，非摆设）
+
+===== 真实场景：提案层 vs 终态层底线违反（修复证据）=====
+提案层（协商轮内某 agent 跌破底线）: 22/35 场景
+终态层（MANE 输出守住底线）        : 0/35 场景
+跌破底线的 agent 分布: {'physician': 20, 'ethics_committee': 10, 'patient': 12, 'family': 9, 'hospital_admin': 3}
+✅ **修复证据**：提案层普遍违反（各方天然偏执）→ MANE 终态全守住——'底线=GNE 共享约束+仲裁融合'每场景都在把共识拉回底线之上，约束非摆设。
+[E1 done] Fri Sep  4 12:51:05 UTC 2026
+===== [2] E4 指标校准（读 local 产物，纯分析）Fri Sep  4 12:51:05 UTC 2026 =====
+===== E4a: FDBI 退化校准（证明 0.892 非机械分数）=====
+系统                 FDBI 均值说明                            
+恒定 0.25             1.0000  理想平衡（无信息）
+均匀随机                0.3225  随机也能拿的分
+单极 0.97             0.0000  极度偏斜
+双极冲突                0.0000  两派对立
+随机游走                0.4375  无协商
+MANE 实际             0.8891  本系统 35 场景
+解读：MANE 应显著高于随机游走/单极/双极；若接近均匀随机说明 FDBI 区分度低。
+
+===== E4b: L3 盒机械抬升检查（clip 敏感性）=====
+把终态 clip 到不同'盒'内（模拟约束盒作用），看 FDBI 变化：
+  clip 到 无盒[0,1]            FDBI=0.8891
+  clip 到 默认盒[0.15/0.2]      FDBI=0.8891
+  clip 到 宽盒[0.1,0.4]        FDBI=0.8891
+  clip 到 窄盒[0.2,0.3]        FDBI=0.8928
+解读：若 clip 到默认盒与无盒的 FDBI 差异大 → 约束盒机械抬升嫌疑；若差异小 → MANE 的平衡是协商产物而非盒的作用。
+
+===== E4c: 双轴主表（保障轴 vs 满意度轴）=====
+场景                    保障轴                         满意度     
+                          底线违     可行    KKT    仲裁     min
+PQ-1-2                      0   True1.7e-07 False   0.888
+PQ-3-7                      0   True1.2e-07 False   0.824
+PQ-3-8                      0   True6.9e-08  True   0.913
+PQ-4-9                      0   True1.5e-07  True   0.672
+PQ-4-10                     0   True1.4e-07  True   0.743
+MEE-equilibrium-0           0   True1.0e-07  True   0.882
+MEE-equilibrium-1           0   True1.2e-07  True   0.817
+MEE-equilibrium-2           0   True9.4e-08 False   0.810
+MEE-equilibrium-3           0   True1.1e-07  True   0.817
+MEE-equilibrium-4           0   True1.0e-07  True   0.789
+MEE-equilibrium-5           0   True1.3e-07  True   0.777
+MEE-equilibrium-6           0   True1.2e-07  True   0.864
+MEE-equilibrium-7           0   True1.2e-07  True   0.757
+MEE-equilibrium-8           0   True1.2e-07  True   0.862
+MEE-equilibrium-9           0   True1.0e-07  True   0.791
+VITAL-mc-C_001              0   True1.1e-07  True   0.894
+VITAL-mc-C_026              0   True8.9e-08 False   0.942
+VITAL-mc-C_043              0   True1.2e-07  True   0.838
+VITAL-mc-C_052              0   True1.1e-07 False   0.913
+VITAL-mc-C_081              0   True1.4e-07  True   0.706
+VITAL-mc-C_095              0   True1.1e-07 False   0.891
+MEQA-open-0                 0   True1.1e-07  True   0.905
+MEQA-open-1                 0   True1.2e-07 False   0.895
+MEQA-open-2                 0   True1.0e-07 False   0.896
+MEQA-open-4                 0   True1.4e-07 False   0.848
+MEQA-open-5                 0   True1.0e-07 False   0.884
+MEQA-open-6                 0   True1.2e-07 False   0.889
+MEQA-open-8                 0   True1.1e-07 False   0.875
+MEQA-open-9                 0   True1.3e-07 False   0.890
+LLMEvalMed-9-1              0   True1.5e-07 False   0.857
+LLMEvalMed-12-1             0   True1.6e-07 False   0.862
+LLMEvalMed-13-1             0   True1.2e-07 False   0.782
+LLMEvalMed-14-1             0   True1.6e-07 False   0.877
+LLMEvalMed-18-1             0   True1.2e-07 False   0.919
+LLMEvalMed-21-1             0   True1.4e-07 False   0.872
+
+底线违反场景数: 0/35  资源可行率: 100%
+解读：双轴报告——主结果看'底线违 0 + 可行 100% + KKT 达标'（保障），满意度 min 看'对最脆弱方是否可接受'（软质量），FDBI 仅作诊断。
+[E4 done] Fri Sep  4 12:51:05 UTC 2026
+===== [3] E2 真实 LLM 基线（local, Qwen3-8B，预计 3-4h）Fri Sep  4 12:51:05 UTC 2026 =====
+2026-09-04 12:51:55,201 INFO ethicalguard: [PQ-1-2] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:54:04,035 INFO ethicalguard: [PQ-3-7] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 12:57:17,538 INFO ethicalguard: [PQ-3-8] ERS=0.70 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 13:00:14,508 INFO ethicalguard: [PQ-4-9] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:02:39,653 INFO ethicalguard: [PQ-4-10] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:05:18,036 INFO ethicalguard: [MEE-equilibrium-0] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:08:18,592 INFO ethicalguard: [MEE-equilibrium-1] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:11:28,355 INFO ethicalguard: [MEE-equilibrium-2] ERS=0.80 type=medical_preference action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 13:13:57,894 INFO ethicalguard: [MEE-equilibrium-3] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:16:46,366 INFO ethicalguard: [MEE-equilibrium-4] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:19:26,687 INFO ethicalguard: [MEE-equilibrium-5] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:22:15,679 INFO ethicalguard: [MEE-equilibrium-6] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:25:56,294 INFO ethicalguard: [MEE-equilibrium-7] ERS=0.75 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:29:19,335 INFO ethicalguard: [MEE-equilibrium-8] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:32:04,450 INFO ethicalguard: [MEE-equilibrium-9] ERS=0.85 type=medical_resource action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:34:33,764 INFO ethicalguard: [VITAL-mc-C_001] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 13:37:15,907 INFO ethicalguard: [VITAL-mc-C_026] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 13:39:56,877 INFO ethicalguard: [VITAL-mc-C_043] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:44:31,484 INFO ethicalguard: [VITAL-mc-C_052] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 13:46:29,819 INFO ethicalguard: [VITAL-mc-C_081] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-04 13:48:16,134 INFO ethicalguard: [VITAL-mc-C_095] ERS=0.80 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 13:51:10,823 INFO ethicalguard: [MEQA-open-0] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:55:13,753 INFO ethicalguard: [MEQA-open-1] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 13:58:30,161 INFO ethicalguard: [MEQA-open-2] ERS=0.10 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:01:04,151 INFO ethicalguard: [MEQA-open-4] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:03:35,979 INFO ethicalguard: [MEQA-open-5] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:06:12,192 INFO ethicalguard: [MEQA-open-6] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:08:36,522 INFO ethicalguard: [MEQA-open-8] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:11:14,125 INFO ethicalguard: [MEQA-open-9] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:13:39,778 INFO ethicalguard: [LLMEvalMed-9-1] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 14:15:48,483 INFO ethicalguard: [LLMEvalMed-12-1] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:20:06,163 INFO ethicalguard: [LLMEvalMed-13-1] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-04 14:22:24,047 INFO ethicalguard: [LLMEvalMed-14-1] ERS=0.85 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:26:22,519 INFO ethicalguard: [LLMEvalMed-18-1] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:28:52,982 INFO ethicalguard: [LLMEvalMed-21-1] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-04 14:32:16,782 INFO ethicalguard: saved 105 rows -> runs/real_llm_baselines.jsonl
+===== E2 真实 LLM 基线对比（mode=local，场景 35）=====
+三方法：single_llm_llm（真·单LLM）/ medagents_style（无保障协作）/ MANE（完整）
+场景                    方法                 FDBI    底线违  t   满意min   LLM调用
+PQ-1-2                single_llm_llm    0.755  0.000  2       -       1
+PQ-1-2                medagents_style   0.902  0.000  2       -       5
+PQ-1-2                MANE              0.832  0.000  1   0.888       -
+PQ-3-7                single_llm_llm    0.684  0.250  2       -       1
+PQ-3-7                medagents_style   0.765  0.250  2       -       5
+PQ-3-7                MANE              0.895  0.000  2   0.824       -
+PQ-3-8                single_llm_llm    0.490  0.250  2       -       1
+PQ-3-8                medagents_style   0.681  0.250  2       -       5
+PQ-3-8                MANE              0.872  0.000  2   0.913       -
+PQ-4-9                single_llm_llm    0.553  0.250  2       -       1
+PQ-4-9                medagents_style   0.667  0.250  2       -       5
+PQ-4-9                MANE              0.873  0.000  2   0.672       -
+PQ-4-10               single_llm_llm    0.553  0.250  2       -       1
+PQ-4-10               medagents_style   0.640  0.250  2       -       5
+PQ-4-10               MANE              0.873  0.000  2   0.743       -
+MEE-equilibrium-0     single_llm_llm    0.717  0.000  2       -       1
+MEE-equilibrium-0     medagents_style   0.727  0.000  2       -       5
+MEE-equilibrium-0     MANE              0.891  0.000  2   0.882       -
+MEE-equilibrium-1     single_llm_llm    0.717  0.000  3       -       1
+MEE-equilibrium-1     medagents_style   0.807  0.000  2       -       5
+MEE-equilibrium-1     MANE              0.890  0.000  3   0.817       -
+MEE-equilibrium-2     single_llm_llm    0.717  0.000  2       -       1
+MEE-equilibrium-2     medagents_style   0.823  0.000  2       -       5
+MEE-equilibrium-2     MANE              0.826  0.000  2   0.810       -
+MEE-equilibrium-3     single_llm_llm    0.684  0.000  2       -       1
+MEE-equilibrium-3     medagents_style   0.767  0.000  2       -       5
+MEE-equilibrium-3     MANE              0.890  0.000  2   0.817       -
+MEE-equilibrium-4     single_llm_llm    0.717  0.000  2       -       1
+MEE-equilibrium-4     medagents_style   0.805  0.000  2       -       5
+MEE-equilibrium-4     MANE              0.889  0.000  2   0.840       -
+MEE-equilibrium-5     single_llm_llm    0.684  0.000  3       -       1
+MEE-equilibrium-5     medagents_style   0.752  0.000  3       -       5
+MEE-equilibrium-5     MANE              0.891  0.000  2   0.777       -
+MEE-equilibrium-6     single_llm_llm    0.684  0.000  2       -       1
+MEE-equilibrium-6     medagents_style   0.762  0.000  2       -       5
+MEE-equilibrium-6     MANE              0.908  0.000  2   0.864       -
+MEE-equilibrium-7     single_llm_llm    0.717  0.000  2       -       1
+MEE-equilibrium-7     medagents_style   0.768  0.000  2       -       5
+MEE-equilibrium-7     MANE              0.908  0.000  2   0.779       -
+MEE-equilibrium-8     single_llm_llm    0.684  0.000  2       -       1
+MEE-equilibrium-8     medagents_style   0.806  0.000  2       -       5
+MEE-equilibrium-8     MANE              0.890  0.000  2   0.843       -
+MEE-equilibrium-9     single_llm_llm    0.510  0.250  2       -       1
+MEE-equilibrium-9     medagents_style   0.694  0.000  2       -       5
+MEE-equilibrium-9     MANE              0.889  0.000  2   0.791       -
+VITAL-mc-C_001        single_llm_llm    0.684  0.000  2       -       1
+VITAL-mc-C_001        medagents_style   0.753  0.250  2       -       5
+VITAL-mc-C_001        MANE              0.858  0.000  3   0.894       -
+VITAL-mc-C_026        single_llm_llm    0.684  0.000  2       -       1
+VITAL-mc-C_026        medagents_style   0.777  0.000  2       -       5
+VITAL-mc-C_026        MANE              0.897  0.000  2   0.936       -
+VITAL-mc-C_043        single_llm_llm    0.684  0.250  2       -       1
+VITAL-mc-C_043        medagents_style   0.823  0.000  2       -       5
+VITAL-mc-C_043        MANE              0.827  0.000  3   0.847       -
+VITAL-mc-C_052        single_llm_llm    0.576  0.250  1       -       1
+VITAL-mc-C_052        medagents_style   0.706  0.250  1       -       5
+VITAL-mc-C_052        MANE              0.887  0.000  1   0.913       -
+VITAL-mc-C_081        single_llm_llm    0.384  0.500  3       -       1
+VITAL-mc-C_081        medagents_style   0.691  0.250  3       -       5
+VITAL-mc-C_081        MANE              0.820  0.000  3   0.706       -
+VITAL-mc-C_095        single_llm_llm    0.684  0.000  2       -       1
+VITAL-mc-C_095        medagents_style   0.815  0.000  2       -       5
+VITAL-mc-C_095        MANE              0.900  0.000  2   0.898       -
+MEQA-open-0           single_llm_llm    0.684  0.250  1       -       1
+MEQA-open-0           medagents_style   0.867  0.000  1       -       5
+MEQA-open-0           MANE              0.973  0.000  1   0.886       -
+MEQA-open-1           single_llm_llm    0.684  0.250  1       -       1
+MEQA-open-1           medagents_style   0.867  0.000  1       -       5
+MEQA-open-1           MANE              0.973  0.000  0   0.875       -
+MEQA-open-2           single_llm_llm    0.859  0.000  0       -       1
+MEQA-open-2           medagents_style   0.906  0.000  1       -       5
+MEQA-open-2           MANE              0.917  0.000  1   0.889       -
+MEQA-open-4           single_llm_llm    0.859  0.000  0       -       1
+MEQA-open-4           medagents_style   0.883  0.000  1       -       5
+MEQA-open-4           MANE              0.910  0.000  1   0.894       -
+MEQA-open-5           single_llm_llm    0.859  0.000  0       -       1
+MEQA-open-5           medagents_style   0.883  0.000  1       -       5
+MEQA-open-5           MANE              0.910  0.000  1   0.894       -
+MEQA-open-6           single_llm_llm    0.684  0.000  0       -       1
+MEQA-open-6           medagents_style   0.853  0.000  0       -       5
+MEQA-open-6           MANE              0.935  0.000  1   0.889       -
+MEQA-open-8           single_llm_llm    0.859  0.000  0       -       1
+MEQA-open-8           medagents_style   0.898  0.000  2       -       5
+MEQA-open-8           MANE              0.917  0.000  1   0.875       -
+MEQA-open-9           single_llm_llm    0.684  0.250  1       -       1
+MEQA-open-9           medagents_style   0.899  0.000  2       -       5
+MEQA-open-9           MANE              0.933  0.000  1   0.890       -
+LLMEvalMed-9-1        single_llm_llm    0.755  0.000  1       -       1
+LLMEvalMed-9-1        medagents_style   0.898  0.000  1       -       5
+LLMEvalMed-9-1        MANE              0.885  0.000  1   0.857       -
+LLMEvalMed-12-1       single_llm_llm    0.626  0.250  2       -       1
+LLMEvalMed-12-1       medagents_style   0.912  0.000  2       -       5
+LLMEvalMed-12-1       MANE              0.878  0.000  2   0.862       -
+LLMEvalMed-13-1       single_llm_llm    0.368  0.250  2       -       1
+LLMEvalMed-13-1       medagents_style   0.613  0.250  2       -       5
+LLMEvalMed-13-1       MANE              0.906  0.000  2   0.782       -
+LLMEvalMed-14-1       single_llm_llm    0.626  0.250  2       -       1
+LLMEvalMed-14-1       medagents_style   0.882  0.000  2       -       5
+LLMEvalMed-14-1       MANE              0.887  0.000  2   0.877       -
+LLMEvalMed-18-1       single_llm_llm    0.626  0.250  2       -       1
+LLMEvalMed-18-1       medagents_style   0.906  0.000  2       -       5
+LLMEvalMed-18-1       MANE              0.876  0.000  2   0.919       -
+LLMEvalMed-21-1       single_llm_llm    0.684  0.250  1       -       1
+LLMEvalMed-21-1       medagents_style   0.898  0.000  2       -       5
+LLMEvalMed-21-1       MANE              0.918  0.000  0   0.867       -
+
+===== 汇总（同场景均值）=====
+方法                 n    FDBI     底线违     违反场景率
+single_llm_llm    35   0.669   0.121     45.7%
+medagents_style   35   0.803   0.057     22.9%
+MANE              35   0.892   0.000      0.0%
+[E2 done] Fri Sep  4 14:32:17 UTC 2026
+===== [4] 跨模型：Llama-3.1-8B（MC4，需空闲显存 ≥16GB）Fri Sep  4 14:32:17 UTC 2026 =====
+[已生成] configs/config_llama31.yaml  model=Meta-Llama-3.1-8B-Instruct
+  path=/mnt/model/Meta-Llama-3.1-8B-Instruct
+  base_url=http://localhost:8012/v1
+[启动]  python scripts/00_serve_local.py --config configs/config_llama31.yaml --port 8012 --dry-run
+[校验]  Config.load(configs/config_llama31.yaml) → mode=local model=Meta-Llama-3.1-8B-Instruct path=/mnt/model/Meta-Llama-3.1-8B-Instruct
+[已生成] configs/config_llama31.yaml  model=Meta-Llama-3.1-8B-Instruct
+  path=/mnt/model/Meta-Llama-3.1-8B-Instruct
+  base_url=http://localhost:8012/v1
+[启动]  python scripts/00_serve_local.py --config configs/config_llama31.yaml --port 8012 --dry-run
+[校验]  Config.load(configs/config_llama31.yaml) → mode=local model=Meta-Llama-3.1-8B-Instruct path=/mnt/model/Meta-Llama-3.1-8B-Instruct
+使用 GPU 1 启动 Llama-3.1-8B（8012）
+Llama 启动失败（见 logs/vllm_llama31.log）→ 跳过跨模型
+===== 全部完成 Fri Sep  4 14:35:17 UTC 2026 =====
+产物: runs/e1_floor_activation.txt / runs/e2_baselines.txt / runs/e4_calibration.txt
+       runs/real_llm_baselines.jsonl / runs/mane_llama31.jsonl / runs/real_llm_baselines_llama31.jsonl

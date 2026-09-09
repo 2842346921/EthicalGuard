@@ -1,0 +1,73 @@
+--- PQ-368-756: short=427 字符, full=1667 字符
+    pqa short=0.75 full=0.875 | cov short=0.3 full=0.3
+--- PQ-371-764: short=578 字符, full=1495 字符
+    pqa short=1.0 full=1.0 | cov short=1.0 full=1.0
+--- PQ-369-758: short=1456 字符, full=2500 字符
+    pqa short=0.2 full=0.6 | cov short=0.4 full=0.6
+--- PQ-448-887: short=521 字符, full=2500 字符
+    pqa short=0.75 full=0.8333333333333334 | cov short=1.0 full=1.0
+--- PQ-487-953: short=503 字符, full=1977 字符
+    pqa short=0.8 full=0.9 | cov short=0.7 full=0.7
+--- PQ-63-135: short=436 字符, full=1904 字符
+    pqa short=1.0 full=1.0 | cov short=1.0 full=1.0
+--- PQ-9-22: short=386 字符, full=2369 字符
+    pqa short=0.8333333333333334 full=1.0 | cov short=0.6 full=0.7
+--- PQ-49-101: short=474 字符, full=2183 字符
+    pqa short=0.0 full=0.0 | cov short=0.3 full=0.3
+--- PQ-273-559: short=337 字符, full=1560 字符
+    pqa short=0.2 full=0.6 | cov short=0.2 full=0.6
+--- PQ-474-931: short=513 字符, full=2500 字符
+    pqa short=0.8 full=0.4 | cov short=1.0 full=1.0
+--- PQ-528-1022: short=493 字符, full=2024 字符
+    pqa short=0.5 full=0.5 | cov short=0.6 full=0.7
+--- PQ-863-1400: short=454 字符, full=2500 字符
+    pqa short=0.375 full=0.5 | cov short=0.0 full=0.0
+--- PQ-334-688: short=490 字符, full=1906 字符
+    pqa short=0.3 full=1.0 | cov short=0.3 full=0.3
+--- PQ-348-722: short=1418 字符, full=2500 字符
+    pqa short=0.16666666666666666 full=0.16666666666666666 | cov short=0.0 full=0.0
+--- PQ-299-609: short=461 字符, full=2246 字符
+    pqa short=1.0 full=1.0 | cov short=0.6 full=0.7
+--- PQ-698-1217: short=419 字符, full=1650 字符
+    pqa short=0.6666666666666666 full=0.5 | cov short=0.6 full=0.6
+--- PQ-178-352: short=463 字符, full=2500 字符
+    pqa short=0.9 full=0.9 | cov short=0.4 full=0.6
+--- PQ-258-526: short=1607 字符, full=2500 字符
+    pqa short=1.0 full=1.0 | cov short=1.0 full=1.0
+--- PQ-288-586: short=562 字符, full=1723 字符
+    pqa short=0.0 full=0.16666666666666666 | cov short=0.0 full=0.6
+--- PQ-322-661: short=520 字符, full=1754 字符
+    pqa short=1.0 full=1.0 | cov short=1.0 full=1.0
+--- PQ-303-616: short=368 字符, full=1483 字符
+    pqa short=0.4 full=0.4 | cov short=0.6 full=0.6
+--- PQ-313-640: short=1312 字符, full=2500 字符
+    pqa short=0.6 full=0.6 | cov short=0.7 full=0.6
+--- PQ-526-1019: short=1213 字符, full=2500 字符
+    pqa short=0.8 full=0.9 | cov short=0.7 full=0.6
+--- PQ-242-486: short=356 字符, full=2500 字符
+    pqa short=0.0 full=0.16666666666666666 | cov short=0.0 full=0.0
+--- PQ-286-581: short=335 字符, full=1329 字符
+    pqa short=0.25 full=0.25 | cov short=0.6 full=0.6
+--- PQ-44-92: short=693 字符, full=1696 字符
+    pqa short=0.75 full=0.875 | cov short=0.6 full=1.0
+--- PQ-681-1202: short=581 字符, full=1824 字符
+    pqa short=0.25 full=0.25 | cov short=0.7 full=0.7
+--- PQ-351-727: short=473 字符, full=1989 字符
+    pqa short=0.125 full=0.125 | cov short=0.3 full=0.0
+--- PQ-722-1256: short=1041 字符, full=2500 字符
+    pqa short=1.0 full=1.0 | cov short=1.0 full=1.0
+
+===== 配对：full(完整共识论证) − short(委员会) =====
+  官方协议     n= 29  full均值=0.566 short均值=0.638  Δ(full−short)=-0.072
+  要点覆盖     n= 29  full均值=0.559 short均值=0.614  Δ(full−short)=-0.055
+  决策明确     n= 29  full均值=0.710 short均值=0.700  Δ(full−short)=+0.010
+
+===== 对照：基线 pqa_official（cross_method_scores）=====
+  single_llm_llm     n= 30  pqa均值=0.539
+  neutral_single_llm n= 30  pqa均值=0.627
+  medagents_style    n= 29  pqa均值=0.578
+  MANE(short)        n= 29  pqa均值=0.573
+  MANE(full)         n= 29  pqa均值=0.638
+
+口径：Δ>0 = 完整共识论证提升官方内容分。full ≥ 基线 → 缺口来自'输出界面只取委员会'；
+full ≈ short → 缺口在协商产出本身（limitation 如实写）。产物: runs/mane_rationale_expand.jsonl

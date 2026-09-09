@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/zhangheng2025/EthicalGuard/scripts/25_case_study.py", line 128, in <module>
+    main()
+  File "/mnt/zhangheng2025/EthicalGuard/scripts/25_case_study.py", line 41, in main
+    from ethicalguard.data import load_scenarios_from_jsonl
+ModuleNotFoundError: No module named 'ethicalguard'

@@ -1,0 +1,59 @@
+===== E4a: FDBI 退化校准（证明 0.892 非机械分数）=====
+系统                 FDBI 均值说明                            
+恒定 0.25             1.0000  理想平衡（无信息）
+均匀随机                0.3225  随机也能拿的分
+单极 0.97             0.0000  极度偏斜
+双极冲突                0.0000  两派对立
+随机游走                0.4375  无协商
+MANE 实际             0.8891  本系统 35 场景
+解读：MANE 应显著高于随机游走/单极/双极；若接近均匀随机说明 FDBI 区分度低。
+
+===== E4b: L3 盒机械抬升检查（clip 敏感性）=====
+把终态 clip 到不同'盒'内（模拟约束盒作用），看 FDBI 变化：
+  clip 到 无盒[0,1]            FDBI=0.8891
+  clip 到 默认盒[0.15/0.2]      FDBI=0.8891
+  clip 到 宽盒[0.1,0.4]        FDBI=0.8891
+  clip 到 窄盒[0.2,0.3]        FDBI=0.8928
+解读：若 clip 到默认盒与无盒的 FDBI 差异大 → 约束盒机械抬升嫌疑；若差异小 → MANE 的平衡是协商产物而非盒的作用。
+
+===== E4c: 双轴主表（保障轴 vs 满意度轴）=====
+场景                    保障轴                         满意度     
+                          底线违     可行    KKT    仲裁     min
+PQ-1-2                      0   True1.7e-07 False   0.888
+PQ-3-7                      0   True1.2e-07 False   0.824
+PQ-3-8                      0   True6.9e-08  True   0.913
+PQ-4-9                      0   True1.5e-07  True   0.672
+PQ-4-10                     0   True1.4e-07  True   0.743
+MEE-equilibrium-0           0   True1.0e-07  True   0.882
+MEE-equilibrium-1           0   True1.2e-07  True   0.817
+MEE-equilibrium-2           0   True9.4e-08 False   0.810
+MEE-equilibrium-3           0   True1.1e-07  True   0.817
+MEE-equilibrium-4           0   True1.0e-07  True   0.789
+MEE-equilibrium-5           0   True1.3e-07  True   0.777
+MEE-equilibrium-6           0   True1.2e-07  True   0.864
+MEE-equilibrium-7           0   True1.2e-07  True   0.757
+MEE-equilibrium-8           0   True1.2e-07  True   0.862
+MEE-equilibrium-9           0   True1.0e-07  True   0.791
+VITAL-mc-C_001              0   True1.1e-07  True   0.894
+VITAL-mc-C_026              0   True8.9e-08 False   0.942
+VITAL-mc-C_043              0   True1.2e-07  True   0.838
+VITAL-mc-C_052              0   True1.1e-07 False   0.913
+VITAL-mc-C_081              0   True1.4e-07  True   0.706
+VITAL-mc-C_095              0   True1.1e-07 False   0.891
+MEQA-open-0                 0   True1.1e-07  True   0.905
+MEQA-open-1                 0   True1.2e-07 False   0.895
+MEQA-open-2                 0   True1.0e-07 False   0.896
+MEQA-open-4                 0   True1.4e-07 False   0.848
+MEQA-open-5                 0   True1.0e-07 False   0.884
+MEQA-open-6                 0   True1.2e-07 False   0.889
+MEQA-open-8                 0   True1.1e-07 False   0.875
+MEQA-open-9                 0   True1.3e-07 False   0.890
+LLMEvalMed-9-1              0   True1.5e-07 False   0.857
+LLMEvalMed-12-1             0   True1.6e-07 False   0.862
+LLMEvalMed-13-1             0   True1.2e-07 False   0.782
+LLMEvalMed-14-1             0   True1.6e-07 False   0.877
+LLMEvalMed-18-1             0   True1.2e-07 False   0.919
+LLMEvalMed-21-1             0   True1.4e-07 False   0.872
+
+底线违反场景数: 0/35  资源可行率: 100%
+解读：双轴报告——主结果看'底线违 0 + 可行 100% + KKT 达标'（保障），满意度 min 看'对最脆弱方是否可接受'（软质量），FDBI 仅作诊断。

@@ -1,0 +1,105 @@
+{"scenario": "PQ-1-2", "method": "single_llm_llm", "vector": [0.35, 0.25, 0.2, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-1-2", "method": "medagents_style", "vector": [0.29200000000000004, 0.238, 0.22999999999999998, 0.24000000000000005], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-1-2", "method": "MANE", "vector": [0.20232897053322293, 0.30086557690872057, 0.2816793589267882, 0.2151260936312681], "t": 1, "sat_min": 0.8877709882616075, "arb": false}
+{"scenario": "PQ-3-7", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-3-7", "method": "medagents_style", "vector": [0.32000000000000006, 0.29000000000000004, 0.22000000000000003, 0.17], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-3-7", "method": "MANE", "vector": [0.28620651520388646, 0.22878958859565174, 0.2635712259704973, 0.22143267022996455], "t": 2, "sat_min": 0.8244344454931459, "arb": false}
+{"scenario": "PQ-3-8", "method": "single_llm_llm", "vector": [0.4, 0.35, 0.15, 0.1], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-3-8", "method": "medagents_style", "vector": [0.34, 0.31, 0.21000000000000002, 0.13999999999999999], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-3-8", "method": "MANE", "vector": [0.24481086184135864, 0.23994285536623677, 0.30153083442529566, 0.21371544836710893], "t": 2, "sat_min": 0.9128888955423816, "arb": true}
+{"scenario": "PQ-4-9", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-4-9", "method": "medagents_style", "vector": [0.35000000000000003, 0.30000000000000004, 0.22000000000000003, 0.13], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-4-9", "method": "MANE", "vector": [0.2291955144693494, 0.2281823785284536, 0.30469540782406546, 0.23792669917813158], "t": 2, "sat_min": 0.6715498867891836, "arb": true}
+{"scenario": "PQ-4-10", "method": "single_llm_llm", "vector": [0.4000000000000001, 0.30000000000000004, 0.20000000000000004, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "PQ-4-10", "method": "medagents_style", "vector": [0.36, 0.3, 0.22, 0.12], "t": 2, "llm_calls": 5}
+{"scenario": "PQ-4-10", "method": "MANE", "vector": [0.22919551177523956, 0.22818237797350982, 0.30469540261259087, 0.23792670763865975], "t": 2, "sat_min": 0.7431718261634359, "arb": true}
+{"scenario": "MEE-equilibrium-0", "method": "single_llm_llm", "vector": [0.35, 0.25, 0.15, 0.25], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-0", "method": "medagents_style", "vector": [0.27, 0.24, 0.15, 0.34], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-0", "method": "MANE", "vector": [0.2356104591499007, 0.22997038861381708, 0.29704487622079756, 0.23737427601548466], "t": 2, "sat_min": 0.8822779427916836, "arb": true}
+{"scenario": "MEE-equilibrium-1", "method": "single_llm_llm", "vector": [0.35, 0.25, 0.15, 0.25], "t": 3, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-1", "method": "medagents_style", "vector": [0.31, 0.25, 0.176, 0.264], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-1", "method": "MANE", "vector": [0.2354151540397023, 0.2298027572653526, 0.297547481607355, 0.2372346070875901], "t": 3, "sat_min": 0.8167131916451128, "arb": true}
+{"scenario": "MEE-equilibrium-2", "method": "single_llm_llm", "vector": [0.35, 0.25, 0.15, 0.25], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-2", "method": "medagents_style", "vector": [0.3, 0.25, 0.18, 0.27], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-2", "method": "MANE", "vector": [0.24698543053168232, 0.21909066391361415, 0.32192283827381857, 0.21200106728088505], "t": 2, "sat_min": 0.8096346885040502, "arb": false}
+{"scenario": "MEE-equilibrium-3", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-3", "method": "medagents_style", "vector": [0.32999999999999996, 0.26999999999999996, 0.16999999999999998, 0.22999999999999998], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-3", "method": "MANE", "vector": [0.23541515226033766, 0.22980275912116258, 0.29754748227588124, 0.23723460634261853], "t": 2, "sat_min": 0.8172475457976995, "arb": true}
+{"scenario": "MEE-equilibrium-4", "method": "single_llm_llm", "vector": [0.35, 0.25, 0.15, 0.25], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-4", "method": "medagents_style", "vector": [0.302, 0.25, 0.172, 0.276], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-4", "method": "MANE", "vector": [0.23075683120479284, 0.23504193337208848, 0.2978728162754108, 0.23632841914770789], "t": 2, "sat_min": 0.8402934198817195, "arb": true}
+{"scenario": "MEE-equilibrium-5", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 3, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-5", "method": "medagents_style", "vector": [0.32, 0.30000000000000004, 0.17, 0.20999999999999996], "t": 3, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-5", "method": "MANE", "vector": [0.23561047052348294, 0.2299703983453485, 0.29704487123962914, 0.23737425989153937], "t": 2, "sat_min": 0.7765624434058411, "arb": true}
+{"scenario": "MEE-equilibrium-6", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-6", "method": "medagents_style", "vector": [0.3, 0.26, 0.15, 0.29], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-6", "method": "MANE", "vector": [0.2332862522910435, 0.23703356264141623, 0.28960726687631694, 0.24007291819122328], "t": 2, "sat_min": 0.8635246731097498, "arb": true}
+{"scenario": "MEE-equilibrium-7", "method": "single_llm_llm", "vector": [0.35, 0.25, 0.15, 0.25], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-7", "method": "medagents_style", "vector": [0.31999999999999995, 0.25, 0.16, 0.27], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-7", "method": "MANE", "vector": [0.2339809693459724, 0.2372398753289443, 0.28958983784649395, 0.2391893174785893], "t": 2, "sat_min": 0.7785090957111791, "arb": true}
+{"scenario": "MEE-equilibrium-8", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-8", "method": "medagents_style", "vector": [0.3, 0.27, 0.16999999999999998, 0.25999999999999995], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-8", "method": "MANE", "vector": [0.23541514881669806, 0.2298027610301444, 0.2975474807751641, 0.2372346093779934], "t": 2, "sat_min": 0.8431812568883055, "arb": true}
+{"scenario": "MEE-equilibrium-9", "method": "single_llm_llm", "vector": [0.45, 0.25, 0.15, 0.15], "t": 2, "llm_calls": 1}
+{"scenario": "MEE-equilibrium-9", "method": "medagents_style", "vector": [0.37, 0.25, 0.16, 0.22000000000000003], "t": 2, "llm_calls": 5}
+{"scenario": "MEE-equilibrium-9", "method": "MANE", "vector": [0.23075683637772115, 0.23504193331368695, 0.29787281696988405, 0.23632841333870777], "t": 2, "sat_min": 0.7908225335258384, "arb": true}
+{"scenario": "VITAL-mc-C_001", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_001", "method": "medagents_style", "vector": [0.32999999999999996, 0.29, 0.186, 0.19399999999999998], "t": 2, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_001", "method": "MANE", "vector": [0.24810324845626963, 0.23439479193544527, 0.3067856174343272, 0.21071634217395785], "t": 3, "sat_min": 0.894483655580699, "arb": true}
+{"scenario": "VITAL-mc-C_026", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_026", "method": "medagents_style", "vector": [0.31999999999999995, 0.27, 0.166, 0.244], "t": 2, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_026", "method": "MANE", "vector": [0.29307775582201206, 0.23474462752124378, 0.24568061911054345, 0.22649699754620067], "t": 2, "sat_min": 0.9355411979609827, "arb": false}
+{"scenario": "VITAL-mc-C_043", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_043", "method": "medagents_style", "vector": [0.27, 0.31, 0.192, 0.22800000000000004], "t": 2, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_043", "method": "MANE", "vector": [0.20820591805884087, 0.2387360168832252, 0.32219934852092247, 0.23085871653701137], "t": 3, "sat_min": 0.846834652945692, "arb": true}
+{"scenario": "VITAL-mc-C_052", "method": "single_llm_llm", "vector": [0.4, 0.3, 0.15, 0.15], "t": 1, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_052", "method": "medagents_style", "vector": [0.35, 0.29, 0.18999999999999997, 0.16999999999999998], "t": 1, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_052", "method": "MANE", "vector": [0.29779014378141777, 0.23434044371280255, 0.24252348409966457, 0.22534592840611503], "t": 1, "sat_min": 0.9129381046354447, "arb": false}
+{"scenario": "VITAL-mc-C_081", "method": "single_llm_llm", "vector": [0.45, 0.35, 0.1, 0.1], "t": 3, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_081", "method": "medagents_style", "vector": [0.35, 0.30000000000000004, 0.17, 0.18000000000000002], "t": 3, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_081", "method": "MANE", "vector": [0.2480385072953824, 0.2264804342053492, 0.32291071819270367, 0.2025703403065647], "t": 3, "sat_min": 0.7064897731997545, "arb": true}
+{"scenario": "VITAL-mc-C_095", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 2, "llm_calls": 1}
+{"scenario": "VITAL-mc-C_095", "method": "medagents_style", "vector": [0.29999999999999993, 0.29, 0.18999999999999997, 0.21999999999999997], "t": 2, "llm_calls": 5}
+{"scenario": "VITAL-mc-C_095", "method": "MANE", "vector": [0.2676657938427262, 0.22992259532191467, 0.2808810155031253, 0.22153059533223385], "t": 2, "sat_min": 0.8982953824709538, "arb": false}
+{"scenario": "MEQA-open-0", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-0", "method": "medagents_style", "vector": [0.29600000000000004, 0.26, 0.20400000000000001, 0.24000000000000005], "t": 1, "llm_calls": 5}
+{"scenario": "MEQA-open-0", "method": "MANE", "vector": [0.2398322799088975, 0.2495431826404086, 0.25235530264470085, 0.25826923480599306], "t": 1, "sat_min": 0.8859474719503301, "arb": false}
+{"scenario": "MEQA-open-1", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-1", "method": "medagents_style", "vector": [0.29600000000000004, 0.26, 0.20400000000000001, 0.24000000000000005], "t": 1, "llm_calls": 5}
+{"scenario": "MEQA-open-1", "method": "MANE", "vector": [0.23983226782849412, 0.249543180738594, 0.25235530129317496, 0.2582692501397369], "t": 0, "sat_min": 0.8751167721940708, "arb": false}
+{"scenario": "MEQA-open-2", "method": "single_llm_llm", "vector": [0.25, 0.3, 0.2, 0.25], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-2", "method": "medagents_style", "vector": [0.27, 0.26, 0.21000000000000002, 0.26], "t": 1, "llm_calls": 5}
+{"scenario": "MEQA-open-2", "method": "MANE", "vector": [0.21892595780124038, 0.2768586172670541, 0.2484595682342103, 0.25575585669749523], "t": 1, "sat_min": 0.8892837016394911, "arb": false}
+{"scenario": "MEQA-open-4", "method": "single_llm_llm", "vector": [0.25, 0.25, 0.2, 0.3], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-4", "method": "medagents_style", "vector": [0.27, 0.26, 0.2, 0.27], "t": 1, "llm_calls": 5}
+{"scenario": "MEQA-open-4", "method": "MANE", "vector": [0.21544722353748227, 0.2728369203203477, 0.24501486562919453, 0.26670099051297547], "t": 1, "sat_min": 0.8935136207388841, "arb": false}
+{"scenario": "MEQA-open-5", "method": "single_llm_llm", "vector": [0.25, 0.25, 0.2, 0.3], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-5", "method": "medagents_style", "vector": [0.27, 0.26, 0.2, 0.27], "t": 1, "llm_calls": 5}
+{"scenario": "MEQA-open-5", "method": "MANE", "vector": [0.21544722353748227, 0.2728369203203477, 0.24501486562919453, 0.26670099051297547], "t": 1, "sat_min": 0.8935136207388841, "arb": false}
+{"scenario": "MEQA-open-6", "method": "single_llm_llm", "vector": [0.35, 0.3, 0.15, 0.2], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-6", "method": "medagents_style", "vector": [0.29, 0.26, 0.19, 0.26], "t": 0, "llm_calls": 5}
+{"scenario": "MEQA-open-6", "method": "MANE", "vector": [0.22207536569939076, 0.26323300113583376, 0.2555863104544588, 0.2591053227103168], "t": 1, "sat_min": 0.8888341455368753, "arb": false}
+{"scenario": "MEQA-open-8", "method": "single_llm_llm", "vector": [0.25, 0.25, 0.2, 0.3], "t": 0, "llm_calls": 1}
+{"scenario": "MEQA-open-8", "method": "medagents_style", "vector": [0.29, 0.25, 0.21999999999999997, 0.24], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-8", "method": "MANE", "vector": [0.21853094256633665, 0.27652958988907633, 0.24946380594004275, 0.2554756616045442], "t": 1, "sat_min": 0.8752914402117452, "arb": false}
+{"scenario": "MEQA-open-9", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "MEQA-open-9", "method": "medagents_style", "vector": [0.28600000000000003, 0.26, 0.22000000000000003, 0.23400000000000004], "t": 2, "llm_calls": 5}
+{"scenario": "MEQA-open-9", "method": "MANE", "vector": [0.22123489470324625, 0.2625291638289902, 0.25772593839666247, 0.25851000307110095], "t": 1, "sat_min": 0.8903070492060092, "arb": false}
+{"scenario": "LLMEvalMed-9-1", "method": "single_llm_llm", "vector": [0.35, 0.25, 0.2, 0.2], "t": 1, "llm_calls": 1}
+{"scenario": "LLMEvalMed-9-1", "method": "medagents_style", "vector": [0.27, 0.22999999999999998, 0.28, 0.22000000000000003], "t": 1, "llm_calls": 5}
+{"scenario": "LLMEvalMed-9-1", "method": "MANE", "vector": [0.2271098967687097, 0.29050758982460917, 0.2634717986842541, 0.218910714722427], "t": 1, "sat_min": 0.8565140023154098, "arb": false}
+{"scenario": "LLMEvalMed-12-1", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.25000000000000006, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-12-1", "method": "medagents_style", "vector": [0.28200000000000003, 0.248, 0.25, 0.22000000000000003], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-12-1", "method": "MANE", "vector": [0.1992848227546624, 0.255143348486172, 0.27860114815936143, 0.26697068059980417], "t": 2, "sat_min": 0.8620323588391419, "arb": false}
+{"scenario": "LLMEvalMed-13-1", "method": "single_llm_llm", "vector": [0.45, 0.35, 0.15, 0.05], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-13-1", "method": "medagents_style", "vector": [0.33999999999999997, 0.33999999999999997, 0.21, 0.10999999999999999], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-13-1", "method": "MANE", "vector": [0.2282624351686252, 0.22898674211482245, 0.28551245402991543, 0.25723836868663674], "t": 2, "sat_min": 0.7820307802956373, "arb": false}
+{"scenario": "LLMEvalMed-14-1", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.25000000000000006, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-14-1", "method": "medagents_style", "vector": [0.29800000000000004, 0.248, 0.23399999999999999, 0.22000000000000003], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-14-1", "method": "MANE", "vector": [0.21696641773308192, 0.2268506896085435, 0.28057563534430313, 0.27560725731407143], "t": 2, "sat_min": 0.8769490167566844, "arb": false}
+{"scenario": "LLMEvalMed-18-1", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.25000000000000006, 0.10000000000000002], "t": 2, "llm_calls": 1}
+{"scenario": "LLMEvalMed-18-1", "method": "medagents_style", "vector": [0.27, 0.26, 0.26, 0.21000000000000002], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-18-1", "method": "MANE", "vector": [0.20629808825650855, 0.23698877300809854, 0.2869969216509651, 0.2697162170844279], "t": 2, "sat_min": 0.9187702870521046, "arb": false}
+{"scenario": "LLMEvalMed-21-1", "method": "single_llm_llm", "vector": [0.35000000000000003, 0.30000000000000004, 0.20000000000000004, 0.15000000000000002], "t": 1, "llm_calls": 1}
+{"scenario": "LLMEvalMed-21-1", "method": "medagents_style", "vector": [0.27, 0.28, 0.23000000000000004, 0.22000000000000003], "t": 2, "llm_calls": 5}
+{"scenario": "LLMEvalMed-21-1", "method": "MANE", "vector": [0.2516904433540758, 0.21685127715464927, 0.2597818072094216, 0.2716764722818533], "t": 0, "sat_min": 0.8672653897105732, "arb": false}

@@ -1,0 +1,12 @@
+===== 按 ACGME competency 聚合的官方 keypoint 覆盖（题内均值 → 跨题均值）=====
+方法                    INTERPERSONAL   MEDICAL KNOWLE    PATIENT CARE  PRACTICED-BASE  PROFESSIONALIS  SYSTEMS-BASED       整体
+MANE(现状A)                      0.538           0.722           0.472           0.562           0.542           0.357   0.538
+MANE+C(议题+例外)                  0.478           0.778           0.525           0.438           0.705           0.714   0.633
+MANE+议题(B)                     0.516           0.778           0.575           0.562           0.760           0.714   0.676
+medagents_style                0.444           0.778           0.375           0.250           0.611           0.500   0.537
+neutral_single_llm             0.567           0.694           0.450           0.250           0.580           0.571   0.555
+single_llm_llm                 0.333           0.583           0.375           0.438           0.527           0.393   0.459
+
+判读：看 B（议题感知）在哪些 competency 上显著高于单 LLM/medagents——
+若集中在 PATIENT CARE / PROFESSIONALISM 等伦理核心域 → 增益有临床能力语义；
+整体列 ≈ 官方 pqa 均值（交叉核对 34 汇总）。

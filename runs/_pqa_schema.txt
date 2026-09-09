@@ -1,0 +1,11 @@
+[rubric] n=1466 顶层字段: ['id', 'keypoint_competencies', 'principles', 'qid', 'question']
+  keypoint_competencies[0] 结构: {"keypoint": "Physicians should prioritize patients’ interests when considering the sale of a clinical practice, evaluating the transaction’s impact on the quality and cost of patient care.", "competency": "PATIENT CARE"}
+  keypoint_competencies 子字段集合: {'keypoint': 6555, 'competency': 6555}
+  principles 值分布: {'autonomy': 891, 'beneficence': 672, 'non_maleficence': 610, 'justice': 417}
+  是否含 answer/reference/gold 类字段: []
+
+[open-qa] n病例=677 顶层字段: ['case', 'case_rewrite', 'ethical_issues', 'id', 'tags', 'title']
+  ethical_issues[0] 字段: {"question": "How should physicians assess the impact of a private equity acquisition of their clinical practice on patients and address related ethical concerns during negotiations?", "keypoints": ["Physicians should prioritize patients’ interests when considering the sale of a clinical practice, evaluating the transaction’s impact on the quality and cost of patient care.", "Physicians have an ethical obligation to address patients’ concerns during negotiations, particularly clarifying how the 
+  ethical_issues 字段集合: {'question': 1466, 'keypoints': 1466, 'qid': 1466}
+  总问题数(ethical_issues): 1466
+  ethical_issues 含 answer/reference/gold 类字段: []

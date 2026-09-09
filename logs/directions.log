@@ -1,0 +1,248 @@
+nohup: ignoring input
+项目根: /mnt/zhangheng2025/EthicalGuard  开始: 2026-09-07 17:56:06
+
+================================================================
+[27] 架构调整 A/B/C 对照（议题感知 + 例外议程；默认开关关，主实验不变） 17:56:06
+================================================================
+2026-09-07 17:56:10,071 INFO ethicalguard: [PQ-368-756] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 17:57:51,953 INFO ethicalguard: [PQ-368-756] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 17:59:34,306 INFO ethicalguard: [PQ-371-764] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:00:38,042 INFO ethicalguard: [PQ-371-764] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:01:41,746 INFO ethicalguard: [PQ-369-758] ERS=0.40 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:02:44,832 INFO ethicalguard: [PQ-369-758] ERS=0.40 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:03:49,912 INFO ethicalguard: [PQ-448-887] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 18:05:06,784 INFO ethicalguard: [PQ-448-887] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 18:06:23,632 INFO ethicalguard: [PQ-487-953] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:08:02,681 INFO ethicalguard: [PQ-487-953] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:09:41,315 INFO ethicalguard: [PQ-63-135] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:12:10,579 INFO ethicalguard: [PQ-63-135] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:14:52,176 INFO ethicalguard: [PQ-9-22] ERS=0.20 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:17:08,657 INFO ethicalguard: [PQ-9-22] ERS=0.20 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:19:24,680 INFO ethicalguard: [PQ-49-101] ERS=0.30 type=preference_family action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 18:21:20,819 INFO ethicalguard: [PQ-49-101] ERS=0.30 type=preference_family action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 18:23:16,787 INFO ethicalguard: [PQ-273-559] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:24:16,640 INFO ethicalguard: [PQ-273-559] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:25:17,902 INFO ethicalguard: [PQ-474-931] ERS=0.70 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:26:53,700 INFO ethicalguard: [PQ-474-931] ERS=0.70 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:28:28,134 INFO ethicalguard: [PQ-528-1022] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:29:38,670 INFO ethicalguard: [PQ-528-1022] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:30:56,111 INFO ethicalguard: [PQ-863-1400] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:33:26,903 INFO ethicalguard: [PQ-863-1400] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:35:09,480 INFO ethicalguard: [PQ-334-688] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:36:09,407 INFO ethicalguard: [PQ-334-688] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:37:10,188 INFO ethicalguard: [PQ-348-722] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:39:08,629 INFO ethicalguard: [PQ-348-722] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:41:10,009 INFO ethicalguard: [PQ-299-609] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:43:06,245 INFO ethicalguard: [PQ-299-609] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 18:45:03,302 INFO ethicalguard: [PQ-698-1217] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:46:07,388 INFO ethicalguard: [PQ-698-1217] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:47:10,830 INFO ethicalguard: [PQ-178-352] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:49:47,568 INFO ethicalguard: [PQ-178-352] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:51:26,884 INFO ethicalguard: [PQ-258-526] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:53:07,794 INFO ethicalguard: [PQ-258-526] ERS=0.85 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 18:54:47,730 INFO ethicalguard: [PQ-288-586] ERS=0.40 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:55:49,618 INFO ethicalguard: [PQ-288-586] ERS=0.40 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:56:51,801 INFO ethicalguard: [PQ-322-661] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 18:59:18,946 INFO ethicalguard: [PQ-322-661] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:01:19,801 INFO ethicalguard: [PQ-303-616] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:03:19,534 INFO ethicalguard: [PQ-303-616] ERS=0.30 type=preference_qol action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:05:18,651 INFO ethicalguard: [PQ-313-640] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 19:07:55,762 INFO ethicalguard: [PQ-313-640] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 19:10:30,067 INFO ethicalguard: [PQ-526-1019] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 19:11:52,706 INFO ethicalguard: [PQ-526-1019] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 19:13:13,295 INFO ethicalguard: [PQ-242-486] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 19:15:20,520 INFO ethicalguard: [PQ-242-486] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 19:17:31,328 INFO ethicalguard: [PQ-286-581] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:19:01,770 INFO ethicalguard: [PQ-286-581] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:20:32,967 INFO ethicalguard: [PQ-44-92] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:21:33,004 INFO ethicalguard: [PQ-44-92] ERS=0.20 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:22:34,492 INFO ethicalguard: [PQ-530-1024] ERS=0.70 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 19:24:29,129 INFO ethicalguard: [PQ-530-1024] ERS=0.70 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'hospital_admin']
+2026-09-07 19:26:26,129 INFO ethicalguard: [PQ-681-1202] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:28:06,090 INFO ethicalguard: [PQ-681-1202] ERS=0.30 type=none action=observe gate=routine | 组队: ['physician', 'ethics_committee', 'patient']
+2026-09-07 19:29:44,591 INFO ethicalguard: [PQ-351-727] ERS=0.80 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 19:31:01,658 INFO ethicalguard: [PQ-351-727] ERS=0.80 type=preference_family action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family']
+2026-09-07 19:33:20,503 INFO ethicalguard: [PQ-722-1256] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+2026-09-07 19:34:50,102 INFO ethicalguard: [PQ-722-1256] ERS=0.75 type=preference_qol action=ethics_consult gate=intervene | 组队: ['physician', 'ethics_committee', 'patient', 'family', 'hospital_admin']
+场景 30（rubric+keypoints）
+[A 复用] 现状 MANE 文本 30 条 <- runs/cross_method_texts.jsonl
+
+===== Stage A：生成 B/C 配置最终文本（各 30 场景现跑）=====
+  PQ-368-756         B_议题感知         len=  162 viol=0.00
+  PQ-368-756         C_议题+例外        len=  162 viol=0.00
+  PQ-371-764         B_议题感知         len=   93 viol=0.00
+  PQ-371-764         C_议题+例外        len=   93 viol=0.00
+  PQ-369-758         B_议题感知         len=  126 viol=0.00
+  PQ-369-758         C_议题+例外        len=  126 viol=0.00
+  PQ-448-887         B_议题感知         len=  124 viol=0.00
+  PQ-448-887         C_议题+例外        len=  124 viol=0.00
+  PQ-487-953         B_议题感知         len=  165 viol=0.00
+  PQ-487-953         C_议题+例外        len=  165 viol=0.00
+  PQ-63-135          B_议题感知         len=  257 viol=0.00
+  PQ-63-135          C_议题+例外        len=  165 viol=0.00
+  PQ-9-22            B_议题感知         len=  182 viol=0.00
+  PQ-9-22            C_议题+例外        len=   94 viol=0.00
+  PQ-49-101          B_议题感知         len=  174 viol=0.00
+  PQ-49-101          C_议题+例外        len=  174 viol=0.00
+  PQ-273-559         B_议题感知         len=  130 viol=0.00
+  PQ-273-559         C_议题+例外        len=  125 viol=0.00
+  PQ-474-931         B_议题感知         len=  104 viol=0.00
+  PQ-474-931         C_议题+例外        len=  115 viol=0.00
+  PQ-528-1022        B_议题感知         len=  134 viol=0.00
+  PQ-528-1022        C_议题+例外        len=  211 viol=0.00
+  PQ-863-1400        B_议题感知         len=  110 viol=0.00
+  PQ-863-1400        C_议题+例外        len=  175 viol=0.00
+  PQ-334-688         B_议题感知         len=   81 viol=0.00
+  PQ-334-688         C_议题+例外        len=   81 viol=0.00
+  PQ-348-722         B_议题感知         len=  196 viol=0.00
+  PQ-348-722         C_议题+例外        len=  198 viol=0.00
+  PQ-299-609         B_议题感知         len=  120 viol=0.00
+  PQ-299-609         C_议题+例外        len=    0 viol=0.00
+  PQ-698-1217        B_议题感知         len=  206 viol=0.00
+  PQ-698-1217        C_议题+例外        len=  206 viol=0.00
+  PQ-178-352         B_议题感知         len=  235 viol=0.00
+  PQ-178-352         C_议题+例外        len=  210 viol=0.00
+  PQ-258-526         B_议题感知         len=  139 viol=0.00
+  PQ-258-526         C_议题+例外        len=  139 viol=0.00
+  PQ-288-586         B_议题感知         len=  131 viol=0.00
+  PQ-288-586         C_议题+例外        len=  131 viol=0.00
+  PQ-322-661         B_议题感知         len=  163 viol=0.00
+  PQ-322-661         C_议题+例外        len=  150 viol=0.00
+  PQ-303-616         B_议题感知         len=  156 viol=0.00
+  PQ-303-616         C_议题+例外        len=  156 viol=0.00
+  PQ-313-640         B_议题感知         len=  288 viol=0.00
+  PQ-313-640         C_议题+例外        len=  155 viol=0.00
+  PQ-526-1019        B_议题感知         len=  188 viol=0.00
+  PQ-526-1019        C_议题+例外        len=  151 viol=0.00
+  PQ-242-486         B_议题感知         len=  150 viol=0.00
+  PQ-242-486         C_议题+例外        len=  183 viol=0.00
+  PQ-286-581         B_议题感知         len=  140 viol=0.00
+  PQ-286-581         C_议题+例外        len=  140 viol=0.00
+  PQ-44-92           B_议题感知         len=  142 viol=0.00
+  PQ-44-92           C_议题+例外        len=  142 viol=0.00
+  PQ-530-1024        B_议题感知         len=  122 viol=0.00
+  PQ-530-1024        C_议题+例外        len=  129 viol=0.00
+  PQ-681-1202        B_议题感知         len=  200 viol=0.00
+  PQ-681-1202        C_议题+例外        len=  210 viol=0.00
+  PQ-351-727         B_议题感知         len=  142 viol=0.00
+  PQ-351-727         C_议题+例外        len=  168 viol=0.00
+  PQ-722-1256        B_议题感知         len=  204 viol=0.00
+  PQ-722-1256        C_议题+例外        len=  204 viol=0.00
+
+===== Stage B：评分 + 议题覆盖诊断 =====
+  PQ-368-756         A_现状         pqa=0.75 cov=0.3 cover=1
+  PQ-368-756         B_议题感知       pqa=0.875 cov=0.0 cover=1
+  PQ-368-756         C_议题+例外      pqa=0.875 cov=0.0 cover=1
+  PQ-371-764         A_现状         pqa=1.0 cov=1.0 cover=1
+  PQ-371-764         B_议题感知       pqa=0.25 cov=0.8 cover=1
+  PQ-371-764         C_议题+例外      pqa=0.25 cov=0.8 cover=1
+  PQ-369-758         A_现状         pqa=0.2 cov=0.4 cover=1
+  PQ-369-758         B_议题感知       pqa=0.7 cov=0.8 cover=1
+  PQ-369-758         C_议题+例外      pqa=0.7 cov=0.8 cover=1
+  PQ-448-887         A_现状         pqa=0.75 cov=1.0 cover=1
+  PQ-448-887         B_议题感知       pqa=0.75 cov=0.6 cover=1
+  PQ-448-887         C_议题+例外      pqa=0.75 cov=0.6 cover=1
+  PQ-487-953         A_现状         pqa=0.8 cov=0.7 cover=1
+  PQ-487-953         B_议题感知       pqa=0.9 cov=0.8 cover=1
+  PQ-487-953         C_议题+例外      pqa=0.9 cov=0.8 cover=1
+  PQ-63-135          A_现状         pqa=1.0 cov=1.0 cover=1
+  PQ-63-135          B_议题感知       pqa=0.2 cov=0.6 cover=1
+  PQ-63-135          C_议题+例外      pqa=0.8 cov=0.5 cover=1
+  PQ-9-22            A_现状         pqa=0.8333333333333334 cov=0.6 cover=1
+  PQ-9-22            B_议题感知       pqa=0.8333333333333334 cov=0.6 cover=1
+  PQ-9-22            C_议题+例外      pqa=0.16666666666666666 cov=0.6 cover=1
+  PQ-49-101          A_现状         pqa=0.0 cov=0.3 cover=1
+  PQ-49-101          B_议题感知       pqa=0.0 cov=0.0 cover=1
+  PQ-49-101          C_议题+例外      pqa=0.0 cov=0.0 cover=1
+  PQ-273-559         A_现状         pqa=0.2 cov=0.2 cover=1
+  PQ-273-559         B_议题感知       pqa=0.4 cov=0.0 cover=1
+  PQ-273-559         C_议题+例外      pqa=0.0 cov=0.0 cover=0
+  PQ-474-931         A_现状         pqa=0.8 cov=1.0 cover=1
+  PQ-474-931         B_议题感知       pqa=0.3 cov=0.6 cover=1
+  PQ-474-931         C_议题+例外      pqa=0.3 cov=0.6 cover=1
+  PQ-528-1022        A_现状         pqa=0.5 cov=0.6 cover=1
+  PQ-528-1022        B_议题感知       pqa=0.375 cov=0.7 cover=1
+  PQ-528-1022        C_议题+例外      pqa=0.375 cov=0.7 cover=1
+  PQ-863-1400        A_现状         pqa=0.375 cov=0.0 cover=1
+  PQ-863-1400        B_议题感知       pqa=0.5 cov=0.0 cover=1
+  PQ-863-1400        C_议题+例外      pqa=0.75 cov=0.8 cover=1
+  PQ-334-688         A_现状         pqa=0.3 cov=0.3 cover=1
+  PQ-334-688         B_议题感知       pqa=0.1 cov=0.0 cover=0
+  PQ-334-688         C_议题+例外      pqa=0.1 cov=0.0 cover=0
+  PQ-348-722         A_现状         pqa=0.16666666666666666 cov=0.0 cover=1
+  PQ-348-722         B_议题感知       pqa=0.16666666666666666 cov=0.0 cover=1
+  PQ-348-722         C_议题+例外      pqa=0.16666666666666666 cov=0.0 cover=1
+  PQ-299-609         A_现状         pqa=1.0 cov=0.6 cover=1
+  PQ-299-609         B_议题感知       pqa=0.75 cov=0.0 cover=1
+  PQ-698-1217        A_现状         pqa=0.6666666666666666 cov=0.6 cover=1
+  PQ-698-1217        B_议题感知       pqa=0.5 cov=0.0 cover=1
+  PQ-698-1217        C_议题+例外      pqa=0.5 cov=0.0 cover=1
+  PQ-178-352         A_现状         pqa=0.9 cov=0.4 cover=1
+  PQ-178-352         B_议题感知       pqa=0.9 cov=0.0 cover=1
+  PQ-178-352         C_议题+例外      pqa=0.9 cov=0.0 cover=1
+  PQ-258-526         A_现状         pqa=1.0 cov=1.0 cover=1
+  PQ-258-526         B_议题感知       pqa=0.9 cov=0.8 cover=1
+  PQ-258-526         C_议题+例外      pqa=0.9 cov=0.8 cover=1
+  PQ-288-586         A_现状         pqa=0.0 cov=0.0 cover=1
+  PQ-288-586         B_议题感知       pqa=0.16666666666666666 cov=0.0 cover=1
+  PQ-288-586         C_议题+例外      pqa=0.16666666666666666 cov=0.0 cover=1
+  PQ-322-661         A_现状         pqa=1.0 cov=1.0 cover=1
+  PQ-322-661         B_议题感知       pqa=0.5 cov=0.0 cover=1
+  PQ-322-661         C_议题+例外      pqa=0.5 cov=0.0 cover=1
+  PQ-303-616         A_现状         pqa=0.4 cov=0.6 cover=1
+  PQ-303-616         B_议题感知       pqa=0.3 cov=0.0 cover=1
+  PQ-303-616         C_议题+例外      pqa=0.3 cov=0.0 cover=1
+  PQ-313-640         A_现状         pqa=0.6 cov=0.7 cover=1
+  PQ-313-640         B_议题感知       pqa=1.0 cov=0.9 cover=1
+  PQ-313-640         C_议题+例外      pqa=0.5 cov=0.0 cover=1
+  PQ-526-1019        A_现状         pqa=0.8 cov=0.7 cover=1
+  PQ-526-1019        B_议题感知       pqa=1.0 cov=0.0 cover=1
+  PQ-526-1019        C_议题+例外      pqa=0.8 cov=0.0 cover=1
+  PQ-242-486         A_现状         pqa=0.0 cov=0.0 cover=1
+  PQ-242-486         B_议题感知       pqa=0.0 cov=0.0 cover=1
+  PQ-242-486         C_议题+例外      pqa=0.16666666666666666 cov=0.0 cover=1
+  PQ-286-581         A_现状         pqa=0.25 cov=0.6 cover=1
+  PQ-286-581         B_议题感知       pqa=0.0 cov=0.0 cover=1
+  PQ-286-581         C_议题+例外      pqa=0.0 cov=0.0 cover=1
+  PQ-44-92           A_现状         pqa=0.75 cov=0.6 cover=1
+  PQ-44-92           B_议题感知       pqa=0.5 cov=0.5 cover=1
+  PQ-44-92           C_议题+例外      pqa=0.5 cov=0.5 cover=1
+  PQ-530-1024        B_议题感知       pqa=0.0 cov=0.0 cover=1
+  PQ-530-1024        C_议题+例外      pqa=0.0 cov=0.0 cover=1
+  PQ-681-1202        A_现状         pqa=0.25 cov=0.7 cover=1
+  PQ-681-1202        B_议题感知       pqa=0.25 cov=0.0 cover=1
+  PQ-681-1202        C_议题+例外      pqa=0.25 cov=0.0 cover=1
+  PQ-351-727         A_现状         pqa=0.125 cov=0.3 cover=1
+  PQ-351-727         B_议题感知       pqa=0.125 cov=0.0 cover=1
+  PQ-351-727         C_议题+例外      pqa=0.125 cov=0.0 cover=1
+  PQ-722-1256        A_现状         pqa=1.0 cov=1.0 cover=1
+  PQ-722-1256        B_议题感知       pqa=1.0 cov=0.0 cover=1
+  PQ-722-1256        C_议题+例外      pqa=1.0 cov=0.0 cover=1
+
+===== 汇总：A/B/C（同题同批 judge）=====
+配置             n    pqa   cov  clear    议题覆盖    违反场景率
+A_现状          29  0.566 0.559  0.710   1.000     0.0%
+B_议题感知        30  0.475 0.257  0.410   0.967     0.0%
+C_议题+例外       29  0.439 0.259  0.424   0.931     0.0%
+
+===== 配对（同题）：B−A / C−A =====
+  B_议题感知       官方协议   n= 29 Δ=+0.075 胜场 12/29
+  B_议题感知       要点覆盖   n= 29 Δ=+0.293 胜场 20/29
+  B_议题感知       议题覆盖   n= 29 Δ=+0.034 胜场 1/29
+  C_议题+例外      官方协议   n= 28 Δ=+0.096 胜场 14/28
+  C_议题+例外      要点覆盖   n= 28 Δ=+0.289 胜场 20/28
+  C_议题+例外      议题覆盖   n= 28 Δ=+0.071 胜场 2/28
+
+判定：pqa/cov/议题覆盖显著升 → 议题感知修复切题；C 较 B 在例外题额外升 → 例外议程有效；
+违反场景率必须保持 0%（开关不得破坏保证层）。产物: runs/arch_scores.jsonl / runs/arch_texts.jsonl
+[27 done] 0
+
+全部完成 2026-09-07 19:41:33
+产物：runs/arch_texts.jsonl（B/C 协商文本+终态向量+KKT）
+      runs/arch_scores.jsonl（A/B/C × pqa/cov/clear/issue_cover/violation）
+      runs/arch_run.txt（汇总与配对表）
+
+判读要点：
+  - B/C 的 pqa/cov/issue_cover 相对 A 显著升 → 议题感知是切题缺口主因；
+  - C 在保密/自伤/强制报告类题上较 B 额外提升 → 例外议程补上'状态无保密维'缺口；
+  - 违反场景率必须保持 0%（开关不得破坏保证层）。
